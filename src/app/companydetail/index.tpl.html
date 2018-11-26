@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        background: none;
+    }
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    body{
+        background: url("../../../vendor/images/zsx/code_back.png")center center;
+        background-size:cover;
+        background-attachment:fixed;
+    }
+    .login_back_gray{
+        width: 9rem;
+        height: 9rem;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color:rgba(0,0,0,0.26);
+        margin-top: 2.8rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+
+<div ng-controller="CompanyDetailCtrl">
+
+
+    <div class="bar bar-header bar-light bar-light-div" style="background: none;background-color: transparent;background-image: none;">
+        <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+        <h1 class="title"><span class="title-color">二维码</span></h1>
+    </div>
+
+    <div class="login_back_gray">
+        <img style="width: 7rem;height: 7rem;margin-top: 0.6rem" src="../../../vendor/images/zsx/code_img.png"/>
+    </div>
+</div>

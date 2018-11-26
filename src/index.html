@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WEBAPP">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="title"></title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+
+    <link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../vendor/css/ionic-toast.css">
+    <link rel="stylesheet" href="../vendor/css/datapick.css">
+    <link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+
+    .container-fluid{
+        padding: 0 0;
+    }
+    .loading{
+        margin-top: 6rem;
+        margin-left: 4.5rem;
+    }
+    body {
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        -webkit-transform:translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0);
+    }
+
+
+</style>
+
+
+
+    <title>掌上修</title>
+</head>
+
+<body  class="container-fluid" ng-controller="IndexCtrl">
+
+<ui-view class="ui_view_min_high"> </ui-view>
+<div class="loading" ng-show="busy"> <i class="fa fa-spin fa-spinner fa-lg"></i>
+    loading ...
+</div>
+<script>
+    window.rootSrc = '/src/';
+
+    if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+        var version = parseFloat(RegExp.$1);
+        if(version>2.3){
+            var phoneScale = parseInt(window.screen.width)/640;
+            document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+        }else{
+            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+        }
+    }else{
+        //var phoneScale = parseInt(window.screen.width)/640;
+       // document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+
+        //document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />');
+        //document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+
+
+
+
+
+</script>
+<script src="../vendor/js/jquery.js"></script>
+<script src="../vendor/js/base.js"></script>
+<script src="../vendor/angular/angular.min.js"></script>
+<script src="../vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../vendor/angular/angular-touch/angular-touch.js"></script>
+<script src="../vendor/angular/oclazyload/ocLazyLoad.js"></script>
+<script src="../vendor/angular/ng-infinite-scroll.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="../vendor/js/ionic-toast.js"></script>
+<script src="../vendor/js/datepick.js"></script>
+
+<script src="./app/app.js"></script>
+<script src="./app/config.router.js"></script>
+<script src="./app/config.lazyload.js"></script>
+<script src="./app/utils.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript" src="../vendor/js/ionic.bundle.min.js"></script>
+
+
+
+</body>
+</html>

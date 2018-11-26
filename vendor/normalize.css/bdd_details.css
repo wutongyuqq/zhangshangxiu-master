@@ -1,0 +1,285 @@
+/*nav*/
+body{
+    background-color: #F8F8F8;
+}
+.bdd_details_nav{
+    width: 100%;
+    height:2000px;
+}
+.bdd_details_value{
+    width:1200px;
+    height:2000px;
+    margin:0 auto;
+}
+.bdd_details_value_hold{
+    width: 890px;
+    height:1800px;
+    float:left;
+
+}
+.bdd_details_value_left{
+    width: 890px;
+    height:240px;
+    margin-top:-30px;
+    background-color:white;
+
+}
+.bdd_details_value_right{
+    width: 290px;
+    height: 1000px;
+    float:right;
+    margin-left:18px;
+}
+.bdd_details_value_left_top{
+    width: 800px;
+    height:210px;
+    margin: 0 auto;
+    margin-top:30px;
+}
+.bdd_details_news{
+    float: right;
+}
+.bdd_details_data{
+    float: left;
+}
+
+.bdd_details_size{
+    font-size: 24px;
+    color: #4d3a3a;
+    font-weight: 700;
+    padding-top:30px;
+}
+.bdd_br{
+    width: 800px;
+    height: 1px;
+    background-color: #f0f0f0;
+}
+.bdd_details_one{
+    font-size: 14px;
+    color:#ccbebe;
+}
+.bdd_details_data_c{
+    font-size: 16px;
+    color: #ccbebe;
+}
+.bdd_details_html{
+    width: 890px;
+    height:120px;
+    margin-top:40px;
+
+
+
+}
+.bdd_details_hs{
+    width: 200px;
+    height: 120px;
+    border: 1px solid #ccc;
+    position: absolute;
+
+
+}
+.bdd_details_x{
+    font-size: 16px;
+    color: #cea63f;
+    position: relative;
+    top:47px;
+    left: 0;
+}
+.bdd_details_img {
+    position: relative;
+    top: 24px;
+    left: 71px;
+}
+
+.bdd_details_html_left{
+    width: 200px;
+    height: 120px;
+    float: left;
+    background-color: white;
+}
+.bdd_details_html_right{
+    width: 410px;
+    height: 120px;
+    float: left;
+    background-color: white;
+}
+.bdd_details_zf{
+    margin-left:39px;
+}
+.bdd_style_value{
+    font-size: 16px;
+    color: #cea63f;
+    position: relative;
+    top:43px;
+}
+.bdd_style_img{
+    position: relative;
+    left:77px;
+    top:23px;
+    font-size: 12px;
+    color: #ccbebe;
+}
+.bdd_details_span{
+    position: relative;
+    left: -36px;
+    top:-6px;
+    color: #ffffff;
+}
+.bdd_details_side{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.bdd_details_ke{
+    position: relative;
+    left:-25px;
+    top: 0;
+}
+.bdd_details_what{
+    position: relative;
+    color: #cea63f;
+    font-size: 16px;
+    left:-133px;
+    top: 53px;
+    margin-left:-20px;
+}
+/*保证金*/
+.bdd_bond{
+    width: 890px;
+    height: 90px;
+    float: left;
+    margin-top:10px;
+    background-color: white;
+
+
+}
+.bdd_bond_pic{
+    width: 90px;
+    height: 90px;
+    background-color:#ccbebe;
+    color: white;
+    float: left;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 5px 0 0 5px;
+
+}
+.bdd_bond_r{
+  float: left;
+    padding:18px 0 0 110px;
+}
+.bdd_bond_l{
+    float: right;
+    padding: 18px 20px 0 0;
+}
+.bdd_bond_span{
+    font-size: 16px;
+    color: #ccbebe;
+}
+.bdd_bond_b{
+    float: left;
+    margin-top:20px;
+    margin-left:-218px;
+}
+.bdd_pic_po{
+    position: relative;
+    left:20%;
+    top:40%;
+}
+.bdd_bond_fit{
+    margin-top:40px;
+}
+.bdd_follow_weibo{
+    width: 115px;
+    height:25px;
+    text-align: center;
+    font-size: 14px;
+    color: #4d3a3a;
+    margin-left:-20px;
+}
+.bdd_follow{
+    float: left;
+}
+.bdd_follow_foll{
+    margin-top:30px;
+    padding-left:400px;
+}
+.bdd_follow_pyq{
+    margin-top:30px;
+    padding-left:10px;
+}
+.bdd_follow_zb{
+    padding-left:210px;
+}
+
+/*分析*/
+.bdd_details_header{
+    width: 290px;
+    height:60px;
+    background-color: white;
+    padding-left:15px;
+
+}
+.bdd_details_header_left{
+    width: 5px;
+    height: 20px;
+    background-color: #cea63f;
+    float: left;
+    margin-top:22px;
+
+}
+.bdd_details_header_conter{
+    float: left;
+    margin-left:5px;
+    margin-top:20px;
+    color: #4d3a3a;
+    font-size: 18px;
+}
+.bdd_details_js{
+    width: 290px;
+    height: 180px;
+    margin-top:10px;
+    background-color: white;
+}
+.bdd_details_js_two{
+    font-size: 16px;
+    color: #4d3a3a;
+    padding:20px 0 0 58px;
+    font-family: Arial;
+    font-weight: 700;
+
+}
+.bdd_details_js_new{
+    font-size: 14px;
+    color: #4d3a3a;
+    padding: 0 0 10px 20px;
+}
+.bdd_details_messg{
+    margin-top:50px;
+}
+.bdd_deails_lis{
+    margin-top:40px;
+}
+.bdd_follow_info{
+     width: 890px;
+     height: 800px;
+     border: 1px solid #ccc;
+     float: left;
+ }
+.bdd_follow_info{
+    width: 890px;
+    height:800px;
+    margin-top:70px;
+
+}
+.bdd_follow_left{
+    width: 890px;
+    height: 70px;
+    background-color:white;
+    margin-top:20px;
+    float: left;
+    padding:20px 10px;
+    font-size: 16px;
+    color: #cea63f;
+
+}

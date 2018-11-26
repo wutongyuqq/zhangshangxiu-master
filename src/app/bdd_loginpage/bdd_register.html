@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动端设置viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <!--引入公共样式-->
+    <link rel="stylesheet" href="../../../vendor/normalize.css/calendar.css"/>
+    <link rel="stylesheet" href="../../../vendor/normalize.css/base.css">
+    <link rel="stylesheet" href="../../../vendor/normalize.css/bdd_register.css">
+    <link rel="stylesheet" href="../../../vendor/normalize.css/bdd-home.css">
+    <link rel="stylesheet" href="../../../vendor/normalize.css/bdd-footer.css">
+    <!--引入首页的js文件-->
+    <!--<script src="./js/index.js"></script>-->
+    <!--<script src="./zepto-master/src/zepto.min.js"></script>
+    &lt;!&ndash;为了支持和jq类似的选择器，得引入一个新的js文件&ndash;&gt;
+    <script src="./zepto-master/src/selector.js"></script>
+    <script src="./zepto-master/src/fx.js"></script>
+    <script src="./zepto-master/src/touch.js"></script>-->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!--引入定制之后的js文件-->
+    <script src="./js/zepto.min.js"></script>
+    <script src="lib/outjs/calendar.js"></script>
+
+    <script>
+        var date = new Date();
+        var yearStr = date.getFullYear();
+        var monthStr = date.getMonth();
+        var curDateStr = date.getDate();
+        $("#today-txt").html("<span style='color: red'>"+yearStr+"/"+monthStr+"/"+curDateStr+"<span>");
+        $(function () {
+            var r = document.body.offsetWidth / 1200; //window.screen.availWidth;
+            if (window.screen.availWidth < 1200) {
+                $(document.body).css("zoom", r);
+            }
+        });
+
+    </script>
+
+    <title>标大大</title>
+</head>
+<body>
+<!--头部-->
+<nav class="bdd-nav">
+    <div class="bdd-nav-div">
+        <div class="bdd-img-div"><div class="bdd-img-one"><img class="bdd-img" src="../../../vendor/images/logo.png" alt=""/></div></div>
+        <div class="bdd-nav-title"><a href="./bdd-test.html"></a>首页</div>
+        <div class="bdd-nav-title"><a href="./bdd_scerrn.html">标讯</a></div>
+        <div class="bdd-nav-title">企信</div>
+        <div class="bdd-nav-title">动态</div>
+        <div class="bdd-nav-title">应用</div>
+        <div class="bdd-nav-title bdd-nav-title-hide"><div class="search-status">
+            <div class="search-filter">
+                <a href="javascript:;"><span class="tit">作品</span><i class="icon-down"></i></a>
+                <ul class="options">
+                    <li><a href="javascript:;" data-rel="project">作品</a></li>
+                    <li><a href="javascript:;" data-rel="experience">文章</a></li>
+                    <li><a href="javascript:;" data-rel="source">源文件</a></li>
+                    <li><a href="javascript:;" data-rel="designer">设计师</a></li>
+                    <li><a href="javascript:;" data-rel="inspiration">灵感</a></li>
+                    <li><a href="javascript:;" data-rel="talk">话题</a></li>
+                    <li><a href="javascript:;" data-rel="activity">活动</a></li>
+                    <li><a href="javascript:;" data-rel="veer">素材</a></li>
+                </ul>
+            </div>
+            <div class="search-select">
+                <input type="text" class="search-val" placeholder="请输入您要查找的内容" autocomplete="off" value="" name="keywords" id="keywords">
+                <ul class="options" style="display: none;">
+                    <li><a href="javascript:;">app</a></li><li><a href="javascript:;">logo</a></li><li><a href="javascript:;">icon</a></li><li><a href="javascript:;">AE</a></li><li><a href="javascript:;">作品集</a></li>								</ul>
+            </div>
+        </div>
+            <input type="hidden" name="type" value="project" id="sType"></div>
+        <div class="bdd-nav-title bdd-nav-search"><a href="#"><img src="../../../vendor/images/nav_icon_search.png" alt=""></a></div>
+        <div class="bdd-nav-title bdd-nav-right">APP下载</div>
+        <div class="bdd-nav-title bdd-nav-right">登录/注册</div>
+    </div>
+</nav>
+<div class="bdd_login_content">
+    <div class="bdd_login_banner">
+        <div class="bdd_login_banner_left">
+            <div class="bdd_login_banner_header">
+                <div class="bdd_logoin_banner_border">
+                    <div class="bdd_logoin_banner_bor_l">登录</div>
+                    <div class="bdd_logoin_banner_bor_r">注册</div>
+                </div>
+                <div class="bdd_logoin_banner_conter">
+                    <input class="bdd_logoin_placeholder" type="text" value="输入手机号" placeholder="输入手机号">
+
+                    <div class="bdd_logoin_hr"></div>
+                    <div class="bdd_logoin_mi">
+                        <div  class="bdd_logoin_mi_l"><div style="float: left"></div><span>验证码</span></div>
+                        <div class="bdd_logoin_mi_r">发送验证码</div>
+                    </div>
+                    <div class="bdd_logoin_hr_span"></div>
+
+                    <input style="margin-top:28px;color: #ccbebe" class="bdd_logoin_placeholder" type="text" value="设置密码" placeholder="设置密码">
+                    <div style="background-color: #ccbebe" class="bdd_logoin_hr"></div>
+
+                    <input class="bdd_login_buttom" type="button" value="登录">
+                    <div class="bdd_login_pic">
+                        <div class="bdd_login_pic_left">点击确认即同意<span style="color: #cea63f">《标大大用户协议》</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bdd_login_banner_right">
+            <div class="bdd_login_banner_right_conter">
+                <div class="bdd_login_banner_right_text">大数据时代的精益求精</div>
+                <div style="margin-top: 10px;" class="bdd_login_banner_right_text">让您与数据随心沟通</div>
+                <div class="bdd_login_banner_logo">
+                    <div class="bdd_login_banner_logo_text"><img src="../../../vendor/images/login_logo.png" alt=""></div>
+                    <div class="bdd_login_banner_logo_text_br"></div>
+                    <div class="bdd_login_banner_logo_text_span">
+                        <div class="bdd_login_banner_logo_list">专注-建筑工程</div>
+                        <div style="margin-top:-2px;" class="bdd_login_banner_logo_li">招投标大数据分析</div></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    /*使用zepto实现轮播图*/
+    $(function(){
+        /*1.添加首尾两张图片*/
+        /*2.重新设置图片盒子和宽度和图片的宽度*/
+        /*3.开启定时器，实现自动轮播*/
+        /*4.添加移动端的滑动事件，实现手动轮播*/
+        /*5.添加过渡效果结束之后的监听*/
+        /*获取轮播图元素*/
+        var banner=$(".jd_banner");
+        var bannerWidth=banner.width();
+        /*获取图片盒子*/
+        var imgBox=banner.find("ul:first-of-type");
+        /*获取点标记*/
+        var indicators=banner.find("ul:eq(1)").find("li");
+        /*获取首尾两张图片*/
+        var first=imgBox.find("li:first-of-type");
+        var last=imgBox.find("li:last-of-type");
+        /*将两张图片添加到首尾位置  first.clone():将first复制一份*/
+        imgBox.append(first.clone());
+        last.clone().insertBefore(first);
+
+        /*设置图片盒子的宽度*/
+        var lis=imgBox.find("li");
+        var count=lis.length;
+        imgBox.width(count*bannerWidth);
+        /*设置li标签的宽度*/
+        lis.each(function(index,value){
+            $(lis[index]).width(bannerWidth);
+        });
+
+        /*设置默认偏移*/
+        imgBox.css("left",-bannerWidth);
+
+        /*定义图片索引*/
+        var index=1;
+
+        /*图片轮播的动画效果*/
+        var imgAnimation=function(){
+            imgBox.animate(
+                {"left":-index*bannerWidth},
+                200,
+                "ease-in-out",
+                function(){ //动画执行完毕之后的回调
+                    /*判断当前索引位置是否是最后一张或者第一张*/
+                    if(index==count-1){ //最后张
+                        index=1;
+                        /*让它瞬间偏移到索引1的位置--非过渡*/
+                        imgBox.css("left",-index*bannerWidth);
+                    }
+                    else if(index==0){
+                        index=count-2;
+                        imgBox.css("left",-index*bannerWidth);
+                    }
+                    /*设置点标记*/
+                    indicators.removeClass("active").eq(index-1).addClass("active");
+                }
+            );
+        }
+
+        /*开启定时器*/
+        var timerId=setInterval(function(){
+            index++;
+            /*开启过渡*/
+            /*设置定位*/
+            /*在zepto中直接使用animate函数来实现
+             * 1.需要添加动画效果的样式--对象
+             * 2.动画的耗时
+             * 3.动画的速度函数 animation-timing-function
+             * 4.当前动画执行完毕之后的回调*/
+            imgAnimation();
+        },2000);
+
+        /*添加滑动事件*/
+        /*左滑动*/
+        /*在谷歌浏览器的模拟器中，无法正确的触发swipe相关事件，但是可以触发tap事件*/
+        imgBox.on("swipeLeft",function(){
+            clearInterval(timerId);
+            index++;
+            imgAnimation();
+        });
+        /*右滑动*/
+        imgBox.on("swipeRight",function(){
+            clearInterval(timerId);
+            index--;
+            imgAnimation();
+        });
+    });
+</script>
+</body>
+</html>

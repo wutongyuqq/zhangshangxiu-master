@@ -1,0 +1,119 @@
+<link href="../../../vendor/css/ioinc.min.css" rel="stylesheet">
+<style>
+    .item-input-margin{
+        margin-top: 55px;
+    }
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+        font-size: 1.2em;
+
+    }
+    .title-color {
+        color: #3ca2dd;
+    }
+
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+    .bts-magin {
+
+        width: 80%;
+        margin: 60px auto 0px auto;
+    }
+    .input-group{
+        height: 1rem;
+        font-size: 1.4em;
+    }
+    .action-back{
+
+
+        height: 1rem;
+        background-repeat:no-repeat;
+    }
+
+    .text-index{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .bar-positive{
+        background-image: none;
+        border-color: transparent;
+    }
+</style>
+
+<!--
+<div class="bar bar-header bar-light bar-light-div">
+    <div  ng-click="goBackPage()" ng-touchstart="touchType=1" class="action-back" ng-touchmove="touchType=0">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+        </ion-nav-back-button>
+
+    </div>
+    <h1 class="title"><span class="title-color">搜索车辆</span></h1>
+</div>
+-->
+
+
+<div class="bar bar-header bar-light" style="height: 1.1rem;">
+
+    <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border: none;background-image: none;">
+        <div class="buttons" style="background-color: transparent;border-bottom: none;height: 1.1rem;">
+            <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img style="width: 0.8rem;height: 0.8rem;" src="../../../vendor/images/zsx/back_blue.png"></button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button" ui-sref="home">首页</button>
+        </div>
+    </ion-header-bar>
+    <h1 class="title" style="font-size: 28px;margin-top: 5px;">搜索车辆</h1>
+</div>
+
+
+
+<ion-content>
+
+    <div class="col-lg-6 bts-magin">
+        <div class="input-group">
+            <input class="input-text" style="padding:5px 10px;height:44px;font-size: 26px;border: 1px solid lightgray;margin-top: 0.2rem;" type="text"  class="form-control-a" ng-model="searchName" placeholder="姓名/卡号/ch手机号">
+      <span class="input-group-btn">
+        <button class="btn-search" ng-click="searchData(searchName)" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
+      </span>
+        </div>
+        <!-- /input-group -->
+    </div>
+
+
+   <!-- &lt;!&ndash; The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists &ndash;&gt;
+    <label class="item item-input item-input-margin">
+        <input  placeholder="输入用户名/会员卡号/手机号码" type="text" ng-model="searchName"/>
+    </label>
+    <button  class="button" ng-click="searchData(searchName)">搜索</button>-->
+    <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+        <ion-item ng-repeat="item in carListData"
+                  item="item" ng-click="toHomePage(item)"
+                  class="item-remove-animate">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <div><span>车牌:</span><span>{{item.mc}}</span></div>
+                    <div><span>车主:</span><span>{{item.cz}}</span></div>
+                    <div><span>手机号:</span><span>{{item.mobile}}</span></div>
+                    <div><span>车牌:</span><span>{{item.mc}}</span></div>
+                    <div><span>车型:</span><span>{{item.cx}}</span></div>
+                </div>
+            </div>
+            <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

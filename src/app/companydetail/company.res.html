@@ -1,0 +1,416 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .item-input-a {
+        width: 90%;
+    }
+
+    .bts-magin {
+
+        width: 80%;
+        margin: 60px auto 0px auto;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    .form-control-a {
+        width: 95%;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .input-label-a {
+        width: 30%;
+    }
+
+    .input-left-div {
+        padding-left: 1.3rem;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        margin-top: 0.55rem;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: -3px;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+
+        text-align: center;
+
+        border: none;
+    }
+
+    .back-line-red {
+        width: 100%;
+        height: 3px;
+        margin-top: 20px;
+        background-color: #ff9db4;
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .btn_inline {
+        width: 100%;
+    }
+
+    .btn_width_div {
+        width: 100%;
+        height: 2.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn_gz_left {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_jc_right {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_a {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .btn_b {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .span_card {
+        position: relative;
+        text-decoration: none;
+        color: #1296db;
+    }
+
+    .span_card_list {
+        position: fixed;
+        left: 0rem;
+        top: 5.5rem;
+        z-index: 1009;
+        width: 10.8rem;
+    }
+
+    .home_ul {
+
+        width: 10.8rem;
+        overflow: auto;
+        padding: 0.5rem;
+        background-color: #eeeeee;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .home_li {
+        float: left;
+        margin-top: 0.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .home_li_a {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: white;
+        text-align: center;
+        padding: 0.3rem;
+        background-color: #89c997;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+
+    .modal-header {
+        background-color: #333333;
+        color: white;
+        border: none;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .btn-primary {
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color: #89c997;
+    }
+
+    .btn-warning {
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color: #89c997;
+        margin-left: 1rem;
+    }
+
+    .modal-footer {
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+
+    .modal-content {
+        border: none;
+    }
+
+    .card_ul {
+        position: fixed;
+        top: 5.2rem;
+        background-color: #f4f1f1;
+        width: 5rem;
+        left: 3.3rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        z-index: 1010;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-height: 7rem;
+        color: #7d7e7d;
+        overflow: scroll;
+
+    }
+
+    .choose_statu {
+
+    }
+
+    .red-back {
+        width: 100%;
+        background-color: #fdd6d6;
+        padding: 0 0.5rem;
+        line-height: 1.1rem;
+        height: 1.1rem;
+    }
+
+    .select-statu {
+        width: 4rem;
+        height: 0.8rem;
+        border: none;
+
+    }
+
+    .select-statu > option {
+        border: none;
+    }
+
+    .select-time {
+        width: 4rem;
+        height: 0.8rem;
+        margin-left: 1.6rem;
+        color: #1296db;
+        font-size: 1.2em;;
+
+    }
+
+    .pg_div_header {
+        height: 1.2rem;
+        line-height: 1.2rem;
+        display: block;
+        background-color: #e1f1ff;
+        padding: 0 1rem;
+    }
+
+    .float_left {
+        float: left;
+    }
+
+    .float_right {
+        float: right;
+    }
+
+    .car_img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .pg_div_content {
+        background-color: #ece8e8;
+        height: 3rem;
+        padding: 0.3rem 0.6rem;
+        overflow: hidden;
+
+    }
+
+    .text-aign-left {
+        text-align: left;
+        margin-left: 1rem;
+        color: #333333;
+        font-weight: 500;
+
+    }
+
+    .text-left-b {
+        height: 0.6rem;
+    }
+
+    .pg-line {
+        width: 100%;
+        margin-top: 0.05rem;
+    }
+
+    .pg_div_header {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .scroll-list {
+        overflow: scroll;
+    }
+    .up-load-part{
+        position: fixed;
+        top: 0;
+        background-color: white;
+    }
+    .scroll-list{
+        margin-top:3rem;
+    }
+
+</style>
+
+
+    <div class="up-load-part">
+        <div class="bar bar-header bar-light">
+
+            <ion-header-bar align-title="left" class="bar-positive"
+                            style="background-color: transparent;border-bottom: 1px solid blue">
+                <div class="buttons" style="background-color: transparent">
+                    <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;">
+                        <img src="../../../vendor/images/zsx/back_blue.png"></button>
+                </div>
+                <h1 class="title"></h1>
+                <div class="buttons">
+                    <button class="button" ui-sref="home">首页</button>
+                </div>
+            </ion-header-bar>
+            <h1 class="title">在厂车辆</h1>
+        </div>
+
+
+        <div class="col-lg-6 bts-magin">
+            <div class="input-group">
+                <input type="text" class="form-control-a" placeholder="输入车牌" ng-model="cardName">
+            <span class="input-group-btn">
+        <button class="btn-search" type="button" ng-click="searchCar(cardName)"><img
+                src="../../../vendor/images/zsx/search_white.png"></button>
+      </span>
+            </div>
+            <!-- /input-group -->
+        </div>
+        <!-- /.col-lg-6 -->
+        <div class="red-back">
+            <select class="text_inline select-statu" ng-model="chooseName" ng-change="queryData(chooseName)">
+                <option>估价中</option>
+                <option>待派工</option>
+                <option>待领工</option>
+                <option>修理中</option>
+                <option>待结算</option>
+                <option>待质检</option>
+                <option>待出厂</option>
+            </select>
+
+
+            <div class="text_inline select-time" ng-click="changeByTime(orderBySx)">
+                {{orderBySx?'按时间升序排列':'按时间降序排列'}}
+            </div>
+        </div>
+    </div>
+    <div class="scroll-list">
+
+
+        <div class="pg-line" ng-repeat="item in dataArray" ng-click="toGongdanPage(item)">
+            <div class="pg_div_header">
+                <div class="float_left">车牌：{{item.cp}}</div>
+                <div class="float_right">状态：{{item.states}}</div>
+            </div>
+            <div class="pg_div_content">
+                <div class="float_left"><img class="car_img" src="../../../vendor/images/zsx/car_img.jpg"/></div>
+                <div class="float_left text-aign-left">
+                    <div class="text-left-b">车架号：{{item.cjhm}}</div>
+                    <div class="text-left-b">进厂时间：{{item.jc_date}}</div>
+                    <div class="text-left-b">接待人员：{{item.jcr}}</div>
+                    <div class="text-left-b">车型：{{item.cx}}</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+

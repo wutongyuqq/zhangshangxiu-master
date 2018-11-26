@@ -1,0 +1,170 @@
+/*个人中心*/
+body{
+    background-color: #F8F8F8;
+}
+.bdd_perso_nav_header{
+    width: 1200px;
+    height:1200px;
+    margin: 0 auto;
+
+}
+.bdd_perso_nav_news{
+    width: 1200px;
+    height: 340px;
+    background-color: white;
+    margin:200px auto 0 auto;
+
+}
+.bdd_perso_left{
+    width: 110px;
+    height: 100px;
+    float: left;
+    background-color:#F8F8F8;
+    margin:50px 0 0 50px;
+}
+.bdd_perso_nav_head{
+    width: 1200px;
+    height: 800px;
+    overflow: hidden;
+}
+.bdd_perso_right{
+    margin-top:53px;
+    margin-left:200px;
+}
+.bdd_perso_color{
+    font-size: 18px;
+    color: #4d3a3a;
+    font-weight: 700;
+}
+.bdd_perso_tel{
+    font-size: 16px;
+    color: #4d3a3a;
+    margin-top:7px;
+}
+.bdd_perso_span{
+    margin-top:20px;
+}
+/*活跃度*/
+.bdd_vitality{
+    width:1200px;
+    height:100px;
+    margin: 0 auto;
+    margin-top:100px;
+
+}
+.bdd_vitality_list{
+    width:300px;
+    height: 100px;
+    float: left;
+    text-align: center;
+}
+.bdd_vitality_size{
+    font-size: 24px;
+    color: #acb76c;
+}
+.bdd_vitality_si{
+    font-size: 16px;
+    color: #4d3a3a;
+    margin-top:10px;
+}
+/*资料*/
+.bdd_vitality_zi{
+    width: 1200px;
+    height: 550px;
+    margin-top:80px;
+}
+.bdd_vitality_left{
+    float: left;
+    width: 280px;
+    height: 550px;
+    background-color: white;
+}
+.bdd_vitality_right{
+    float: left;
+    width: 900px;
+    height: 550px;
+    margin-left:19px;
+    background-color: white;
+    overflow: hidden;
+}
+.bdd_vita_list{
+    width: 280px;
+    height: 60px;
+    text-align: center;
+    padding-top:20px;
+    font-size: 18px;
+    color: #ffffff;
+}
+.bdd_vitality_right_header{
+    width: 900px;
+    height: 80px;
+}
+.bdd_vita_span{
+    width:65px;
+    height:3px;
+    background-color: #cea63f;
+    margin-top:15px;
+}
+.bdd_vitality_right_hrader_li{
+    font-size: 16px;
+    color: #4d3a3a;
+}
+.bdd_vita_top{
+    float: left;
+    padding:20px 0 0 50px;
+}
+.bdd_vita_right{
+    float: left;
+    padding:20px 0 0 40px;
+}
+.bdd_vitality_conter{
+    width:900px;
+    height:200px;
+
+}
+.bdd_vitality_conter_span {
+    margin: 0 auto;
+}
+.bdd_vita_span_list{
+    width: 95px;
+}
+/*下方微信 扣扣*/
+.bdd_vita_side{
+    width: 900px;
+    height: 300px;
+
+}
+.bdd_vita_footer_title_text{
+    width: 100px;
+    height: 30px;
+    background-color: #cea63f;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    padding-top:3px;
+    float: left;
+    margin-left:80px;
+
+}
+.bdd_vita_side_weixin{
+    font-size: 16px;
+    color: #4d3a3a;
+    float: left;
+
+}
+.bdd_vita_img{
+    vertical-align: middle;
+    margin-left:39px;
+}
+.bdd_vita_side_header{
+    width: 900px;
+    height: 50px;
+    margin-top:50PX;
+}
+.bdd_vitality_hr{
+    border-bottom: 1px solid #ccc;
+    opacity: 0.5;
+    padding-top:60px;
+
+}

@@ -1,0 +1,134 @@
+<style>
+
+    body{
+        background: url("../../../vendor/images/zsx/login_back.png") no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+    }
+    .login_back_gray{
+        width: 10rem;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color:rgba(255,253,253,0.26);
+        margin-top: 5.8rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    }
+    .login-color{
+        color: #03f44d;
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+    .login-input_a{
+        background-color:rgba(255,253,253,0.5);
+        width: 95%;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        color:white;
+        font-size:0.8em;
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+    }
+    .login-div{
+        margin-left: 0.5rem;
+        padding-top: 0.5rem;
+
+    }
+    .btn-login{
+        width: 8rem;
+    }
+    .btn-login-div{
+        margin-top: 0.7rem;
+        width: 100%;
+        text-align: center;
+
+
+    }
+    .btn-login{
+        background-color: #32b16c;
+        color: white;
+        font-weight: 500;
+        font-size: 1.5em;
+        border: none;
+    }
+    .btn-login:hover{
+        color: white;
+        border: none;
+    }
+
+    .login-color-div{
+        margin-top: 0.5rem;
+    }
+    .text-inline{
+        display: inline-block;
+        font-size: 1.4em;
+    }
+    .login_back_img{
+        font-size: 1.4em;
+    }
+    input[type=text]{
+        display:inline-block;
+        height: auto;
+        padding: 0.1rem 0.2rem;
+        font-size: 1.2em;
+    }
+
+    input[type=password]{
+        display:inline-block;
+        height: auto;
+        padding: 0.1rem 0.2rem;
+        font-size: 1.2em;
+        color:#ffffff
+    }
+
+</style>
+
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+<div class="login_back_img" ng-controller="LoginCtrl">
+    <div class="login_back_gray">
+        <div class="login-div">
+        <div class="login-color-div">
+            <div class="login-color"><!--<div class="text-inline">厂&#12288;名：</div>-->
+                <input type="text" ng-model="user.factoryName" placeholder="修理厂名称/分店名称" class="text-inline login-input_a login_factory_name"/></div>
+        </div>
+        <div class="login-color-div">
+            <div class="login-color"><!--<div class="text-inline">用户名：</div>-->
+                <input  type="text"  ng-model="user.userName"  placeholder="输入用户名"  class="text-inline login-input_a login_username"/></div>
+
+        </div>
+        <div class="login-color-div">
+            <div class="login-color"><!--<div class="text-inline">密&#12288;码：</div>-->
+                <input type="password" ng-model="user.password"   placeholder="输入密码"  class="text-inline login-input_a login_password"/></div>
+        </div>
+            <div class="btn-login-div">
+            <button type="button" class="btn btn-login" ng-click="checkDate(user)" style="font-size: 1.4em;">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    function isIosApp(){
+        var u = navigator.userAgent;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        return isiOS;
+    }
+    console.log("333333");
+    if(isIosApp()) {
+        var inputArr = document.getElementsByTagName("input");
+        if(inputArr!=null&&inputArr.length>0){
+            for(var i=0;i<inputArr.length;i++){
+                var elem = inputArr[i];
+                elem.style.fontSize = 0.6+"rem";
+                elem.style.padding = "0px 10px";
+                elem.style.lineHeight = "1.3rem";
+            }
+        }
+    }
+</script>

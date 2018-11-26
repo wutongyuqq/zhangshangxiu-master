@@ -1,0 +1,716 @@
+<style>
+    @keyframes action_translateY {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    body{
+        background-color:#f8f8f8;
+    }
+    .jd_layout{
+        width: 1200px;
+        /*最大宽度*/
+        max-width:1200px;
+        /*最小宽度*/
+        min-width: 320px;
+        margin:0 auto;
+        background-color: #eee;
+    }
+    /*轮播图样式*/
+    .jd_banner{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    /*.jd_bannerImg{
+        width:800%;
+    }*/
+    .jd_bannerImg{
+        width:800%;
+        position: relative;
+    }
+
+    .jd_bannerImg > li{
+        width:12.5%;
+        float: left;
+    }
+    .jd_bannerImg > li img{
+        display: block;
+        width: 100%;
+    }
+    .jd_bannerIndicator{
+        width: 128px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        transform: translateX(-50%);
+    }
+    .jd_bannerIndicator > li{
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        border: 1px solid #fff;
+        float: left;
+        margin-left:10px;
+    }
+    .jd_bannerIndicator > li:first-of-type{
+        margin-left:0;
+    }
+    .jd_bannerIndicator > li.active{
+        background-color: #fff;
+    }
+
+    /*导航块样式*/
+    .jd_nav{
+        width: 100%;
+        padding:30px 0;
+        background-color: #fff;
+        margin-top:20px;
+        height: 120px;
+    }
+    .jd_nav li{
+        width: 25%;
+        float: left;
+        text-align: center;
+        margin-top:5px;
+        overflow: hidden;
+    }
+    .jd_nav li img{
+        width: 50px;
+    }
+    .jd_nav li p{
+        line-height:30px;
+    }
+    .bdd_notice{
+        font-size: 16px;
+        color: #cea63f;
+        font-family: Arial;
+    }
+    .bdd_notice_title_l{
+        font-size:32px;
+        color: #e6b947;
+        font-weight: 700;
+        margin-top:-2px;
+        font-family: Arial;
+    }
+    .bdd_notice_title_r{
+        font-size: 12px;
+        color: #e6b947;
+        font-family: Arial;
+    }
+
+    .bdd_win_left{
+        width:850px;
+        height:2200px;
+        float: left;
+    }
+    .bdd_win_right{
+        width:350px;
+        float: left;
+        padding-left: 56px;
+        margin-bottom: 200PX;
+    }
+
+    .bdd_data_conter{
+        width: 304px;
+        height: 235px;
+        margin-top:5px;
+        background-color:white;
+    }
+
+    .bdd_win_header{
+        width:900px;
+        height:40px;
+        margin-top: 10px;
+    }
+    .bdd_win_conter{
+        width: 900px;
+        height: 166px;
+        padding: 40px 0px 20px 20px;
+        margin-top:20px;
+        background-color: white;
+    }
+    .bdd_data_header{
+        width:290px;
+        height: 110px;
+        margin-top:90px;
+        background-image: url("../../../vendor/images/homepage_bg_cal.png");
+    }
+
+    .bdd_infor{
+        width: 280px;
+        height:850px;
+        margin-top:50px;
+        margin-left:20px;
+    }
+    .bdd_use{
+        margin-top:50px;
+        width: 280px;
+        height:420px;
+        background-color:white;
+        margin-left:20px;
+
+    }
+    /*招标公告*/
+
+    .bdd_win_header_left{
+        float: left;
+        line-height:9px;
+        padding-left:20px;
+        font-size: 18px;
+        color: #ccbebe;
+        font-family: Arial;
+
+    }
+    .bdd_win_header_right{
+        float: right;
+        font-size: 16px;
+        color: #ccbebe;
+        margin-top:-17px;
+        overflow: hidden;
+        font-family: Arial;
+    }
+    .bdd_icon{
+        width:8px;
+        height:8px;
+        background-color:#ccc;
+        margin-top:40px;
+    }
+    .bdd_header_lit{
+        float: left;
+        padding: 0 30px;
+        margin-top:-15px;
+        font-size: 18px;
+        color:#4d3a3a;
+        overflow: hidden;
+        font-family: Arial;
+    }
+    .bdd_header_a {
+        padding-left:50px;
+
+    }
+    .bdd_text_b{
+        padding: 20px;
+    }
+    .bdd_text_z{
+        width: 900px;
+        font-size: 18px;
+        color: #2e2e2e;
+        height: 33px;
+        font-family: Arial;
+        margin-top:-25px;
+    }
+    .bdd_text_y{
+        padding-top:15px;
+        font-size: 14px;
+        color: #ccbebe;
+        height: 64px;
+        font-family: Arial;
+    }
+    .bdd_text_p{
+        width: 800px;
+        height: 30px;
+        font-size: 14px;
+        color: #ccbebe;
+        margin-top:-22px;
+
+    }
+    .bdd_text_invite{
+        width:80px;
+        height: 25px;
+        font-size: 14px;
+        font-family: Arial;
+        color: #ef873a;
+        background-color: #fdefe3;
+        text-align: center;
+        padding-top:4px;
+        float: left;
+
+    }
+    .bdd_text_pading{
+        margin-left:10px;
+        background-color: #e3e6f7;
+        color: #3676f0;
+    }
+    .bdd_content{
+        width:1200px;
+        max-width: 1200px;
+        min-width: 360px;
+        height:200px;
+        margin: 0 auto;
+
+    }
+    .bdd_content_left{
+        float: left;
+        width:33%;
+        display: block;
+        height: 200px;
+        padding-left:141px;
+        overflow: hidden;
+    }
+    .bdd_content_left_logo{
+        vertical-align: middle;
+        margin: 100px 5px;
+    }
+    .bdd_win_conter_last{
+        padding-bottom: 20px;
+    }
+    .bdd_header_color{
+        color: #cea63f;
+    }
+    /*日期样式*/
+    .calendar-week .item, .calendar-date .item{
+        width: 40px;
+        height: 30px;
+    }
+    /*最新资讯更多*/
+    .bdd_infor_title{
+        float: left;
+        padding-left:26px;
+        font-size: 18px;
+        color: #4d3a3a;
+        margin-top: -10px;
+        font-family: Arial;
+    }
+    .bdd_infor_rihgt{
+        float: left;
+        padding-left:224px;
+        font-size: 16px;
+        color: #ccbebe;
+        margin-top: -22px;
+        overflow: hidden;
+    }
+    .bdd_infor_dv{
+        width:6px;
+        height:12px;
+        background-color:#cea63f;
+        position: relative;
+        top:8px;
+        left:12px;
+    }
+    .bdd_infor_ul{
+        background-color: white;
+    }
+    .bdd_infor_mation_border{
+        width: 290px;
+        height: 1000px;
+        margin-top:20px;
+    }
+    .bdd_infor_mation{
+        width:280px;
+        height:100px;
+        overflow: hidden;
+        float: right;
+    }
+    .bdd_infor_maleft{
+        width: 60px;
+        height: 60px;
+        background-color:#f9f2f4;
+        float: left;
+        margin-top:34px;
+
+    }
+    .bdd_infor_maright{
+        width: 215px;
+        height: 60px;
+        float: left;
+        padding-left: 10px;
+        font-family: Arial;
+
+    }
+    .bdd_infor_maright_title{
+        font-size: 14px;
+        color: #4d3a3a;
+        margin-top: 30px;
+        font-family: Arial;
+    }
+    .bdd_infor_maright_news{
+        font-size: 14px;
+        color:#ccbebe;
+        margin-top:10px;
+        font-family: Arial;
+    }
+    .bdd_infor_maright_new{
+        font-size: 14px;
+        color:#ccbebe;
+        font-family: Arial;
+    }
+    .bdd_infor_bid{
+        width: 280px;
+        height: 125px;
+        border-radius:10px ;
+        margin: 40px auto;
+        background-color: #F7C9AC;
+        color: white;
+        font-size: 14px;
+    }
+    .bdd_bid_p{
+        text-align: center;
+        padding-top:45px;
+    }
+    .bdd_bid_w{
+        margin-top: -39px;
+    }
+    /*底部*/
+    .bdd_footer_left{
+        height:150px;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+        vertical-align: middle;
+        background-color:#212121;
+
+
+    }
+    .bdd_footer_content {
+        float: left;
+        height:100px;
+        font-size: 16px;
+        color: #ccbebe;
+        line-height: 150px;
+        margin: 0 auto;
+
+    }
+    .bdd_footer_logo{
+        vertical-align: middle;
+    }
+    .bdd_footer_megges{
+        padding-left: 80px;
+    }
+    .bdd_footer_side{
+        padding-left: 65px;
+    }
+    .bdd_footer_aido{
+        padding-left:213px;
+    }
+    .bdd_footer_news{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .bdd_text_riqi{
+        font-size: 14px;
+        color:#ccbebe;
+        float: right;
+        margin-right:10px;
+    }
+
+
+</style>
+
+<div class="jd_layout" style="margin-top: 130px;">
+    <!--轮播图-->
+    <div class="jd_banner">
+        <!--图片-->
+        <ul class="jd_bannerImg clearfix">
+            <li>
+                <a ng-click="$ctrl.cancelAreaB()" href="javascript:;">
+                    <img src="../../../vendor/images/banner_1.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <!--点标记-->
+        <ul class="jd_bannerIndicator">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <p>{{slide.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+
+
+    </div>
+    <!--导航块-->
+    <div class="jd_nav">
+        <ul class="clearfix">
+            <li>
+                <a href="javascript:;">
+                    <div class="bdd_notice_title_l">4000<span class="bdd_notice_title_r">条</span></div>
+                    <p class="bdd_notice">进30天收入公告</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="bdd_notice_title_l">4000<span class="bdd_notice_title_r">条</span></div>
+                    <p class="bdd_notice">信息来自企业网站</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="bdd_notice_title_l">4000<span class="bdd_notice_title_r">条</span></div>
+                    <p class="bdd_notice">信息来自政府网站</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="bdd_notice_title_l">4000<span class="bdd_notice_title_r">条</span></div>
+                    <p class="bdd_notice">招投标每天收录</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--中标公告-->
+    <div class="bdd_win">
+        <div class="bdd_win_left">
+            <div class="bdd_win_header">
+                <div class="bdd_win_header_left">招标公告</div>
+                <div class="bdd_icon"></div>
+                <div class="bdd_header_lit  bdd_header_color">全部</div>
+                <div class="bdd_header_lit">监理</div>
+                <div class="bdd_header_lit">施工</div>
+                <div class="bdd_header_lit">设计</div>
+                <div class="bdd_header_lit">监理</div>
+                <div class="bdd_header_lit">监理</div>
+
+                <div class="bdd_win_header_right">更多&nbsp;></div>
+            </div>
+            <div class="bdd_win_conter" style="margin-top: 0px">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_header">
+                <div class="bdd_win_header_left">招标公告</div>
+                <div class="bdd_icon"></div>
+                <div class="bdd_header_lit">全部</div>
+                <div class="bdd_header_lit">监理</div>
+                <div class="bdd_header_lit">施工</div>
+                <div class="bdd_header_lit">设计</div>
+                <div class="bdd_header_lit">监理</div>
+                <div class="bdd_header_lit">监理</div>
+
+                <div class="bdd_win_header_right">更多&nbsp;&nbsp;></div>
+            </div>
+            <div class="bdd_win_conter">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </div>
+            <div class="bdd_win_conter">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter bdd_win_conter_last">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter bdd_win_conter_last">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter bdd_win_conter_last">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="bdd_win_conter bdd_win_conter_last">
+                <div class="bdd_text_z">湖南省沩水流域综合治理（宁乡段）工程施工监理第一标段（第二次）招标公告</div>
+                <div class="bdd_text_y">资质要求：机电安装工程施工总承包三级及以上</div>
+                <div class="bdd_text_p">评标办法：综合评估法Ⅰ</div>
+                <div class="bdd_text_invite">招标公告</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="bdd_text_invite bdd_text_pading">中标公告</div>
+                <div class="bdd_text_riqi">2018-01-01</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <!--<div class="bdd_win_header">企业信息</div>-->
+            <!--<div class="bdd_inc">-->
+            <!--<div class="bdd_inc_list_o">-->
+            <!--<div class="bdd_inc_r">湖南耀邦建设有限公司</div>-->
+            <!--<div class="bdd_inc_c">历史中标数据：100</div>-->
+            <!--<div class="bdd_inc_l">擅长领域：建筑工程</div>-->
+            <!--<div class="bdd_inc_l">历史中标最低金额：1000万</div>-->
+            <!--</div>-->
+            <!--<div class="bdd_inc_list_t">-->
+            <!--<div class="bdd_inc_r">湖南耀邦建设有限公司</div>-->
+            <!--<div class="bdd_inc_c">历史中标数据：100</div>-->
+            <!--<div class="bdd_inc_l">擅长领域：建筑工程</div>-->
+            <!--<div class="bdd_inc_l">历史中标最低金额：1000万</div>-->
+            <!--</div>-->
+            <!--<div class="bdd_inc_list_f">-->
+            <!--<div class="bdd_inc_r">湖南耀邦建设有限公司</div>-->
+            <!--<div class="bdd_inc_c">历史中标数据：100</div>-->
+            <!--<div class="bdd_inc_l">擅长领域：建筑工程</div>-->
+            <!--<div class="bdd_inc_l">历史中标最低金额：1000万</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div class="bdd_win_right">
+        <div class="bdd_data_header">
+            <div>
+                <div id="today-txt"></div>
+            </div>
+        </div>
+        <div class="calendar bdd_data_conter" id="calendar" style="display: block;"></div>
+
+
+        <div class="bdd_infor">
+            <div class="bdd_infor_ul">
+                <div class="bdd_infor_dv"></div>
+                <div class="bdd_infor_title">最新资讯</div>
+                <div class="bdd_infor_rihgt">更多></div>
+                <div class="bdd_infor_mation_border">
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                    <div class="bdd_infor_mation">
+                        <div class="bdd_infor_maleft"></div>
+                        <div class="bdd_infor_maright">
+                            <div class="bdd_infor_maright_title">2015-2016年招标情况</div>
+                            <div class="bdd_infor_maright_news">湖南省沩水流域综合治</div>
+                            <div class="bdd_infor_maright_new">工程施工监理第一标段（第二次</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bdd_use">
+            <div class="bdd_infor_ul">
+                <div class="bdd_infor_dv"></div>
+                <div class="bdd_infor_title">常用应用</div>
+                <div class="bdd_infor_rihgt">更多></div>
+                <div class="bdd_infor_bid">
+                    <div class="bdd_bid_p">评标计算</div>
+                </div>
+                <div class="bdd_infor_bid">
+                    <div class="bdd_bid_p bdd_bid_w">四库一平台</div>
+                </div>
+                <div class="bdd_infor_bid">
+                    <div class="bdd_bid_p bdd_bid_w">建筑施工特许证查询</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="bdd_content">
+    <div class="bdd_content_left"><img class="bdd_content_left_logo" src="../../../vendor/images/homepage_icon_gou.png" alt=""><span>权威数据源</span>
+    </div>
+    <div class="bdd_content_left"><img class="bdd_content_left_logo" src="../../../vendor/images/homepage_icon_gou.png" alt=""><span>海量且精准</span>
+    </div>
+    <div class="bdd_content_left"><img class="bdd_content_left_logo" src="../../../vendor/images/homepage_icon_gou.png" alt=""><span>智能且及时</span>
+    </div>
+</div>

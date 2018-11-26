@@ -1,0 +1,538 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .text-inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 28%;
+        height: 100%;
+        line-height: 1rem;
+        border-top-left-radius: 0.1rem;
+        border-top-right-radius: 0.1rem;
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: 0.1rem;
+        width: 28%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+        border-top-left-radius: 0.1rem;
+        border-top-right-radius: 0.1rem;
+        text-align: center;
+
+        border: none;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        margin-top: 52px;
+        text-align: center;
+        border-bottom: 2px solid #ff9db4;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .form-control-a {
+        width: 95%;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .bts-magin {
+
+        width: 60%;
+        margin: 10px auto 0px auto;
+        text-align: center;
+
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .confirm-nav-btn {
+        width: 3rem;
+        background-color: #89c997;
+        padding: 0.3rem 0.4rem;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+        font-size: 1.4em;
+    }
+
+    .confirm-a {
+        vertical-align: middle;
+    }
+
+    .confirm-div {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        position: fixed;
+        padding-bottom: 0.5rem;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background-color: white;
+        z-index: 1008;
+    }
+
+    .wb_btn_img {
+        width: 0.6rem;
+        height: 0.6rem;
+
+    }
+
+    .wb_second_line {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .wb_second_line_qw {
+        margin-left: 1rem;
+    }
+
+    .content-list-div {
+        width: 100%;
+    }
+
+    .content-list-div-a {
+        width: 90%;
+        text-align: left;
+        padding-left: 1rem;
+        background-color: #ebccd1;
+
+        margin: 2px auto;
+        color: #333333;
+        font-weight: 600;
+    }
+
+    .content-list-div-b {
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+        background-color: #eeeeee;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        color: #333333;
+        font-weight: 600;
+    }
+
+    .content-list-div-table {
+
+        width: 100%;
+        margin-top: 2px;
+
+    }
+
+    .img-minus {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .tb_content_a {
+        background-color: #7ff7fb;
+        height: 1rem;
+    }
+
+    .tb_content_b {
+
+        background-color: #eeeeee;
+        height: 2rem;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+
+    .tb_content_c {
+        padding-top: 0.45rem;
+        height: 2rem;
+        background-color: #fdfcfd;
+        vertical-align: middle;
+    }
+
+    .tb_content_b > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_c > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_a > td {
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    .tb_content_td_a {
+        padding-left: 0.2rem;
+    }
+
+    .select-all {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .serch_resualt_tip {
+        width: 100%;
+        text-align: center;
+        color: #3ca2dd;
+    }
+
+    .select-res-small {
+        font-size: 10px;
+        margin-left: 0.3rem;
+    }
+
+    .select-all-res {
+        margin-left: 0.3rem;
+    }
+
+    .position-left {
+        text-align: left;
+        margin-left: 0.5rem;
+    }
+
+    .position-left > div {
+        line-height: 0.7rem;
+        height: 0.7rem;
+        color: #333333;
+    }
+
+    .content-list-div-a-res {
+        margin-top: 0.2rem;
+    }
+    .temp-pj-white-back{
+
+        background-color: white;
+        border: none;
+        height: 0.6rem;
+        width: 7rem;
+    }
+    .content-list-div-tmp{
+        text-align: center;
+
+    }
+    .temp-pj-div{
+        width: 90%;
+        background-color:#ebccd1;
+        padding-top: 0.3rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        margin: 0.5rem auto;
+        border-radius: 0.3rem;
+    }
+    .text-pj-line{
+        margin-top: 0.5rem;
+    }
+    .list-margin{
+        margin-top: 0.2rem;
+    }
+    .item{
+        border-width: 0px;
+    }
+    label{
+        max-width: none;
+    }
+    .action-back{
+
+        width: 1rem;
+        height: 0.5rem;
+        background-image: url("../../../vendor/images/zsx/back_blue.png");
+        background-repeat:no-repeat;
+    }
+    .img-gray{
+        background-image: url("../../../vendor/images/zsx/back_gray.png");
+    }
+</style>
+
+<div>
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button" ui-sref="home">首页</button>
+            </div>
+        </ion-header-bar>
+        <h1 class="title">配件选择</h1>
+    </div>
+
+    <div class="home_tab_div">
+        <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(0)">所有配件
+        </div>
+        <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(1)">临时配件
+        </div>
+        <div class="text_inline home_tab_div_right  {{showSelectMore==2?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(2)">自带配件
+        </div>
+
+    </div>
+
+
+    <!-- 所有配件-->
+
+    <div class="content-list-div" ng-show="showSelectMore==0">
+
+        <div class="col-lg-6 bts-magin">
+            <div class="input-group">
+                <input type="text" class="form-control-a" ng-model="pjName" placeholder="输入配件名称">
+                <span class="input-group-btn">
+        <button class="btn-search" type="button" ng-click="searchPjName(pjName)"><img src="../../../vendor/images/zsx/search_white.png"></button>
+      </span>
+            </div>
+            <!-- /input-group -->
+        </div>
+        <!-- /.col-lg-6 -->
+
+
+        <div class="serch_resualt_tip">
+            <div class="text-inline select-all-div">
+               <!-- <img class="text-inline select-all" src="../../../vendor/images/zsx/select-blue-true.png">
+                <div class="text-inline">全选/取消全选</div>-->
+                <div class="text-inline">
+                    <ion-checkbox ng-click="checkPjkAll()" ng-model="checkAll" ng-checked="checkAll">全选/取消全选</ion-checkbox>
+                </div>
+            </div>
+
+            <div class="text-inline select-all-res">
+                <div class="text-inline">
+                    <ion-checkbox ng-model="selectFromRes" ng-checked="selectFromRes">在结果中搜索</ion-checkbox>
+                </div>
+            </div>
+
+
+            <div class="list list-margin">
+
+                <ion-checkbox class="content-list-div-a" ng-repeat="item in dataList track by $index"
+                              ng-model="item.checked"
+                              ng-checked="item.checked" ng-click="checkPjkItem($index)">
+                    <div class="text_inline content-list-div-a">
+
+                        <div class="text-inline position-left">
+                            <div>名称：{{item.pjmc}}</div>
+                            <div>仓库：{{item.cd}}号仓</div>
+                            <div>销售价：￥{{item.xsj}}</div>
+                        </div>
+                        <div class="text-inline position-left">
+                            <div>规格：{{item.cd}}</div>
+                            <div>库存量：{{item.kcl}}</div>
+                            <div>配件型号：{{item.cx}}</div>
+                        </div>
+
+
+                    </div>
+
+                </ion-checkbox>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- 临时配件-->
+    <div class="content-list-div content-list-div-tmp" ng-show="showSelectMore==1">
+        <div class="temp-pj-div">
+            <div class="text-pj-line">
+                <div class="text-inline">名称：</div>
+                <input   ng-model="oData.pjmc"  class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">进价：</div>
+                <input   ng-model="oData.cb" class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">销价：</div>
+                <input ng-model="oData.ssj" class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">数量：</div>
+                <input  ng-model="oData.sl"  class="text-inline temp-pj-white-back"/>
+            </div>
+        </div>
+
+
+
+        <div class="temp-pj-div" ng-repeat="item in tempAddDataList">
+            <div class="text-pj-line">
+                <div class="text-inline">名称：</div>
+                <input ng-model="item.pjmc" class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">进价：</div>
+                <input  ng-model="item.cb"  class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">销价：</div>
+                <input  ng-model="item.ssj"  class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">数量：</div>
+                <input  ng-model="item.sl"  class="text-inline temp-pj-white-back"/>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 自带配件-->
+    <div class="content-list-div content-list-div-tmp" ng-show="showSelectMore==2">
+        <div class="temp-pj-div">
+            <div class="text-pj-line">
+                <div class="text-inline">名称：</div>
+                <input  ng-model="zdPjData.pjmc" class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">数量：</div>
+                <input  ng-model="zdPjData.sl" class="text-inline temp-pj-white-back"/>
+            </div>
+        </div>
+
+        <div class="temp-pj-div" ng-repeat="item in zdPeijianList">
+            <div class="text-pj-line">
+                <div class="text-inline">名称：</div>
+                <input ng-model="item.pjmc" class="text-inline temp-pj-white-back"/>
+            </div>
+            <div class="text-pj-line">
+                <div class="text-inline">数量：</div>
+                <input  ng-model="item.sl" class="text-inline temp-pj-white-back"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="confirm-div" ng-show="showSelectMore==0">
+        <div class="text-inline confirm-a confirm-nav-btn">
+            新增配件
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn" ng-click="makeSurePj()">
+            确定
+        </div>
+
+    </div>
+
+
+
+    <div class="confirm-div" ng-show="showSelectMore==1">
+        <div class="text-inline confirm-a confirm-nav-btn" ng-click="addTempPj()">
+            再加一个
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn"  ng-click="makeSureTempPei()">
+            确定
+        </div>
+
+    </div>
+
+
+
+
+    <div class="confirm-div" ng-show="showSelectMore==2">
+        <div class="text-inline confirm-a confirm-nav-btn"  ng-click="addZdPj()">
+            再加一个
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn"   ng-click="makeSureZdPei()">
+            确定
+        </div>
+
+    </div>
+
+
+</div>

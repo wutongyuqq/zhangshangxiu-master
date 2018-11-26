@@ -1,0 +1,516 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 1.2em;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+    input[type=text] {
+        font-size: 1.3em;
+    }
+    input[type=number] {
+        font-size: 1.3em;
+    }
+    button {
+        font-size: 1.4em;
+    }
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+    button {
+        font-size: 1.4em;
+    }
+    .tabs {
+        height: 1.4rem;
+        font-size: 1.3em;
+    }
+    .content-list-div-table-a {
+        width: 100%;
+        background-color: #eeeeee;
+        text-align: left;
+
+    }
+    .content-list-div-table-a > tbody > tr {
+
+    }
+
+    .tb_content_a > td {
+        padding-top: 0.3rem;
+    }
+    .content-list-div-table-a > tbody > tr > td {
+        padding: 0.2rem 0.3rem;
+        font-size: 1.2em;
+    }
+    .content-list-div-content {
+        background-color: #eeeeee;
+        padding-left: 0.5rem;
+
+        margin-top: 0.2rem;
+    }
+    .ss_second{
+        width: 100%;
+        margin-top: 2px;
+        height: 3.8rem;
+        background-color: #e7e6e6;
+    }
+    .ss_second_car{
+        width: 3.6rem;
+        height: 3.8rem;
+        background: url("../../../vendor/images/zsx/car_bk_yel.png") no-repeat;
+        background-size:4.0rem  3.8rem;
+    }
+    .ss_second_car_b{
+
+        height:3.8rem;
+
+    }
+    .ss_second_car_txt{
+        margin-top: 3.0rem;
+        margin-left: 0.6rem;
+        font-size: 1.0em;
+
+    }
+    .text-inline{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .text-inline-tb{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ss_second_gou_red{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    .ss_second_div{
+        font-size: 0.8em;
+        padding-top: 0.2rem;
+        padding-left: 0.3rem;
+    }
+    .ss_second_item{
+        padding-top: 0.1rem;
+    }
+    .margin_left_a{
+
+        margin-top: 0.1rem;
+    }
+    .ss_third_div{
+        width:100%;
+        height: 1rem;
+        background-color:#7ff7fb;
+        padding-left: 0.4rem;
+        margin-top: 0.2rem;
+    }
+    .img_bg{
+        margin-top: 0.15rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-left: 0.3rem;
+    }
+    .img_text{
+        padding-top: 0.3rem;
+        font-size: 1.0em;
+        padding-left: 0.3rem;
+    }
+    .tb_item_txt{
+        padding-left: 0.2rem;
+        padding-top: 0.1rem;
+    }
+    .btn_green_div{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+
+    .confirm-nav-btn {
+        width: 2.3rem;
+        background-color: #89c997;
+        padding: 0.3rem 0.1rem;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.1rem;
+        margin-top: 0.5rem;
+    }
+    .confirm-a {
+        vertical-align: middle;
+        text-align: center;
+    }
+    .tb_width_a{
+        width: 7rem;
+    }
+    .img_wg_z{
+        width: 6rem;
+        position: absolute;
+        left: 2.4rem;
+        top:3rem;
+    }
+    .bar-positive{
+        background-color: white;
+        color: #333;
+    }
+
+    .list{
+        padding-bottom: 100px;
+    }
+    .item{
+        padding: 0 0;
+        margin-top: 0.2rem;
+    }
+
+    .modal-footer {
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+
+    .modal-content {
+        border: none;
+    }
+
+    .model-margin-top {
+        margin: 0.3rem 0.01rem;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+
+    .modal-header {
+        background-color: #333333;
+        color: white;
+        border: none;
+    }
+
+    .modal-title {
+        color: white;
+    }
+    .li-item{
+        width: 100%;
+        padding: 0.3rem 0.3rem;
+        font-size: 1.4em;
+    }
+    .ul-list{
+        width: 100%;
+    }
+    .item-red{
+        background-color: lightpink;
+    }
+    .item-gray{
+        background-color: #cccccc;
+    }
+    .text-inline-c {
+
+        margin-right: 1rem;
+    }
+
+    .item-back {
+        background-color: lightblue;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+
+    .modal-header {
+        background-color: #333333;
+        color: white;
+        border: none;
+    }
+
+    .modal-header {
+        background-color: #333333;
+        color: white;
+        border: none;
+    }
+
+
+    .modal-footer {
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+
+    .modal-content {
+        border: none;
+    }
+
+    .model-margin-top {
+        margin: 0.3rem 0.01rem;
+    }
+
+    .action-back {
+
+        width: 1rem;
+        height: 0.5rem;
+        background-image: url("../../../vendor/images/zsx/back_blue.png");
+        background-repeat: no-repeat;
+    }
+
+    .img-gray {
+        background-image: url("../../../vendor/images/zsx/back_gray.png");
+    }
+
+    .list-margin {
+        padding-bottom: 1rem;
+    }
+
+    .content-list-div-a {
+        display: inline-block;
+    }
+
+    .wb_btn_img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+</style>
+
+
+
+<ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+        <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img
+                src="../../../vendor/images/zsx/back_blue.png"></button>
+    </div>
+    <h1  class="title"></h1>
+    <div class="buttons">
+        <button class="button" ui-sref="home">首页</button>
+    </div>
+    <h1 class="title">领工</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="ss_second">
+        <div class="ss_second_car text-inline">
+            <div class="ss_second_car_txt">{{factoryItem.cp}}</div>
+        </div>
+
+        <div class="ss_second_car_b text-inline">
+            <div class="ss_second_div">
+                <div style="width: 5rem">
+                <div class="text-inline" ng-repeat="item in dataArr | unique:'states'" style="padding-left: 0.2rem;">
+                <img class="ss_second_gou_red margin_left_a" src="../../../vendor/images/zsx/gou_blue.png"/>
+                <div class="margin_left_a">{{item.states}}</div>
+                </div>
+                </div>
+                <div class="ss_second_item">{{factoryItem.cx }}</div>
+                <div class="ss_second_item">进厂时间：{{factoryItem.jc_date|limitTo:10 }}</div>
+                <div class="ss_second_item">预计提车：{{factoryItem.ywg_date|limitTo:10 }}</div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="ss_third_div" ng-click="chooseAll(selectAll)">
+        <img class="text-inline img_bg" src="{{selectAll?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/right_now_no.png'}}">
+        <div class="text-inline img_text">全选/取消全选</div>
+    </div>
+
+
+    <ion-list class="ion_list_bot">
+
+        <ion-item ng-repeat="item in dataArr"
+                  item="item"
+                  ng-click="toLinggongPage(item)" class="item-remove-animate">
+
+            <table class="content-list-div-table-a">
+
+                <tr>
+
+                    <td class="tb_width_a"><div ng-click="chooseItem($index,item,item.choose)"><img class="img_bg text-inline-tb" src="{{item.choose?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/right_now_no.png'}}"/><div class="text-inline-tb tb_item_txt">{{item.xlxm}}</div></div></td>
+                    <td><img class="img_bg text-inline-tb" src="../../../vendor/images/zsx/gou_blue.png"/><div class="text-inline-tb tb_item_txt">{{item.wxgz}}</div></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img class="img_bg text-inline-tb" src="../../../vendor/images/zsx/person.png"/><div class="text-inline-tb tb_item_txt">{{item.assign?'指派给：'+item.assign:'未指派'}}</div></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2"><img class="img_bg text-inline-tb" src="../../../vendor/images/zsx/repairing.png"/><div class="text-inline-tb tb_item_txt">正在维修：{{item.xlg}}</div></td>
+
+                </tr>
+            </table>
+        </ion-item>
+
+    </ion-list>
+    <div class="btn_green_div">
+
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 0.8em"  ng-click="replacePerson()">
+            换人
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 0.8em" ng-click="pgPerson()">
+           加人
+        </div>
+
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 0.8em"  ng-click="tuiGong()">
+            退工
+        </div>
+
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 0.8em"  ng-click="siGongWanBi()">
+            施工完毕
+        </div>
+    </div>
+</ion-content>
+
+
+
+
+<script type="text/ng-template" id="modalRep.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                换人
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="display: inline-block;vertical-align: top;width: 100%;">
+                <ul class="list ul-list">
+
+                    <li  ng-repeat="item in repairPersonList | unique: 'xlg'"
+                        class="li-item item {{$index%2==0?'item-red':'item-gray'}}" ng-click="chooseXlz(item)">
+                        {{item.xlg}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+
+
+
+
+
+<script type="text/ng-template" id="modalAdd.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                加人
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="display: inline-block;vertical-align: top;width: 100%;">
+                <ul class="list ul-list">
+
+                    <li  ng-repeat="item in repairPersonList | unique: 'xlg'"
+                         class="li-item item {{$index%2==0?'item-red':'item-gray'}}" ng-click="chooseXlz(item)">
+                        {{item.xlg}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+
+
+<script type="text/ng-template" id="modal7.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h3 class="modal-title" align="center">
+                加人
+            </h3>
+        </div>
+        <div class="modal-body">
+            <div style="display: inline-block;vertical-align: top;">
+                <ul class="list">
+
+                    <li ng-repeat="item in repairPersonList | unique: 'xlz'"
+                        class="item {{$index==clickIndex?'item-back':''}}" style="padding: 0.4rem 0.6rem;font-size: 1.4em;margin-top: 0;" ng-click="chooseXlz(item,$index)">
+                        {{item.xlz}}
+                    </li>
+                </ul>
+            </div>
+            <div style="display:inline-block;text-align: left;vertical-align: top;width:5rem;">
+                <ion-checkbox ng-repeat="item2 in personArr"
+                              ng-model="item2.checked"
+                              ng-checked="item2.checked" style="padding: 0.3rem 0.5rem;margin-top: 0;">
+                    <div  style="width:2rem;padding:0rem 0.6rem;margin-top: 0;font-size: 1.4em;">{{ item2.xlg }}</div>
+                </ion-checkbox>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()" style="margin-left: 1rem;padding:0.3rem 0.6rem; font-size: 1.4em;">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf)" style="margin-left: 2rem;padding:0.3rem 0.6rem;font-size: 1.4em; ">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+<script type="text/ng-template" id="modal8.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h3 class="modal-title" align="center">
+                换人
+            </h3>
+        </div>
+        <div class="modal-body">
+            <div style="display: inline-block;vertical-align: top;">
+                <ul class="list">
+
+                    <li ng-repeat="item in repairPersonList | unique: 'xlz'"
+                        class="item {{$index==clickIndex?'item-back':''}}" style="padding: 0.4rem 0.6rem;font-size: 1.4em;margin-top: 0;" ng-click="chooseXlz(item,$index)">
+                        {{item.xlz}}
+                    </li>
+                </ul>
+            </div>
+            <div style="display:inline-block;text-align: left;vertical-align: top;width:5rem;">
+                <ion-checkbox ng-repeat="item2 in personArr"
+                              ng-model="item2.checked"
+                              ng-checked="item2.checked" style="padding: 0.3rem 0.5rem;margin-top: 0;">
+                    <div  style="width:2rem;padding:0rem 0.6rem;margin-top: 0;font-size: 1.4em;">{{ item2.xlg }}</div>
+                </ion-checkbox>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()" style="margin-left: 1rem;padding:0.3rem 0.6rem; font-size: 1.4em;">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf)" style="margin-left: 2rem;padding:0.3rem 0.6rem;font-size: 1.4em; ">
+                确定
+            </button>
+        </div>
+    </div>
+</script>

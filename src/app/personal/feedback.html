@@ -1,0 +1,18 @@
+
+<div class="bdd_vitality_right_header">
+    <div class="bdd_vitality_right_hrader_li bdd_vita_right" >账户信息</div>
+    <div class="bdd_vitality_hr"></div>
+</div>
+<form name="feedbackForm" ng-submit="ctrl.submit()">
+    <div class="bdd_feedblack_text">
+        <div class="bdd_feedblack_header">意见类型</div>
+        <div style="{{ctrl.changeColor1}}" class="bdd_feedblack_buttom bdd_feedblack_span" ng-click="ctrl.problemType(1)">程序错误</div>
+        <div style="{{ctrl.changeColor2}}" class="bdd_feedblack_buttom" ng-click="ctrl.problemType(2)">产品建议</div>
+        <div style="{{ctrl.changeColor3}}" class="bdd_feedblack_buttom" ng-click="ctrl.problemType(3)">吐槽</div></div>
+    <div class="bdd_feedblack_news" style="padding-bottom: 20px">
+        <div class="bdd_feedblack_header">反馈内容</div>
+        <textarea class="bdd_feedblack_inputs_a" style="width:500px;height: 200px;margin-left: 20px;" name="problem" ng-model="ctrl.problem" type="text"/>
+
+    </div>
+    <input type="submit" class="bdd_vita_footer_title_text" value="提交"/>
+</form>

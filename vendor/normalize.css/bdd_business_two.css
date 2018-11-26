@@ -1,0 +1,211 @@
+body {
+    background-color: #F8F8F8;
+}
+
+.bdd_header {
+    width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    background-color: white;
+    padding-right: 50px;
+    padding-left: 50px;
+
+}
+
+.bdd_Busing_text {
+
+    color: #4d3a3a;
+    font-size: 24px;
+    padding-top: 30px;
+    font-weight: 700;
+}
+
+.bdd_Busing_span {
+    display: inline-block;
+    color: #ccbebe;
+    font-size: 16px;
+    width: 310px;
+
+}
+
+.bdd_Busing_message {
+    margin-top: 15px;
+}
+
+.bdd_Busing_message_in {
+    color: #4d3a3a;
+}
+
+.bdd_Busing_lick {
+    width: 1200px;
+    padding-right: 100px;
+
+}
+
+.bdd_Busing_message_a {
+    width: 600px;
+}
+
+.bdd_Busing_text_a {
+    padding-top: 15px;
+    color: #ccbebe;
+}
+
+.bdd_content_a {
+    width: 1200px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.bdd_Busing_message_b {
+    float: left;
+    line-height: 35px;
+    width: 240px;
+    text-align: center;
+}
+
+.bdd_Busing_message_b:hover {
+    background-color: #4d3a3a;
+    color: white;
+    cursor: pointer;
+}
+
+.bdd_busing_new_a {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+}
+
+.bdd_Busing_new_b {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #4d3a3a;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.bdd_busing_com_b {
+    width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.bdd_busing_com_infor {
+    padding-top: 20px;
+    color: #4d3a3a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.bdd_busing_com_infor_b {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bdd_busing_com_infor_l {
+    float: left;
+}
+
+.bdd_busing_com_infor_h {
+    float: right;
+}
+
+.bdd_busing_com_infor_k {
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+.bdd_busing_con_side {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+}
+
+.bdd_business_informessage {
+    width: 1200px;
+
+    margin-top: 40px;
+}
+
+.bdd_business_informessage_conter_l {
+    float: left;
+}
+
+.bdd_business_informessage_conter_r {
+    float: right;
+}
+
+.bdd_business_informessage_conter {
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: hidden;
+
+}
+
+.bdd_busing_text_mess {
+    text-align: center;
+    color: #4d3a3a;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bdd_busing_text_mess_b {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+
+
+
+}
+
+.bdd_busing_text_mess_r {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.bdd_business_informessage_span {
+    font-size: 18px;
+    color: #4d3a3a;
+    font-weight: 700;
+}
+
+.bdd_business_informessage_span_l {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.bdd_business_informessage_kit {
+    display: inline-block;
+
+}
+
+.bdd_business_informessage_a {
+    margin-left: 30px;
+}
+.bdd_busing_text_content{
+    margin-top:-20px;
+}
+.bdd_business_infor{
+    padding-bottom:25px;
+}

@@ -1,0 +1,38 @@
+<link href="../../../vendor/css/ioinc.min.css" rel="stylesheet">
+<style>
+	.item-input-margin{
+		margin-top: 55px;
+	}
+
+</style>
+
+<div class="bar bar-header bar-light">
+	<h1 class="title">车辆接待</h1>
+</div>
+
+<ion-content>
+
+	<!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
+	<label class="item item-input item-input-margin">
+		<input placeholder="输入用户名" type="text" ng-model="searchName"/><button ng-click="searchData(searchName)">搜索</button>
+	</label>
+	<ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+		<ion-item ng-repeat="item in carListData"
+				  item="item" ng-click="toHomePage(item)"
+				  class="item-remove-animate">
+			<div class="card">
+				<div class="item item-text-wrap">
+					<div><span>车牌:</span><span>{{item.mc}}</span></div>
+					<div><span>车主:</span><span>{{item.cz}}</span></div>
+					<div><span>手机号:</span><span>{{item.mobile}}</span></div>
+					<div><span>车牌:</span><span>{{item.mc}}</span></div>
+					<div><span>车型:</span><span>{{item.cx}}</span></div>
+				</div>
+			</div>
+			<ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+		</ion-item>
+
+	</ion-list>
+
+</ion-content>

@@ -1,0 +1,404 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+    .title-color {
+        color: #3ca2dd;
+    }
+    .bar_second_pink{
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+    .container-fluid{
+        padding: 0 0;
+        margin: 0 0;
+    }
+    .color-white{
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+    .bar-white-home{
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+    .bar-white-card{
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+    .border-color{
+        width: 9rem;
+        height: 1rem;
+        background-color: #eeeeee;
+        text-align: left;
+        margin: 0 auto;
+        border-left: 2px solid #b5d2e5;
+        border-right: 2px solid #b5d2e5;
+        border-bottom:  1px solid #99a5ac;
+
+
+    }
+    .border-center{
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+
+    }
+    .text-inline{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .border-first{
+
+         border-top: 2px solid #b5d2e5;
+     }
+    .border-last{
+        border-bottom: 2px solid #b5d2e5;
+    }
+    .text-left{
+        width: 3.5rem;
+        height: 100%;
+        border-right: 4px solid #9aa6ab;
+        vertical-align: top;
+        padding-top: 0.25rem;
+        margin: 0 auto;
+        text-align: right;
+        padding-right: 0.25rem;
+    }
+    .text-right{
+        width: 5rem;
+        height: 100%;
+        vertical-align: middle;
+        padding-top: 0.15rem;
+
+    }
+    .edit-img{
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-left: 4.5rem;
+    }
+
+    .select-img{
+        width: 1.0rem;
+        height: 1.0rem;
+    }
+    .select-item{
+        width: 33%;
+        float: left;
+        margin-top: 0.3rem;
+    }
+    .select_pro{
+        text-align: center;
+        margin-top: 0.3rem;
+        background-color: #f8fbf8;
+        overflow: hidden;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        color: #1296db;
+        font-weight: 700;
+    }
+    .select-text{
+        padding-top: 0.15rem;
+    }
+    .color-white-img{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    .color-white-img-home{
+        margin-left: 1rem;
+    }
+    .color-white-img-card{
+        margin-left: 3.8rem;
+    }
+    .text-gray{
+        color: #707070;
+    }
+    .text-input-a{
+        border: none;
+        width: 4rem;
+        float: left;
+        display: block;
+    }
+    .edit-img-a{
+        width: 0.6rem;
+        height: 0.6rem;
+        float: right;
+        display: block;
+        margin-left: 0.2rem;
+
+    }
+    input[type=text]{
+        height: 0.7rem;
+    }
+    .claim_input{
+        border: none;
+        width: 100%;
+        background: none;
+        text-align: right;
+        padding-right: 0.95rem;
+    }
+    input[readonly]{
+        background-color: transparent;
+    }
+    input[disabled], input[readonly]:not(.cloned-text-input), select[disabled], select[readonly], textarea[disabled], textarea[readonly]:not(.cloned-text-input) {
+        background-color: transparent;
+    }
+
+    .icon-user{
+        float:right;
+        z-index:1009;
+        margin-top: 8px;
+        margin-left: 2rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-image: url(../../../vendor/images/zsx/right_btn.png); /*引入图片图片*/
+        background-repeat: no-repeat; /*设置图片不重复*/
+        background-position: 10px 10px; /*图片显示的位置*/
+
+    }
+
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+    .modal-header{
+        background-color: #333333;
+        color:white;
+        border: none;
+    }
+    .modal-title{
+        color:white;
+    }
+    .btn-primary{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997 ;
+    }
+    .btn-warning{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997;
+        margin-left: 1rem;
+    }
+    .modal-footer{
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+    .modal-content{
+        border: none;
+    }
+    .model-margin-top{
+        margin: 0.3rem 0.01rem;
+    }
+    .select_pro_div{
+        width: 100%;
+    }
+
+
+</style>
+<div>
+    <!--<div class="bar bar-header bar-light bar-light-div">
+         <div><img  ng-click="goBackPage()" src="../../../vendor/images/zsx/back_blue.png"/></div>
+        <h1 class="title"><span class="title-color">业务导航</span></h1>
+    </div>
+-->
+
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button" ui-sref="home">首页</button>
+            </div>
+        </ion-header-bar>
+        <h1 class="title">业务导航</h1>
+
+    </div>
+
+
+
+    <div class="bar_second_pink">
+        <a ui-sref="czInfo">
+        <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+        <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+        <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+    </div>
+    <div class="border-center">
+        <div class="border-color border-first">
+            <div class="text-inline text-left" style="font-size: 1.6em;">公里数</div>
+            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowGls">{{carInfo.gls}}</span><input  style="font-size: 1.0em;" ng-show="isShowGls" ng-model="carInfo.gls"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowGls,1)" class="edit-img-a" src="{{isShowGls?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+        </div>
+        <div class="border-color">
+            <div class="text-inline text-left" style="font-size: 1.6em;">车架号</div>
+            <div class="text-inline text-right" style="font-size: 1.4em;"><span ng-show="!isShowCjh">{{carInfo.cjhm}}</span><input  style="font-size: 1.0em;" ng-show="isShowCjh" ng-model="carInfo.cjhm" type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowCjh,2)" class="edit-img-a" src="{{isShowCjh?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+        </div>
+        <div class="border-color">
+            <div class="text-inline text-left" style="font-size: 1.6em;">车型</div>
+            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowCx">{{carInfo.cx}}</span><input  style="font-size: 1.0em;" ng-show="isShowCx"   ng-model="carInfo.cx" type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowCx,3)" class="edit-img-a" src="{{isShowCx?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+
+        </div>
+        <div class="border-color">
+            <div class="text-inline text-left" style="font-size: 1.6em;">预完工日期</div>
+            <div class="text-inline text-right" style="font-size: 1.6em;">   <input  style="font-size: 1em;" ng-change="updateCarInfo('',4)" class="claim_input" type="text" ng-model="carInfo.ticheTime" id="start_date" placeholder="选择起始日期" readonly="readonly"/></div>
+
+        </div>
+        <div class="border-color">
+            <div class="text-inline text-left" style="font-size: 1.6em;">故障描述</div>
+            <div class="text-inline text-right" style="font-size: 1.6em;" ng-click="updateCarInfo(isShowGzms,5)"><span>{{carInfo.gzms}}</span><img  class="edit-img-a" src="../../../vendor/images/zsx/right_btn.png"/></div>
+
+        </div>
+        <div class="border-color">
+            <div class="text-inline text-left" style="font-size: 1.6em;">介绍人</div>
+            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowJsr">{{carInfo.jsr}}</span><input  style="font-size: 1.0em;" ng-show="isShowJsr"  ng-model="carInfo.jsr"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowJsr,6)" class="edit-img-a" src="{{isShowJsr?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+
+        </div>
+        <div class="border-color border-last">
+            <div class="text-inline text-left" style="font-size: 1.6em;">备注</div>
+            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowBz">{{carInfo.ywtx}}</span><input  style="font-size: 1.0em;" ng-show="isShowBz"  ng-model="carInfo.ywtx"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowBz,7)" class="edit-img-a" src="{{isShowBz?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+
+        </div>
+    </div>
+
+    <div class="select_pro select_pro_div">
+        <div class="select-item select_one" ng-click="toProjectSelect()">
+            <img class="select-img" src="{{projectPer.new=='1'?'../../../vendor/images/zsx/select_pro.png':'../../../vendor/images/zsx/select_gray.png'}}"/>
+            <div class="select-text {{projectPer.new=='1'?'':'text-gray'}}" style="font-size: 1.6em;">项目选择</div>
+
+        </div>
+        <div class="select-item select_one"  ng-click="toBjSelect()">
+            <img class="select-img" src="{{projectPer.new=='1'?'../../../vendor/images/zsx/car_door.png':'../../../vendor/images/zsx/car_gray.png'}}"/>
+            <div class="select-text {{projectPer.new=='1'?'':'text-gray'}}" style="font-size: 1.6em;">钣金喷漆</div>
+
+        </div>
+        <div class="select-item select_one">
+            <img class="select-img" src="../../../vendor/images/zsx/check_plan.png"/>
+            <div class="select-text" style="font-size: 1.6em;">车辆检查</div>
+
+        </div>
+        <div class="select-item select_one">
+            <img class="select-img" src="../../../vendor/images/zsx/tc_work.png"/>
+            <div class="select-text" style="font-size: 1.6em;">套餐业务</div>
+
+        </div>
+        <div class="select-item select_one">
+            <img class="select-img" src="../../../vendor/images/zsx/you_ticket.png"/>
+            <div class="select-text" style="font-size: 1.6em;">优惠券</div>
+
+        </div>
+        <div class="select-item select_one" ng-click="toHistoryRecord()">
+            <img class="select-img" src="../../../vendor/images/zsx/history.png"/>
+            <div class="select-text" style="font-size: 1.6em;">历史记录</div>
+
+        </div>
+        <div class="select-item select_one" ng-click="toWinbding()">
+            <img class="select-img" src="../../../vendor/images/zsx/work_order.png"/>
+            <div class="select-text" style="font-size: 1.6em;">工单汇总</div>
+
+        </div>
+        <div class="select-item select_one" ng-click="cancleJieche()">
+            <img class="select-img" src="../../../vendor/images/zsx/cancle_reciver.png"/>
+            <div class="select-text" style="font-size: 1.6em;">取消接车</div>
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<script type="text/ng-template" id="modal8.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                提示
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 1rem">
+
+                <div class="model-margin-top"><span>您确定要取消车牌号为：</span><span style="color: blue">{{cardName}}</span><span>&nbsp;的接车吗？</span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()" >
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok()" style="margin-left: 2rem">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+<script>
+
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#start_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear()-40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear()+20) + '-' + 12 + '-' + 31 //最大日期
+    });
+
+
+
+    /**
+     * 解决键盘弹出遮挡input
+     */
+    var winHeight = $(window).height();   //获取当前页面高度
+    $(window).resize(function(){
+        var thisHeight=$(this).height();
+        if(winHeight - thisHeight >50){
+            $(".select_pro_div").hide();
+        }else{
+            $(".select_pro_div").show();
+        }
+    });
+
+
+    function iosInput() {
+
+        $('.select_pro_div').css('position','absolute');
+        //解决第三方软键盘唤起时底部input输入框被遮挡问题
+        var bfscrolltop = document.body.scrollTop;//获取软键盘唤起前浏览器滚动部分的高度
+        $("input").focus(function(){//在这里‘input.inputframe’是我的底部输入栏的输入框，当它获取焦点时触发事件
+            interval = setInterval(function(){//设置一个计时器，时间设置与软键盘弹出所需时间相近
+                document.body.scrollTop = document.body.scrollHeight;//获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+            },100)
+        }).blur(function(){//设定输入框失去焦点时的事件
+            clearInterval(interval);//清除计时器
+            document.body.scrollTop = bfscrolltop-20;
+            //将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+        });
+
+    }
+    iosInput();
+
+</script>

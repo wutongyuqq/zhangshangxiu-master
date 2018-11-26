@@ -1,0 +1,255 @@
+<style>
+    /*登录页面*/
+    body{
+        background-color: #F8F8F8;
+    }
+    .bdd_login_content{
+        width: 1200px;
+        height: 800px;
+        margin: 0 auto;
+
+    }
+    .bdd_login_banner{
+        width: 1040px;
+        height:500px;
+        margin: 200px auto 0px  auto;
+        background-color: white;
+
+    }
+    .bdd_login_banner_left{
+        width: 600px;
+        height: 500px;
+        float: left;
+    }
+    .bdd_login_banner_right{
+        width: 438px;
+        height:400px;
+        float: left;
+        margin-top:50px;
+        border-left: 1px solid #E6DFDF;
+    }
+    .bdd_login_banner_header{
+        width: 500px;
+        height: 400px;
+        margin:50px auto;
+
+    }
+    .bdd_logoin_banner_border{
+        width: 400px;
+        height: 50px;
+        margin: 0 auto;
+
+    }
+    .bdd_logoin_banner_bor_l{
+        float: left;
+        color: #4d3a3a;
+        font-size: 18px;
+        font-family: Arial;
+    }
+    .bdd_logoin_banner_bor_r{
+        float: left;
+        margin-left:50px;
+        font-size: 14px;
+        color: #4d3a3a;
+        margin-top:4px;
+        font-family: Arial;
+    }
+    .bdd_logoin_banner_conter{
+        width: 400px;
+        height: 50px;
+        margin-top:58px;
+        margin: 0 auto;
+    }
+    .bdd_logoin_placeholder{
+        border: none;
+        background-color:white;
+        font-size: 16px;
+        color:#ccbebe;
+        font-family: Arial;
+
+    }
+    .bdd_logoin_hr{
+        width: 400px;
+        height: 1px;
+        background-color: #ccbebe;
+        margin-top:6px;
+        opacity: 0.5;
+
+    }
+    .bdd_logoin_mi{
+        width: 400px;
+        height: 50px;
+        margin-top:20px;
+    }
+    .bdd_logoin_mi_l{
+        color: #ccbebe;
+        font-size: 14px;
+        float: left;
+        font-family: Arial;
+    }
+    .bdd_logoin_mi_r{
+        color:#cea63f;
+        font-size: 14px;
+        float:right;
+        font-family: Arial;
+    }
+    .bdd_login_buttom{
+        width: 400px;
+        height: 46px;
+        background-color: #212121;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        margin-top:60px;
+        font-family: Arial;
+    }
+    .bdd_login_pic{
+        width:400px;
+        height: 50px;
+        margin-top:50px;
+
+    }
+    .bdd_login_pic_left{
+        color: #ccbebe;
+        font-size: 14px;
+        float: left;
+        font-family: Arial;
+    }
+    .bdd_login_pic_right{
+        float: right;
+
+    }
+    .bdd_login_banner_right_conter{
+        width: 300px;
+        height: 400px;
+        margin:50px auto 0px auto;
+    }
+    .bdd_login_banner_right_text{
+        text-align: center;
+        color: #ccbebe;
+        font-size: 24px;
+        letter-spacing:1px;
+        font-family: Arial;
+
+    }
+    .bdd_login_banner_logo{
+        width: 300px;
+        height: 50px;
+        margin-top:240px;
+    }
+    .bdd_login_banner_logo_text_br{
+        width: 2px;
+        height: 28px;
+        background-color: #cea63f;
+    }
+    .bdd_login_banner_logo_text_span{
+        font-size: 14px;
+        color: #4d3a3a;
+        font-family: Arial;
+    }
+    .bdd_login_banner_logo_text_br{
+        float: left;
+        margin-left:28px;
+        margin-top:5px;
+    }
+    .bdd_login_banner_logo_text{
+        float: left;
+        margin-top:2px;
+    }
+    .bdd_login_banner_logo_text_span{
+        float: right;
+        font-family: Arial;
+
+    }
+</style>
+<!--头部-->
+<nav class="bdd-nav">
+    <div class="bdd-nav-div">
+        <div class="bdd-img-div"><div class="bdd-img-one"><img class="bdd-img" src="../../../vendor/images/logo.png" alt=""/></div></div>
+        <div class="bdd-nav-title"><a href="./bdd-test.html"></a>首页</div>
+        <div class="bdd-nav-title"><a href="./bdd_scerrn.html">标讯</a></div>
+        <div class="bdd-nav-title">企信</div>
+        <div class="bdd-nav-title">动态</div>
+        <div class="bdd-nav-title">应用</div>
+        <div class="bdd-nav-title bdd-nav-title-hide"><div class="search-status">
+            <div class="search-filter">
+                <a href="javascript:;"><span class="tit">作品</span><i class="icon-down"></i></a>
+                <ul class="options">
+                    <li><a href="javascript:;" data-rel="project">作品</a></li>
+                    <li><a href="javascript:;" data-rel="experience">文章</a></li>
+                    <li><a href="javascript:;" data-rel="source">源文件</a></li>
+                    <li><a href="javascript:;" data-rel="designer">设计师</a></li>
+                    <li><a href="javascript:;" data-rel="inspiration">灵感</a></li>
+                    <li><a href="javascript:;" data-rel="talk">话题</a></li>
+                    <li><a href="javascript:;" data-rel="activity">活动</a></li>
+                    <li><a href="javascript:;" data-rel="veer">素材</a></li>
+                </ul>
+            </div>
+            <div class="search-select">
+                <input type="text" class="search-val" placeholder="请输入您要查找的内容" autocomplete="off" value="" name="keywords" id="keywords">
+                <ul class="options" style="display: none;">
+                    <li><a href="javascript:;">app</a></li><li><a href="javascript:;">logo</a></li><li><a href="javascript:;">icon</a></li><li><a href="javascript:;">AE</a></li><li><a href="javascript:;">作品集</a></li>								</ul>
+            </div>
+        </div>
+            <input type="hidden" name="type" value="project" id="sType"></div>
+        <div class="bdd-nav-title bdd-nav-search"><a href="#"><img src="../../../vendor/images/nav_icon_search.png" alt=""></a></div>
+        <div class="bdd-nav-title bdd-nav-right">APP下载</div>
+        <div class="bdd-nav-title bdd-nav-right">登录/注册</div>
+    </div>
+</nav>
+<div class="bdd_login_content">
+    <div class="bdd_login_banner">
+        <div class="bdd_login_banner_left">
+            <div class="bdd_login_banner_header">
+                <div class="bdd_logoin_banner_border">
+                    <div class="bdd_logoin_banner_bor_l">登录</div>
+                    <div class="bdd_logoin_banner_bor_r">注册</div>
+                </div>
+                <div class="bdd_logoin_banner_conter">
+                    <input class="bdd_logoin_placeholder" type="text" value="用户名/邮箱/手机号" placeholder="用户名/邮箱/手机号">
+                    <div class="bdd_logoin_hr"></div>
+                    <input style="margin-top:34px;color: #ccbebe" class="bdd_logoin_placeholder" type="text" value="密码" placeholder="密码">
+                    <div style="background-color: #ccbebe" class="bdd_logoin_hr"></div>
+                    <div class="bdd_logoin_mi">
+                        <div  class="bdd_logoin_mi_l"><div style="float: left"><img  src="../../../vendor/images/login_icon_Hook.png" alt=""></div><span style="padding-left: 10px">记住我</span></div>
+                        <div class="bdd_logoin_mi_r">忘记密码</div>
+                    </div>
+                    <input class="bdd_login_buttom" type="button" value="登录">
+                    <div class="bdd_login_pic">
+                        <div class="bdd_login_pic_left">其他账号登录</div>
+                        <div class="bdd_login_pic_right">
+                            <img src="./images/login_icon_wechat.png" alt="">
+                            <img style="margin-left: 20px;" src="../../../vendor/images/login_icon_qq.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bdd_login_banner_right">
+            <div class="bdd_login_banner_right_conter">
+                <div class="bdd_login_banner_right_text">大数据时代的精益求精</div>
+                <div style="margin-top: 10px;" class="bdd_login_banner_right_text">让您与数据随心沟通</div>
+                <div class="bdd_login_banner_logo">
+                    <div class="bdd_login_banner_logo_text"><img src="../../../vendor/images/login_logo.png" alt=""></div>
+                    <div class="bdd_login_banner_logo_text_br"></div>
+                    <div class="bdd_login_banner_logo_text_span">
+                        <div class="bdd_login_banner_logo_list">专注-建筑工程</div>
+                        <div style="margin-top:-2px;" class="bdd_login_banner_logo_li">招投标大数据分析</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bdd_footer_left">
+    <div class="bdd_footer_news">
+        <div class="bdd_footer_content"><a href="#"><img class="bdd_footer_logo" src="./images/logo.png" alt=""/></a></div>
+        <div class="bdd_footer_content  bdd_footer_side"><a href="#">关于我们</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">加入我们</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">商务合作</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">新手指南</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">网站声明</a></div>
+        <div class="bdd_footer_content bdd_footer_aido"><a href="#"><img class="bdd_footer_logo" src="./images/bottom_icon_andriod.png" alt=""/></a></div>
+        <div class="bdd_footer_content"><a href="#"><img class="bdd_footer_logo"  src="./images/bottom_icon_ios.png" alt=""/></a></div>
+        <div class="bdd_footer_content"><a href="#"><img  class="bdd_footer_logo" src="./images/bottom_icon_wechat.png" alt=""/></a></div>
+    </div>
+</div>

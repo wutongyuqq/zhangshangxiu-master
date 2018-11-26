@@ -1,0 +1,361 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+        font-size: 1.8em;
+        color: black;
+        font-weight: 700;
+    }
+
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+
+    .bar-white-home{
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+    .bar-white-card{
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .border-color {
+
+        height: 1rem;
+        background-color: #eeeeee;
+        text-align: left;
+        margin: 0 auto;
+        border-left: 2px solid #b5d2e5;
+        border-right: 2px solid #b5d2e5;
+        border-bottom: 1px solid #99a5ac;
+
+    }
+
+    .border-center {
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .text-inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .border-first {
+
+        border-top: 2px solid #b5d2e5;
+    }
+
+    .border-last {
+        border-bottom: 2px solid #b5d2e5;
+    }
+
+    .text-left {
+        width: 3.5rem;
+        height: 100%;
+        vertical-align: top;
+        padding-top: 0.25rem;
+        margin: 0 auto;
+        text-align: right;
+        padding-right: 0.25rem;
+    }
+
+    .text-right {
+        width: 5rem;
+        height: 100%;
+        vertical-align: middle;
+        padding-top: 0.15rem;
+
+    }
+
+    .edit-img {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-left: 4.5rem;
+    }
+
+    .select-img {
+        width: 1.0rem;
+        height: 1.0rem;
+    }
+
+    .select-item {
+        width: 33%;
+        float: left;
+        margin-top: 0.3rem;
+    }
+
+    .select_pro {
+        text-align: center;
+        margin-top: 0.3rem;
+        background-color: #f8fbf8;
+        overflow: hidden;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        color: #1296db;
+        font-weight: 700;
+    }
+
+    .select-text {
+        padding-top: 0.15rem;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 0.5rem;
+        color: black;
+        font-weight: 700;
+        font-size: 1.8em;
+    }
+
+    .color-white-img-card {
+        margin-left: 2.5rem;
+        font-size: 1.8em;
+    }
+
+    .text-gray {
+        color: #707070;
+    }
+
+    .text-input-a {
+        border: none;
+        width: 4rem;
+        float: left;
+        display: block;
+    }
+
+    .edit-img-a {
+        width: 0.5rem;
+        height: 0.5rem;
+        float: right;
+        display: block;
+        margin-top: 0.1rem;
+        margin-left: 0.4rem;
+
+    }
+
+    input[type=text] {
+        height: 0.7rem;
+    }
+
+    .block_color_b {
+        color: white;
+        margin-left: 0.2rem;
+        font-size: 1.8em;;
+    }
+
+    .bar_conter_a {
+        width: 100%;
+        height: 1rem;
+        background-color: #7FF7FB;
+        margin-top: 0.2rem;
+        font-size: 1.4em;
+        color: #4d3a3a;
+        padding-top: 0.25rem;
+        padding-left: 1rem;
+    }
+
+    .bar_conter_p {
+        width: 10.8rem;
+        height: 1rem;
+        background-color: #DBDBDB;
+        padding-left: 1rem;
+        line-height: 1rem;
+        color: #000;
+    }
+
+    .bar_conter_y {
+        float: left;
+        width: 43%;
+        font-size: 1.6em;
+        color: #000;
+    }
+
+    .bar_conter_d {
+        float: left;
+        width: 50%;
+        font-size: 1.4em;
+        color: #333;
+    }
+
+    .bar_conter_q {
+        width: 7%;
+        float: right;
+        color: #fff;
+        font-size: 2.6em;
+        font-weight: 700;
+    }
+
+    .bar_conter_p_color {
+        background-color: #FFDBDB;
+    }
+
+    .bdd_sumit {
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        background-color: #31b0d5;
+        text-align: center;
+        color: white;
+        font-size: 1.6em;;
+        margin-top: 0.1rem;
+
+    }
+
+    .action-sheet_i {
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-top: 48px;
+    }
+</style>
+<div>
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button" ui-sref="home">首页</button>
+            </div>
+        </ion-header-bar>
+        <h1 class="title">车辆信息</h1>
+
+    </div>
+  <!--  <div class="bar_second_pink">
+        <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+        <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div>
+        <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div>
+    </div>-->
+
+    <!--类容-->
+    <div class="action-sheet_i">
+        <div class="bar_conter_a">车辆信息</div>
+        <div class="bar_conter_p">
+            <div class="bar_conter_y">车牌</div>
+            <div class="bar_conter_d">{{carInfo.cp}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">绑定微信</div>
+            <div class="bar_conter_d">{{carDataInfo.openid?'已绑定':'未绑定'}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">公里数</div>
+            <div class="bar_conter_d">{{carDataInfo.gls}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">车架号码</div>
+            <div class="bar_conter_d">{{carDataInfo.cjhm}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">车型</div>
+            <div class="bar_conter_d">{{carDataInfo.cx}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">推荐人</div>
+            <div class="bar_conter_d">{{carDataInfo.custom5}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">专属顾问</div>
+            <div class="bar_conter_d">{{carDataInfo.custom3}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">车身颜色</div>
+            <div class="bar_conter_d">{{carDataInfo.csys}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">保险公司</div>
+            <div class="bar_conter_d">{{carDataInfo.bxgs}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">年审日期</div>
+            <div class="bar_conter_d">{{carDataInfo.ns_date}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">年审提醒日期</div>
+            <div class="bar_conter_d">{{carDataInfo.nsrqtx}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">购车日期</div>
+            <div class="bar_conter_d">{{carDataInfo.buy_date}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">保险到期日</div>
+            <div class="bar_conter_d">{{carDataInfo.bx_datee}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">可用积分</div>
+            <div class="bar_conter_d">{{carDataInfo.integral}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">养车币余额</div>
+            <div class="bar_conter_d">{{carDataInfo.bit_amount}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">发动机号码</div>
+            <div class="bar_conter_d">{{carDataInfo.fdjhm}}</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <!--<div class="bdd_sumit">提交</div>-->
+
+    </div>
+</div>

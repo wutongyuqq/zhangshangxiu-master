@@ -1,0 +1,569 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .item-input-a {
+        width: 90%;
+    }
+
+    .bts-magin {
+
+        width: 80%;
+        margin: 44px auto 0px auto;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    .form-control-a {
+        width: 95%;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .input-label-a {
+        width: 30%;
+        font-size: 1.2em;
+    }
+
+    .input-left-div {
+        padding-left: 1.5rem;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        font-size: 1.2em;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: -3px;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+
+        text-align: center;
+
+        border: none;
+    }
+
+    .back-line-red {
+        width: 100%;
+        height: 3px;
+        margin-top: 20px;
+        background-color: #ff9db4;
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .btn_inline {
+        width: 100%;
+    }
+
+    .btn_width_div {
+        width: 100%;
+        height: 1.2rem;
+        margin-top: 0.2rem;
+    }
+
+    .btn_gz_left {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_jc_right {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_a {
+        padding: 0.3rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .btn_b {
+        padding: 0.3rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .span_card {
+        position: relative;
+        text-decoration: none;
+        color: #1296db;
+    }
+
+    .span_card_list {
+        width: 100%;
+    }
+
+    .home_ul {
+
+        width:100%;
+        overflow: auto;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .home_li {
+        float: left;
+        margin-top: 0.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .home_li_a {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: white;
+        text-align: center;
+        padding: 0.3rem;
+        background-color: #89c997;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+    .modal-header{
+        background-color: #333333;
+        color:white;
+        border: none;
+    }
+    .modal-title{
+        color:white;
+    }
+    .btn-primary{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997 ;
+    }
+    .btn-warning{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997;
+        margin-left: 1rem;
+    }
+    .modal-footer{
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+    .modal-content{
+        border: none;
+    }
+    .card_ul{
+        position: absolute;
+        background-color: #f4f1f1;
+        width: 4rem;
+        left:3rem;
+        padding: 0.3rem 0.3rem;
+        z-index: 1010;
+        max-height: 9rem;
+        min-height: 6rem;
+        color: #7d7e7d;
+        overflow: scroll;
+
+    }
+    .showCard-height{
+        height: 0.8rem;
+        font-size: 1.3em;
+    }
+    .bar-light-div{
+        font-size: 1.2em;
+    }
+    input[type=text]{
+        font-size: 1.3em;
+    }
+    input[type=number]{
+        font-size: 1.3em;
+    }
+    .home_tab_div_left{
+        font-size: 1.4em;
+    }
+    .home_tab_div_right{
+        font-size: 1.4em;
+    }
+    button{
+        font-size: 1.0em;
+    }
+    .title-color{
+         font-size: 1.4em;
+     }
+    .input-group{
+        height: 1rem;
+        font-size: 1.4em;
+    }
+    .tabs{
+        height: 1.4rem;
+        font-size: 1.3em;
+    }
+</style>
+
+<div>
+    <div class="bar bar-header bar-light bar-light-div">
+        <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+        <h1 class="title"><span class="title-color">车辆接待</span></h1>
+    </div>
+    <div class="bts-magin" style="width: 100%;height: auto;"><img  style="width: 100%;height: auto;" src="../../../vendor/images/zsx/take_photo.png"></div>
+    <div  style="width: 100%;text-align: center">拍摄车牌</div>
+
+    <div class="col-lg-6" style="margin-top: 0.1rem;width: 8rem;margin-left: 1.4rem">
+        <div class="input-group">
+            <input id="text-card" type="text" ng-focus="toSelectPage()" class="form-control-a" placeholder="姓名/卡号/手机号">
+      <span class="input-group-btn">
+        <button class="btn-search" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
+      </span>
+        </div>
+        <!-- /input-group -->
+    </div>
+    <!-- /.col-lg-6 -->
+
+    <div class="home_tab_div {{showMore==0?'home_tab_div_right_color':'home_tab_div_left_color'}}">
+        <div class="text_inline home_tab_div_left {{showMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(0)">基本信息
+        </div>
+        <div class="text_inline home_tab_div_right  {{showMore==0?'home_tab_div_right_color':'home_tab_div_left_color'}}"
+             ng-click="showMoreView(1)">更多信息
+        </div>
+
+    </div>
+    <div ng-show="showMore==0" class="input-left-div">
+        <any class="item-input" style="overflow: visible">
+            <span class="input-label input-label-a">车牌
+                &nbsp;&nbsp;&nbsp;
+                <a class="span_card text_inline" ng-click="showCardMore()">{{proName}}</a>
+
+            </span>
+            <div class="text_inline">
+            <input class="kepybord-listen"  placeholder="必填" type="text" ng-model="carInfo.shortCardName" ng-blur="showCardList=false" ng-focus="showCardListData()"/>
+                <div class="card_ul"  ng-show="showCardList">
+                    <div class="showCard-height" ng-repeat="itemA in cardDataList track by $index" ng-click="showCardName(itemA)">{{itemA.mc?itemA.mc:""}}</div>
+                </div>
+            </div>
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">车架号</span>
+            <input class="kepybord-listen" placeholder="输入" ng-focus="showCardList=false" ng-model="carInfo.cjhm" type="text"  ng-pattern="/^[0-9a-zA-Z]+$/"/>
+        </any>
+
+        <any class="item-input">
+            <span class="input-label input-label-a">车型</span>
+            <input class="kepybord-listen" type="text" placeholder="输入" ng-model="carInfo.cx"/>
+        </any>
+
+        <any class="item-input">
+            <span class="input-label input-label-a">公里数</span>
+            <input class="kepybord-listen" type="number"  placeholder="输入" ng-model="carInfo.gls" type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">送修人</span>
+            <input class="kepybord-listen" placeholder="必填" ng-model="carInfo.linkman" type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">手机号</span>
+            <input class="kepybord-listen" type="number" placeholder="必填" ng-model="carInfo.mobile"/>
+        </any>
+
+
+    </div>
+
+
+    <div ng-show="showMore==1" class="input-left-div">
+        <any class="item-input">
+            <span class="input-label input-label-a">车主</span>
+            <input class="kepybord-listen" placeholder="输入" ng-model="carInfo.cz" type="text">
+        </any>
+
+        <any class="item-input">
+            <span class="input-label input-label-a">推荐人</span>
+            <input class="kepybord-listen" placeholder="输入" ng-model="carInfo.custom5" type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">故障描述</span>
+            <input class="kepybord-listen" placeholder="输入" ng-model="carInfo.gzms"  type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">钥匙牌号</span>
+            <input class="kepybord-listen" placeholder="输入" ng-model="carInfo.ysph"  type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">预交车时间</span>
+            <div class="text-inline text-right" style="font-size: 1.6em;">   <input  style="font-size: 1em;"  class="claim_input" type="text" ng-model="carInfo.ywg_date" id="start_date" placeholder="选择日期" readonly="readonly"/></div>
+
+
+
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">备注</span>
+            <input class="kepybord-listen" placeholder="输入" ng-model="carInfo.ywtx" type="text">
+        </any>
+
+    </div>
+
+
+    <div class="back-line-red">
+    </div>
+    <div class="btn_width_div">
+        <div class="text_inline btn_gz_left">
+            <button class="btn_a" ui-sref="CompanyDetail">关注</button>
+        </div>
+        <div class="text_inline btn_jc_right">
+            <button class="btn_b" ng-click="uploadCardInfo(carInfo)">接车</button>
+        </div>
+
+    </div>
+
+    <div id="tab_nav" class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.4rem;">
+        <a class="tab-item">
+            <div>
+                <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                     src="../../../vendor/images/zsx/recever_hand_blue.png"/>
+
+                <div style="color: #1296db;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">车辆接待</div>
+            </div>
+
+        </a>
+        <a class="tab-item" ui-sref="FactoryPage">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/factory_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">车间管理</div>
+
+        </a>
+        <a class="tab-item" ui-sref="CompanyTop">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/condition_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">整厂概况</div>
+
+        </a>
+        <a class="tab-item" ui-sref="Usercenter">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/msg_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">信息中心</div>
+
+        </a>
+
+        <a class="tab-item" ui-sref="workmore">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/setting_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">设置</div>
+
+        </a>
+    </div>
+
+</div>
+
+
+<script type="text/ng-template" id="modal.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                该车辆已进厂
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 2rem">
+
+                <div><span>接待人员：</span><span>{{data.jcr}}</span></div>
+                <div><span>进厂时间：</span><span>{{data.jc_date}}</span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">
+                进入该车
+            </button>
+            <button class="btn btn-warning" ng-click="cancel()" style="margin-left: 2rem">
+                返回接车
+            </button>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+<script type="text/ng-template" id="modal9.html">
+    <div class="modal-top" align="center">
+        <div class="modal-body">
+            <div style="text-align: center;">
+
+                <div class="span_card_list text_inline">
+                    <ul class="home_ul">
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('闽')">闽</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('京')">京</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('津')">津</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('沪')">沪</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('渝')">渝</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('蒙')">蒙</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('新')">新</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('藏')">藏</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('宁')">宁</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('桂')">桂</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('港')">港</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('澳')">澳</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('黑')">黑</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('吉')">吉</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('辽')">辽</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('晋')">晋</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('冀')">冀</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('青')">青</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('鲁')">鲁</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('豫')">豫</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('苏')">苏</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('皖')">皖</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('浙')">浙</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('湘')">湘</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('鄂')">鄂</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('粤')">粤</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('琼')">琼</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('甘')">甘</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('陕')">陕</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('黔')">黔</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('滇')">滇</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('川')">川</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('临')">临</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('警')">警</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('测')">测</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</script>
+
+<script>
+    /**
+     * 解决android键盘弹出遮挡input
+     */
+
+    var winHeight = $(window).height();   //获取当前页面高度
+    $(window).resize(function(){
+        var thisHeight=$(this).height();
+        if(winHeight - thisHeight >50){
+            $(".bar-footer").hide();
+            $(".btn_width_div").hide();
+        }else{
+            $(".bar-footer").show();
+            $(".btn_width_div").show();
+        }
+    });
+
+
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#start_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear()-40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear()+20) + '-' + 12 + '-' + 31 //最大日期
+    });
+
+
+
+    /**
+     * 解决键盘弹出遮挡input
+     */
+    function iosInput() {
+
+            $('.bar-footer').css('position','absolute');
+            //解决第三方软键盘唤起时底部input输入框被遮挡问题
+            var bfscrolltop = document.body.scrollTop;//获取软键盘唤起前浏览器滚动部分的高度
+            $(".kepybord-listen").focus(function(){//在这里‘input.inputframe’是我的底部输入栏的输入框，当它获取焦点时触发事件
+                interval = setInterval(function(){//设置一个计时器，时间设置与软键盘弹出所需时间相近
+                    document.body.scrollTop = document.body.scrollHeight;//获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+                },100)
+            }).blur(function(){//设定输入框失去焦点时的事件
+                clearInterval(interval);//清除计时器
+                document.body.scrollTop = bfscrolltop-20;
+                //将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+            });
+
+    }
+    function isIos(){
+        var u = navigator.userAgent;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        return isiOS;
+    }
+    if(!isIos()) {
+        iosInput();
+    }else{
+        $("#tab_nav").css("height","1.9rem");
+        $("#text-card").css("font-size","0.8em");
+        $("#tab_nav").css("padding-bottom","0.1rem");
+
+    }
+
+
+
+</script>

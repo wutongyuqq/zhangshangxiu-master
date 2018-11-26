@@ -1,0 +1,71 @@
+﻿
+
+
+<!--资质证书框-->
+<div class="bdd_book_content">
+    <div class="bdd_book_border">
+        <div class="bdd_apt_tittle_zizhi">注册类别：</div>
+        <div style="margin-top: 35px;" class="bdd_dev_area bdd_dev_area_pro">
+            <!--class="{{$ctrl.province==''?'bdd_comp_span_all span-cursor span-yellow':'bdd_comp_span_all span-cursor'}}"
+            class="bdd_comp_span_all span-cursor span-yellow"
+            -->
+            <a class="{{ctrl.flag==''?'bdd_comp_span_all span-cursor span-yellow':'bdd_comp_span_all span-cursor'}}" ng-click="ctrl.cancelCategory()">全部</a>
+            <div class="bdd_per_span" ng-repeat="book in ctrl.bookList">
+                <a class="{{ctrl.flag==book.category?' span-cursor span-yellow':'span-cursor'}}" ng-bind="book.category|limitTo:9"
+                   ng-click="ctrl.clickBook(book)"></a>
+            </div>
+            <div style="margin-left: 45px" class="dropdown  dropdown-div dropdown-div-more">
+                <a id="more_select_zz" role="button" data-toggle="dropdown"
+                   class="btn btn-white btn-white-a" data-target="#"
+                   href="javascript:;" ng-click="ctrl.moreSelectZs(ctrl.moreZs)">
+                    <div class="to_more" ng-show="!ctrl.moreZs">更多</div>
+                    <div class="to_more to_bottom" ng-show="!ctrl.moreZs"></div>
+                    <div class="to_more" ng-show="ctrl.moreZs">收起</div>
+                    <div class="to_more to_top" ng-show="ctrl.moreZs"></div>
+                </a>
+            </div>
+        </div>
+
+        <!--class="{{$ctrl.province==area.name?' span-cursor span-yellow':'span-cursor'}}"
+        span-cursor
+        -->
+        <div id="more-pro" class="bdd_dev_per_pro_m" ng-show="ctrl.moreZs">
+            <div class="bdd_per_span" ng-repeat="book in ctrl.bookList2">
+                <a class="{{ctrl.flag==book.category?' span-cursor span-yellow':'span-cursor'}}" ng-bind="book.category|limitTo:15"
+                   ng-click="ctrl.clickBook(book)"></a>
+            </div>
+        </div>
+        <div class="bdd_side_left_did">
+            <div class="bdd_side_conter_do">
+                <div class="bdd_per_left">
+                    <!--综合排序-->
+                    <div style="margin-bottom: 1px;" class="bdd_side_news_val">
+                        <div class="bdd_side_rihgt">综合排序</div>
+                        <div class="bdd_side_rihgt_r">共找到 <span style="color: #cea63f"><span ng-bind="ctrl.personSize"></span></span> 条人员信息
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--已筛选条件-->
+<div class="bdd_screening_content">
+
+
+    <!-- 内容 -->
+    <div class="bdd_per_content" id="bdd_adver_header" infinite-scroll='ctrl.nextPage()'
+         infinite-scroll-disabled='ctrl.busy' infinite-scroll-distance='1'>
+        <div ng-class="$index%2==0?'bdd_per_content_left':'bdd_per_content_right'"
+             ng-repeat="person in ctrl.personList">
+            <div class="bdd_per_content_left_news"><span ng-bind="person.name"></span></div>
+            <div class="bdd_per_content_left_data"><span ng-bind="person.certDate"></span></div>
+            <div class="bdd_per_border">
+                <div class="bdd_per_content_text">注册类别：<span ng-bind="person.category"></span></div>
+                <div class="bdd_per_content_text">专业：<span ng-bind="person.major"></span></div>
+            </div>
+        </div>
+    </div>
+
+</div>

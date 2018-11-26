@@ -1,0 +1,233 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 1.2em;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+    input[type=text] {
+        font-size: 1.3em;
+    }
+    input[type=number] {
+        font-size: 1.3em;
+    }
+    button {
+        font-size: 1.4em;
+    }
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+    button {
+        font-size: 1.4em;
+    }
+    .tabs {
+        height: 1.4rem;
+        font-size: 1.3em;
+    }
+    .content-list-div-table-a {
+        width: 100%;
+        background-color: #eeeeee;
+        text-align: left;
+
+    }
+    .content-list-div-table-a > tbody > tr {
+
+    }
+
+    .tb_content_a > td {
+        padding-top: 0.3rem;
+    }
+    .content-list-div-table-a > tbody > tr > td {
+        padding: 0.3rem 0.3rem;
+        font-size: 1.4em;
+    }
+    .content-list-div-content {
+        background-color: #eeeeee;
+        padding-left: 0.5rem;
+
+        margin-top: 0.2rem;
+    }
+    .ss_second{
+        width: 100%;
+        margin-top: 55px;
+        height: 3.4rem;
+        background-color: #e7e6e6;
+        
+    }
+    .ss_second_car{
+        width: 3.6rem;
+        height: 3.4rem;
+        background: url("../../../vendor/images/zsx/car_bk_yel.png") no-repeat;
+        background-size:3.6rem  3.4rem;
+    }
+    .ss_second_car_b{
+
+        height:3.4rem;
+
+    }
+    .ss_second_car_txt{
+        margin-top: 2.8rem;
+        margin-left: 0.9rem;
+        font-size: 1.2em;
+
+    }
+    .text-inline{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .text-inline-tb{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ss_second_gou_red{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    .ss_second_div{
+        font-size: 1.4em;
+        padding-top: 0.2rem;
+        padding-left: 0.3rem;
+    }
+    .ss_second_item{
+        padding-top: 0.25rem;
+    }
+    .margin_left_a{
+        margin-left: 0.3rem;
+        margin-top: 0.1rem;
+    }
+    .ss_third_div{
+        width:100%;height: 1rem;
+        background-color:#7ff7fb;
+        margin-top: 0.2rem;
+        padding-left: 0.4rem;
+    }
+    .img_bg{
+        margin-top: 0.15rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-left: 0.3rem;
+    }
+    .img_text{
+        padding-top: 0.3rem;
+        font-size: 1.4em;
+        padding-left: 0.3rem;
+    }
+    .tb_item_txt{
+        padding-left: 0.2rem;
+        padding-top: 0.1rem;
+    }
+    .btn_green_div{
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+
+    .confirm-nav-btn {
+        width: 3rem;
+        background-color: #89c997;
+        padding: 0.3rem 0.5rem;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+    }
+    .confirm-a {
+        vertical-align: middle;
+        text-align: center;
+    }
+    .tb_width_a{
+        width: 7rem;
+    }
+
+    .list{
+        padding-bottom: 100px;
+    }
+    .item{
+        padding: 0 0;
+        margin-top: 0.2rem;
+    }
+    .has-header{
+        top: 1px;
+    }
+</style>
+
+
+<ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+        <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img
+                src="../../../vendor/images/zsx/back_blue.png"></button>
+    </div>
+    <h1  class="title"></h1>
+    <div class="buttons">
+        <button class="button" ui-sref="home">首页</button>
+    </div>
+    <h1 class="title">领工</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="ss_second">
+        <div class="ss_second_car text-inline">
+            <div class="ss_second_car_txt">{{factoryItem.cp}}</div>
+        </div>
+        <div class="ss_second_car_b text-inline">
+            <div class="ss_second_div">
+                <div style="width: 5rem">
+                    <div class="text-inline" ng-repeat="item in dataArr | unique:'states'" style="padding-left: 0.2rem;">
+                        <img class="ss_second_gou_red margin_left_a" src="../../../vendor/images/zsx/gou_blue.png"/>
+                        <div class="margin_left_a">{{item.states}}</div>
+                    </div>
+                </div>
+                <div class="ss_second_item">{{factoryItem.cx }}</div>
+                <div class="ss_second_item">进厂时间：{{factoryItem.jc_date|limitTo:10}}</div>
+                <div class="ss_second_item">预计提车：{{factoryItem.ywg_date|limitTo:10 }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="ss_third_div" ng-click="chooseAll(selectAll)">
+        <img class="text-inline img_bg" src="{{selectAll?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/right_now_no.png'}}">
+        <div class="text-inline img_text">全选/取消全选</div>
+    </div>
+    <ion-list class="ion_list_bot">
+
+        <ion-item ng-repeat="item in dataArr"
+                  item="item"
+                  ng-click="toLinggongPage(item)" class="item-remove-animate">
+
+            <table class="content-list-div-table-a">
+
+                <tr>
+                    <td class="tb_width_a"><div ng-click="chooseItem($index,item,item.choose)"><img class="img_bg text-inline-tb" src="{{item.choose?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/right_now_no.png'}}"/><div class="text-inline-tb tb_item_txt">{{item.xlxm}}</div></div></td>
+                    <td><img class="img_bg text-inline-tb" src="../../../vendor/images/zsx/gou_red.png"/><div class="text-inline-tb tb_item_txt">{{item.wxgz}}</div></td>
+                </tr>
+                <tr>
+                    <td><img class="img_bg text-inline-tb" src="../../../vendor/images/zsx/person.png"/><div class="text-inline-tb tb_item_txt">{{item.assign?'指派给：'+item.assign:'未指派'}}</div></td>
+                    <td></td>
+                </tr>
+            </table>
+        </ion-item>
+
+    </ion-list>
+    <div class="btn_green_div">
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.4em" ui-sref="TendList">
+            调整派工
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.4em" ng-click="lingGong()">
+            领工
+        </div>
+    </div>
+</ion-content>

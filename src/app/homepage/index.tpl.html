@@ -1,0 +1,111 @@
+<style>
+    .mobileImg{
+        width: 100%;
+        display: block;
+    }
+    .mobileImg > img{
+        width: 100%;
+        display: block;
+    }
+    .pcImg{
+        width: 100%;
+        height: 410px;
+        display: block;
+        /*设置背景图片了*/
+
+        /*设置图片居中显示*/
+        background-position: center center;
+        /*设置背景图片的大小*/
+        background-size: cover;
+    }
+</style>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" data-large-image="../../../vendor/images/banner_4.png">
+            <!--&lt;!&ndash;移动端&ndash;&gt;
+            <a href="javascript:;" class="mobileImg">
+                <img src="./images/slide_01_640x340.jpg" alt="...">
+            </a>
+            &lt;!&ndash;非移动端&ndash;&gt;
+            <a href="javascript:;" class="pcImg" style="background-image: url('./images/slide_01_2000x410.jpg');"></a>-->
+        </div>
+        <div class="item" data-large-image="../../../vendor/images/banner_1.png" >
+
+        </div>
+        <div class="item" data-large-image="../../../vendor/images/banner_2.png" >
+
+        </div>
+        <div class="item" data-large-image="../../../vendor/images/banner_3.png">
+
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<script>
+    /**
+     * Created by itcast.
+     */
+    $(function(){
+        /*获取当前所有item*/
+        var items=$(".carousel-inner .item");
+        /*监听屏幕的大小改变*/
+        $(window).on("resize",function(){
+            /*1.获取当前屏幕的宽度*/
+            var width=$(window).width();
+            /*2.判断屏幕的宽度*/
+            if(width>=0){/*说明非移动端*/
+                /*为每一个item添加子元素--遍历*/
+                $(items).each(function(index,value){
+                    var item=$(this);
+                    /*当前自定义属性中 存储的图片路径*/
+                    var imgSrc=item.data("largeImage");
+                    console.log(imgSrc);
+                    /*添加非移动端的子元素*/
+                    item.html($('<a href="javascript:;" class="pcImg"></a>').css("backgroundImage","url('"+imgSrc+"')"));
+                });
+            }
+
+        }).trigger("resize");
+
+        /*添加移动端的滑动操作*/
+        var startX,endX;
+        var carousel_inner=$(".carousel-inner")[0];
+
+        /*获取当前轮播图*/
+        var carousel=$(".carousel");
+
+        carousel_inner.addEventListener("touchstart",function(e){
+            startX= e.targetTouches[0].clientX;
+        });
+        carousel_inner.addEventListener("touchend",function(e){
+            endX= e.changedTouches[0].clientX;
+            if(endX-startX > 0){
+                /*上一张*/
+                carousel.carousel('prev');
+            }
+            else if(endX-startX < 0){
+                /*下一张*/
+                carousel.carousel('next');
+            }
+        });
+    });
+
+
+</script>

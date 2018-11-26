@@ -1,0 +1,558 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .item-input-a {
+        width: 90%;
+    }
+
+    .bts-magin {
+
+        width: 80%;
+        margin: 44px auto 0px auto;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    .form-control-a {
+        width: 95%;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .input-label-a {
+        width: 30%;
+        font-size: 2.5em;
+    }
+
+    .input-left-div {
+        padding-left: 1.5rem;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        font-size: 2.6em;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: -3px;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+
+        text-align: center;
+
+        border: none;
+    }
+
+    .back-line-red {
+        width: 100%;
+        height: 3px;
+        margin-top: 20px;
+        background-color: #ff9db4;
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding: 0.2rem;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 3px;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .btn_inline {
+        width: 100%;
+    }
+
+    .btn_width_div {
+        width: 100%;
+        height: 2.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn_gz_left {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_jc_right {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_a {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .btn_b {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .span_card {
+        position: relative;
+        text-decoration: none;
+        color: #1296db;
+    }
+
+    .span_card_list {
+        width: 100%;
+    }
+
+    .home_ul {
+
+        width:100%;
+        overflow: auto;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .home_li {
+        float: left;
+        margin-top: 0.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .home_li_a {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: white;
+        text-align: center;
+        padding: 0.3rem;
+        background-color: #89c997;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+    .modal-header{
+        background-color: #333333;
+        color:white;
+        border: none;
+    }
+    .modal-title{
+        color:white;
+    }
+    .btn-primary{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997 ;
+    }
+    .btn-warning{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997;
+        margin-left: 1rem;
+    }
+    .modal-footer{
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+    .modal-content{
+        border: none;
+    }
+    .card_ul{
+        position: absolute;
+        background-color: #f4f1f1;
+        width: 4rem;
+        left:3rem;
+        padding: 0.3rem 0.3rem;
+        z-index: 1010;
+        max-height: 7rem;
+        color: #7d7e7d;
+        overflow: scroll;
+
+    }
+    .showCard-height{
+        height: 0.8rem;
+        font-size: 2.3em;
+    }
+    .bar-light-div{
+        font-size:2.2em;
+    }
+    input[type=text]{
+        font-size: 2.3em;
+    }
+    input[type=number]{
+        font-size: 2.3em;
+    }
+    .home_tab_div_left{
+        font-size: 2.4em;
+    }
+    .home_tab_div_right{
+        font-size: 2.4em;
+    }
+    button{
+        font-size: 2.4em;
+    }
+    .title-color{
+        font-size: 2.4em;
+    }
+    .input-group{
+        height: 1rem;
+        font-size: 2.4em;
+    }
+    .tabs{
+        height: 1.4rem;
+        font-size: 2.4em;
+    }
+    .text-inline {
+        display: inline-block;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+    .text-inline {
+        display: inline-block;
+    }
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49.5%;
+        height: 100%;
+        line-height: 1rem;
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        width: 49.5%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+        text-align: center;
+
+        border: none;
+    }
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        margin-top: 52px;
+        text-align: center;
+        border-bottom: 2px solid #ff9db4;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .text-inline-left{
+        height: 100%;
+        width: 4rem;
+        text-align: center;
+        background-color: #fbe2e2;
+        padding: 0.3rem 0.2rem;
+        font-size: 2.0em;
+        color:#000000
+    }
+    .text-inline-right{
+        height: 100%;
+        width: 6.8rem;
+        text-align: left;
+        background-color: #eeeeee;
+        padding: 0.3rem 0.3rem 0.3rem 1rem;
+        font-size: 2.0em;
+        color:#000000
+    }
+.item{
+    padding: 0;
+}
+    .content-list-div {
+        width: 100%;
+    }
+
+    .content-list-div-a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-list-div-table {
+
+        width: 100%;
+        margin-top: 2px;
+        border-collapse: separate;
+        border-spacing: 0px 3px;
+
+    }
+    .tb_content_a {
+        background-color: #7ff7fb;
+    }
+
+    .tb_content_b {
+        background-color: #eeeeee;
+        vertical-align: middle;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .tb_content_c {
+        padding-top: 0.45rem;
+        height: 2rem;
+        background-color: #fdfcfd;
+        vertical-align: middle;
+    }
+
+    .tb_content_b > td {
+        text-align: center;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .tb_content_c > td {
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    .tb_content_a > td {
+        text-align: center;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .tb_content_td_a {
+        padding-left: 0.2rem;
+    }
+
+
+</style>
+
+<div>
+    <div class="bar bar-header bar-light bar-light-div">
+        <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+        <h1 class="title"><span class="title-color">信息中心</span></h1>
+    </div>
+
+    <div class="home_tab_div">
+        <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(0)">销售
+        </div>
+        <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(1)">施工
+        </div>
+
+
+    </div>
+    <div style="width: 100%;text-align: center;margin-top: 0.2rem;">
+    <div class="text-inline text-right" style="margin-left: 0.2rem;"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                                                            style="width: 2.9rem;height: 0.8rem;font-size: 2.4em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.startData"
+                                                                            type="text" id="start_date" placeholder="选择起始日期"
+                                                                            readonly="readonly"/></div>
+    <div class="text-inline" style="font-size: 2.4em">至</div>
+    <div class="text-inline text-right"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                               style="width: 2.9rem;height: 0.8rem;font-size: 2.4em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.endData" type="text" id="end_date" placeholder="选择结束日期" readonly="readonly"/>
+    </div>
+    <!-- <button class="text-inline text-right" ng-click="getWxHistory(selectData)" style="font-size: 1.4em;">搜索</button>-->
+
+    <button class="text-inline btn-search"  ng-click="getCardListData(selectData)" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
+
+    </div>
+
+    <!-- 项目-->
+    <div class="content-list-div" ng-show="showSelectMore==0">
+        <div class="text_inline content-list-div-a">
+            <table class="content-list-div-table">
+
+                <tr class="tb_content_a">
+                    <td style="font-size: 1.0em;">工单号</td>
+                    <td style="font-size: 1.0em; max-width: 1rem;">进厂日期</td>
+                    <td style="font-size: 1.0em; max-width: 1rem;">车牌号</td>
+                    <td style="font-size: 1.0em;">工种</td>
+                    <td style="font-size: 1.0em;">金额</td>
+                </tr>
+                <tr class="tb_content_b" ng-repeat="item in dataArray">
+                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.jsd_id}}</td>
+                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.jc_date|limitTo:10 }}</td>
+                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.cp}}</td>
+                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.wxgz_collect}}</td>
+                    <td style="font-size: 0.8em; max-width: 1rem;">￥{{item.zje}}</td>
+                </tr>
+
+
+
+            </table>
+
+        </div>
+
+
+    </div>
+    <div class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.4rem">
+        <a class="tab-item" ui-sref="home">
+            <div>
+                <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                     src="../../../vendor/images/zsx/recever_hand_gray.png"/>
+
+                <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车辆接待</div>
+            </div>
+
+        </a>
+        <a class="tab-item" ui-sref="FactoryPage">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/factory_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车间管理</div>
+
+        </a>
+        <a class="tab-item" ui-sref="CompanyTop">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/condition_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">整厂概况</div>
+
+        </a>
+        <a class="tab-item">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/msg_blue.png"/>
+
+            <div style="color: #1296db;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">信息中心</div>
+
+        </a>
+
+        <a class="tab-item" ui-sref="workmore">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/setting_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">设置</div>
+
+        </a>
+    </div>
+
+</div>
+<script>
+
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#start_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+    var calendar2 = new LCalendar();
+    calendar2.init({
+        'trigger': '#end_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+
+
+
+
+</script>
+

@@ -1,0 +1,268 @@
+body{
+    background-color: #F8F8F8;
+}
+.bdd_basic_hold{
+    width: 1200px;
+    height:1640px;
+    margin: 0 auto;
+
+}
+.bdd_basic_top{
+    width: 1200px;
+    height: 140px;
+    margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
+}
+.bdd_basic_top_l {
+    width: 80px;
+    height: 80px;
+    background-color: #ccbebe;
+    float: left;
+
+}
+.bdd_basic_conter{
+    width: 1170px;
+    height: 80px;
+    margin-top:30px;
+    margin-left:30px;
+}
+.bdd_basic_top_r{
+    float: left;
+    margin-left:20px;
+}
+.bdd_basic_P_size{
+    font-size: 24px;
+    color: #4d3a3a;
+    float: left;
+}
+.bdd_basic_P_span{
+    font-size: 14px;
+    color: #ccbebe;
+    padding-top:20px;
+    margin-left:-28px;
+    line-height:60px;
+
+}
+.bdd_basic_P_span_value{
+    padding:0 30px;
+}
+.bdd_basic_P_span_xu{
+    width:50px;
+    height:20px;
+    border-radius:10px;
+    background-color: #A7BC6E;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    padding-top:1px;
+    float: right;
+    margin-top:7px;
+    margin-left:10px;
+}
+/*΢��*/
+.bdd_follow_weibo{
+    width: 115px;
+    height:25px;
+    text-align: center;
+    font-size: 14px;
+    color: #4d3a3a;
+    margin-left:-20px;
+}
+.bdd_follow{
+    float: left;
+}
+.bdd_follow_foll{
+    margin-top:30px;
+    padding-left:400px;
+}
+.bdd_follow_pyq{
+    margin-top:30px;
+    padding-left:10px;
+}
+.bdd_follow_zb{
+    padding-left:210px;
+}
+.bdd_follow_info{
+    width: 890px;
+    height: 800px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.bdd_follow_info{
+    width: 890px;
+    height:800px;
+    margin-top:70px;
+
+}
+.bdd_follow_left{
+    width: 890px;
+    height: 70px;
+    background-color:white;
+    margin-top:20px;
+    float: left;
+    padding:20px 10px;
+    font-size: 16px;
+    color: #cea63f;
+
+}
+.bdd_follow_span{
+    margin: 30px 0 0 120px;
+}
+.bdd_follow_span{
+    padding-left:400px;
+}
+
+/*������*/
+.bdd_basic_nav{
+    width: 1200px;
+    height:35px;
+    margin:0 auto;
+    background-color:white;
+}
+
+.bdd_basic_nav_title{
+    width:300px;
+    height:35px;
+    float: left;
+    color: #4d3a3a;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px  20px 0px 20px;
+
+}
+.bdd_follow_dv{
+    width: 1200px;
+    height:150px;
+    margin-top:5px;
+}
+/*�����ܷ�*/
+.bdd_reput_top{
+    width: 1200px;
+    height: 250px;
+    background-color: white;
+    margin-top: 30px;
+}
+.bdd_reput_top_title{
+    font-size: 18px;
+    color: #ccbebe;
+    text-align: center;
+    padding-top:100px;
+    padding-left:150px;
+}
+/*�����ͷ��*/
+.bdd_scope{
+    width: 1200px;
+    margin: 0 auto;
+    height:200px;
+    background-color:white;
+    margin-top:30px;
+    overflow: hidden;
+
+}
+.bdd_scope_conter_left{
+    width: 10px;
+    height: 10px;
+    background-color: #cea63f;
+    float: left;
+    margin-top:17px;
+    margin-left:10px;
+
+}
+.bdd_scope_conter_right {
+    float: left;
+    margin-left: 10px;
+    color: #4d3a3a;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+/*�����*/
+.bdd_reput_conter{
+    width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top:30px;
+    overflow: hidden;
+}
+.bdd_scopr_prize_span{
+    width: 890px;
+    height:40px;
+    margin-top:50px;
+}
+.bdd_scopr_prize{
+    display: inline;
+    font-size: 16px;
+    color: #4d3a3a;
+}
+.bdd_scope_reput{
+    padding-left:30px;
+}
+.bdd_scope_list{
+    margin-left:80px;
+}
+/*³�ཱ*/
+.bdd_lauban_left{
+    width: 5px;
+    height: 5px;
+    background-color: #cea63f;
+    margin:10px 0 0 30px;
+
+}
+.bdd_lauban_rihgt{
+    font-size: 16px;
+    color: #4d3a3a;
+    margin-left:40px;
+    margin-top:-14px;
+}
+.bdd_lauban_conter{
+    width: 1140px;
+    height: 80px;
+    margin: 0 auto;
+    background-color:#F7F7F7;
+    padding-top:18px;
+    overflow: hidden;
+}
+.bdd_lauban_conter_left{
+    font-size: 14px;
+    color: #4d3a3a;
+    float: left;
+    margin-left:20px;
+    line-height:20px;
+}
+.bdd_lauban_conter_right{
+    float: right;
+    font-size: 14px;
+    color: #4d3a3a;
+    margin-right:20px;
+}
+.bdd_lauban_news{
+    width: 1200px;
+    height: 100px;
+    margin-top:10px;
+}
+/*װ�ν�*/
+.bdd_decorate{
+    margin-top:100px;
+    font-size: 18px;
+    color: #4d3a3a;
+    margin-left:30px;
+    line-height: 40px;
+}
+/*������¼*/
+.bdd_lauban_conter_mess{
+    height:200px;
+
+}
+.bdd_lauban_conter_footer{
+    width: 1100px;
+    height:50px;
+    margin-top:60px;
+    margin: 0 auto;
+    margin-top:60px;
+    color: #4d3a3a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height:20px;
+}

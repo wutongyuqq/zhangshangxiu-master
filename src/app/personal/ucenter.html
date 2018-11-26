@@ -1,0 +1,99 @@
+<style>
+    .bdd_perso_left {
+        width: 110px;
+        height: 110px;
+        border-radius: 110px;
+    }
+
+    .img_top {
+        border-radius: 110px;
+        height: 110px;
+        width: 110px
+    }
+
+    .bdd_usercenter_b {
+        min-height: 1000px;
+        padding-bottom: 100px;
+    }
+    .bdd_vitality_right_a{
+        float: left;
+        width: 900px;
+        margin-left:19px;
+        margin-top: 90px;
+        background-color: white;
+        min-height: 500px;
+        height: auto;
+    }
+    .bdd_vitality_zi{
+
+    }
+    .bdd_usercenter_b{
+        min-height: 1200px;
+    }
+    .bdd_perso_nav_news{
+        margin: 0 auto;
+        left:50%;
+        right: 50%;
+        margin-left: -600px;
+
+
+    }
+</style>
+<!--头部-->
+
+<div class="bdd_usercenter_b">
+    <div class="bdd_perso_piv"></div>
+
+
+    <div class="bdd_perso_piv">
+        <img class="bdd_perso_piv_pic" src="../../../vendor/images/wode_bg.png" alt="">
+    </div>
+    <!--nav-->
+    <div style="margin: 0 auto">
+
+        <!--个人资料-->
+        <div class="bdd_vitality_zi bdd_perso_nav_news">
+            <div class="bdd_perso_nav_news_a">
+                <div>
+                    <div class="bdd_perso_left"><img src="{{ucenter.imgurl}}" alt="" class="img_top"></div>
+                    <div class="bdd_perso_right">
+                        <div class="bdd_perso_anv_li bdd_perso_color" ng-bind="ucenter.nickname"></div>
+                        <div class="bdd_perso_anv_li bdd_perso_tel bdd_perso_span" ng-bind="ucenter.userphone"></div>
+                    </div>
+                    <div class="bdd_vitality">
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="bdd_vitality_left_a" style="background-color: white">
+                <li  ui-sref=".personInfo"
+                     ng-click="ctrl.selectMenu('ucenter.personInfo')" style="{{ctrl.menu=='ucenter.personInfo'?'background-color: #212121;':''}}" class="bdd_vita_list_a">
+                    <a style="{{ctrl.menu=='ucenter.personInfo'?'color: white':''}}">个人资料</a>
+                </li>
+                <li  ui-sref=".financial"
+                     ng-click="ctrl.selectMenu('ucenter.financial')" style="{{ctrl.menu=='ucenter.financial'?'background-color: #212121;':''}}" class="bdd_vita_list_a">
+                    <a style="{{ctrl.menu=='ucenter.financial'?'color: white':''}}">金融服务</a>
+                </li>
+                <li  ui-sref=".messages"
+                     ng-click="ctrl.selectMenu('ucenter.messages')" style="{{ctrl.menu=='ucenter.messages'?'background-color: #212121;':''}}" class="bdd_vita_list_a">
+                    <a style="{{ctrl.menu=='ucenter.messages'?'color: white':''}}">消息通知</a>
+                </li>
+                <li  ui-sref=".feedback" style="{{ctrl.menu=='ucenter.feedback'?'background-color: #212121;':''}}" class="bdd_vita_list_a" ng-click="ctrl.selectMenu('ucenter.feedback')">
+                    <a style="{{ctrl.menu=='ucenter.feedback'?'color: white':''}}"
+                      >意见反馈</a>
+                </li>
+                <li  ui-sref=".myfollow"
+                     ng-click="ctrl.selectMenu('ucenter.myfollow')" style="{{ctrl.menu=='ucenter.myfollow'?'background-color: #212121;':''}}" class="bdd_vita_list_a">
+                    <a style="{{ctrl.menu=='ucenter.myfollow'?'color: white':''}}">我的关注</a>
+                </li>
+
+            </ul>
+            <div class="bdd_vitality_right_a" style="height: auto;">
+                <ui-view> </ui-view>
+            </div>
+
+        </div>
+    </div>
+</div>
+

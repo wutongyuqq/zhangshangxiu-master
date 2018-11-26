@@ -1,0 +1,450 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .text-inline {
+        display: inline-block;
+        font-size: 1.4em;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        margin-left: -3px;
+        height: 100%;
+        line-height: 1rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: -3px;
+        width: 49.9%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+
+        text-align: center;
+
+        border: none;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        margin-top: 0.55rem;
+        text-align: center;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.4em;
+    }
+
+    .form-control-a {
+        width: 6rem;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .bts-magin-a {
+
+        width: 100%;
+        margin: 20px auto 0px auto;
+        text-align: center;
+    }
+
+    .btn-search {
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .confirm-nav-btn {
+        width: 100%;
+        background-color: #89c997;
+        padding: 15px 10px;
+        color: white;
+    }
+
+    .confirm-a {
+        vertical-align: middle;
+    }
+
+    .confirm-div {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+        display: block;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        background-color: white;
+    }
+
+    .wb_btn_img {
+        width: 0.6rem;
+        height: 0.6rem;
+
+    }
+
+    .wb_second_line {
+        margin-top: 0.1rem;
+        text-align: center;
+    }
+
+    .wb_second_line_qw {
+        padding-left: 3.5rem;
+    }
+
+    .content-list-div {
+        width: 100%;
+    }
+
+    .content-list-div-a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-list-div-table {
+
+        width: 100%;
+        margin-top: 2px;
+
+    }
+
+    .img-minus {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .tb_content_a {
+        background-color: #7ff7fb;
+        height: 1rem;
+    }
+
+    .tb_content_b {
+
+        background-color: #eeeeee;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        vertical-align: middle;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .tb_content_c {
+        padding-top: 0.45rem;
+        height: 2rem;
+        background-color: #fdfcfd;
+        vertical-align: middle;
+    }
+
+    .tb_content_b > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_c > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_a > td {
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+    .tb_content_a{
+        vertical-align: middle;
+        padding-top: 0.15rem;
+    }
+
+    .tb_content_td_a {
+        padding-left: 0.2rem;
+    }
+    .input-white-back{
+        background-color: white;
+        border: none;
+    }
+    input[type=number]{
+        display: inline-block;
+        height: 0.7rem;
+        line-height: 0.7rem;
+    }
+    .input-white-back-right{
+        background-color: white;
+        border: none;
+        width: 6rem;
+    }
+    .green-btn-back{
+        background-color: #89c997;
+        padding:0.15rem 0.3rem;
+        color:white;
+    }
+    .tb_content_b{
+        padding-top: 0.5rem;
+
+    }
+.tb_content_b_a{
+    margin-top: 0.1rem;
+    text-align: left;
+}
+    .tb_text_label{
+        width: 2.9rem;
+        text-align: right;
+    }
+    .tb_content_mg{
+        margin-top: 0.2rem;
+    }
+    .tb_content_a_ss{
+        margin-left: 0.2rem;
+    }
+
+    input[type=number]{
+        font-size: 1.4em;
+        vertical-align: middle;
+    }
+    .height-b{
+        width: 100%;
+        height: 2rem;
+    }
+    .width-in{
+        width: 2rem;
+        background-color: transparent;
+        border: none;
+    }
+</style>
+<div>
+
+
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button" ui-sref="home">首页</button>
+            </div>
+        </ion-header-bar>
+        <h1 class="title">收银</h1>
+    </div>
+
+
+
+    <div class="bar_second_pink">
+        <a ui-sref="czInfo">
+            <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+            <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+        <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+    </div>
+    <div class="wb_second_line" style="margin-top: 0.3rem;">
+        <div class="text_inline">预收款余额:{{shouyinBean.Pre_payment}}</div>
+        <div class="text_inline wb_second_line_qw">未分配：{{weifenpeiNum}}</div>
+
+
+    </div>
+    <div class="wb_second_line tb_content_a" style="margin-top: 0.3rem;">
+        <div class="text_inline tb_content_a_ss">应收总计:￥{{shouyinBean.ysje}}</div>
+        <div class="text_inline wb_second_line_qw">优惠：</div>
+
+
+        <div class="text_inline"><input class="width-in" type="number" ng-model="shouyinBean.yhje"/></div>
+
+    </div>
+    <div class="tb_content_b" style="margin-top: 0.3rem;">
+        <div class="tb_content_b_a">
+            <div class="text-inline tb_text_label">现金:￥</div>
+            <input  class="text-inline input-white-back" ng-blur="getWfpMoney()" type="number" ng-model="xianjinNum"/>
+            <div class="text-inline green-btn-back" ng-click="xianjinPay()">全额支付</div>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">刷卡:￥</div>
+            <input  class="text-inline input-white-back" ng-blur="getWfpMoney()"  type="number" ng-model="shuakaNum"/>
+            <div class="text-inline green-btn-back"  ng-click="shuakaPay()">全额支付</div>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">银行账户:</div>
+
+            <select class="text-inline input-white-back-right">
+                <option style="font-size: 1.2em;" ng-repeat="item in selectList"  ng-click="selectItem(item)"  ng-selected="0==$index">{{item.setup1}}</option>
+            </select>
+
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">费率:￥</div>
+            <input  ng-model="jsToBean.yhkFl" class="text-inline input-white-back" type="number"/>
+
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">银行转账:￥</div>
+            <input  class="text-inline input-white-back" ng-blur="getWfpMoney()" type="number" ng-model="zhuanzhangNum"/>
+            <div class="text-inline green-btn-back"  ng-click="zhuanzhangPay()">全额支付</div>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">银行账户:</div>
+            <input  class="text-inline input-white-back-right" type="number"/>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">会员卡号:</div>
+            <input  class="text-inline input-white-back" type="number" ng-model="vipcard_no"/>
+            <div class="text-inline green-btn-back" ng-click="showAllMoney()">查全额</div>
+        </div>
+        <div class="tb_content_b_a" ng-show="isShowAll" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">余额:￥</div>
+            <div class="text-inline green-btn-back-a">{{vipcard_money}}</div>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">扣除金额：￥</div>
+            <input  ng-model="kcVipMoney" class="text-inline input-white-back" type="number"/>
+
+        </div>
+    </div>
+
+
+    <div class="tb_content_b tb_content_mg" style="margin-top: 0.3rem;">
+
+        <div class="tb_content_b_a">
+            <div class="text-inline tb_text_label">挂账金额:￥</div>
+            <input  class="text-inline input-white-back" ng-blur="getWfpMoney()" type="number" ng-model="guazhangNum"/>
+            <div class="text-inline green-btn-back"  ng-click="guazhangPay()">全额支付</div>
+        </div>
+
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">微信:￥</div>
+            <input  class="text-inline input-white-back" ng-blur="getWfpMoney()" type="number" ng-model="weixinNum"/>
+            <div class="text-inline green-btn-back"  ng-click="weixinPay()">全额支付</div>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">费率:￥</div>
+            <input   ng-model="jsToBean.wxFl"  class="text-inline input-white-back" type="number"/>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">支付宝:￥</div>
+            <input  class="text-inline input-white-back" ng-blur="getWfpMoney()" type="number" ng-model="zfbNum"/>
+            <div class="text-inline green-btn-back"  ng-click="zfbPay()">全额支付</div>
+        </div>
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">费率:</div>
+            <input   ng-model="jsToBean.zfbFl"  class="text-inline input-white-back" type="number"/>
+        </div>
+
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">预收款抵扣:￥</div>
+            <input   ng-model="jsToBean.yskDkNum"  class="text-inline input-white-back" type="number"/>
+        </div>
+
+
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">可获得养车币:</div>
+            <div  class="text-inline">{{shouyinBean.bit_use}}</div>
+        </div>
+
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">养车币余额:</div>
+            <div  class="text-inline">{{shouyinBean.bit_compute - shouyinBean.bit_use}}</div>
+        </div>
+
+        <div class="tb_content_b_a" style="margin-top: 0.3rem;">
+            <div class="text-inline tb_text_label">扣除养车币:</div>
+            <input ng-model="kcYcb"  class="text-inline input-white-back" type="number"/>
+        </div>
+
+        <div class="height-b"></div>
+    </div>
+
+
+    <div class="confirm-div" style="font-size: 1.4em;" ng-click="shouYin()">
+        <div class="confirm-a confirm-nav-btn">
+            收银完成
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>

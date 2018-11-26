@@ -1,0 +1,319 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .tb_content_b > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_c > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_a > td {
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    input[type=text] {
+        display: inline-block;
+        height: 0.7rem;
+        line-height: 0.7rem;
+    }
+
+    .first-line-text {
+        margin-left: 0.5rem;
+    }
+
+    .expect-time {
+        margin-left: 0.2rem;
+    }
+
+    .first-line-text {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+
+    .text-left {
+        width: 3rem;
+        text-align: right;
+        margin-left: 1.2rem;
+    }
+
+    .text-right {
+        width: 5rem;
+        text-align: left;
+    }
+
+    .second-line-txt {
+        margin-top: 0.3rem;
+    }
+
+    .content-line-txt {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    .tcxm-tb{
+
+        width: 10rem;
+
+        font-size: 1.2em;
+
+    }
+    .div-margin-top{
+        width: 100%;
+        text-align: center;
+    }
+    .qz-div{
+        margin-top: 0.5rem;
+        font-size: 1.2em;
+
+    }
+    .qz-div>.qz-left-a{
+        margin-top: 0.2rem;
+        margin-left: 0.5rem;
+
+    }
+    .qz-div>.qz-left-b{
+        margin-top: 0.2rem;
+        margin-left: 1rem;
+    }
+  .confirm-div {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: white;
+}
+    .confirm-a {
+        vertical-align: middle;
+
+    }
+
+    .confirm-nav-btn {
+        width: 3rem;
+        background-color: #89c997;
+        padding: 8px 10px;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .confirm-nav-btn-a {
+        width:100%;
+        background-color: #89c997;
+        padding: 15px 10px;
+        color: white;
+        font-size: 1.6em;
+    }
+    .confirm-nav-btn-c{
+        width:100%;
+        background-color: darkgray;
+        padding: 15px 10px;
+        color: white;
+        font-size: 1.6em;
+    }
+    .text-inline {
+        display: inline-block;
+    }
+
+</style>
+<div>
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button" ui-sref="home">首页</button>
+            </div>
+        </ion-header-bar>
+        <h1 class="title">交车结算</h1>
+    </div>
+    <div class="bar_second_pink">
+        <a ui-sref="czInfo">
+            <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+            <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+        <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+    </div>
+
+    <div class="text_inline first-line-text">结算单号：{{jsd_id}}</div>
+    <div class="first-line-text text_inline expect-time">预完工时间：{{ticheTime}}</div>
+    <div class="second-line-txt content-line-txt">
+        <div class="text_inline text-left">修理厂名称：</div>
+        <div class="text_inline text-right">{{company_name}}</div>
+    </div>
+    <div class="content-line-txt">
+        <div class="text_inline text-left">客户名称：</div>
+        <div class="text_inline text-right">{{gdData.cz}}</div>
+    </div>
+    <div class="content-line-txt">
+        <div class="text_inline text-left">车牌：</div>
+        <div class="text_inline text-right">{{gdData.cp}}</div>
+    </div>
+    <div class="content-line-txt">
+        <div class="text_inline text-left">车架号：</div>
+        <div class="text_inline text-right">{{gdData.cjhm}}</div>
+    </div>
+    <div class="content-line-txt">
+        <div class="text_inline text-left">车型：</div>
+        <div class="text_inline text-right">{{gdData.cx}}</div>
+    </div>
+    <div class="content-line-txt">
+        <div class="text_inline text-left">进厂里程：</div>
+        <div class="text_inline text-right">{{gdData.jclc}}</div>
+    </div>
+    <div class="content-line-txt">
+        <div class="text_inline text-left">故障描述：</div>
+        <div class="text_inline text-right">{{car_fault}}</div>
+    </div>
+    <div class="div-margin-top">
+
+
+        <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
+
+        <table class="tcxm-tb">
+            <tr style="font-weight: 700">
+                <td>项目名称</td>
+                <td>修理费</td>
+                <td>优惠</td>
+            </tr>
+            <tr ng-repeat="item in xmDataList">
+                <td>{{item.xlxm}}</td>
+                <td>￥{{item.xlf}}</td>
+                <td>{{item.zk}}</td>
+            </tr>
+            <tr style="font-weight: 700">
+                <td>小计</td>
+                <td>￥{{totalXlf}}</td>
+                <td>{{totalZk}}</td>
+            </tr>
+        </table>
+        <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
+
+        <table class="tcxm-tb">
+            <tr style="font-weight: 700">
+                <td> 配件名称</td>
+                <td>数量</td>
+                <td>单价</td>
+                <td>金额</td>
+            </tr>
+            <tr ng-repeat="item in pjDataList">
+                <td>{{item.pjmc}}</td>
+                <td>{{item.sl}}</td>
+                <td>{{item.ssj}}</td>
+                <td>{{item.sl * item.ssj}}</td>
+            </tr>
+            <tr style="font-weight: 700">
+                <td>小计</td>
+                <td>{{totalsl}}</td>
+                <td></td>
+                <td>{{totalMoney}}</td>
+            </tr>
+        </table>
+        <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
+        <div style="width: 10rem;margin-left:1rem;text-align: left;font-size: 1.2em;font-weight: 700;">应收总计:￥{{totalXlf+totalMoney}}</div>
+        <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
+        <div style="width: 10rem;margin-left:1rem;text-align: left;font-size: 1.2em;font-weight: 700;">地址：{{address}}</div>
+        <div style="width: 10rem;margin-left:1rem;margin-top:0.05rem;text-align: left;font-size: 1.2em;font-weight: 700;">电话：{{telphone}}</div>
+        <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
+
+
+    </div>
+    <div class="qz-div">
+        <div class="qz-left-a">客户签字：</div>
+        <div class="qz-left-a">接待签字：</div>
+        <div class="qz-left-b">日期：{{gdData.jc_date}}</div>
+        <div class="qz-left-b">备注：{{gdData.memo}}</div>
+        <div class="qz-left-b">打印时间：{{dyTime}}</div>
+    </div>
+    <div class="confirm-div">
+        <div class="text-inline confirm-a confirm-nav-btn" ng-click="printOne()">
+            单联打印
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn" >
+            双联打印
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn">
+            取消结算
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn-a {{gdData.djzt=='审核已结算'?'confirm-nav-btn-c':'confirm-nav-btn-a'}}" ng-click="toJieSuanDetail()">
+            收银
+        </div>
+    </div>
+</div>
+<script src="../../../vendor/js/md5.js"></script>

@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .title-color {
+        color: #3ca2dd;
+    }
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+    body{
+        background-color: #f7f8f8;
+    }
+    .title-a{
+        padding-top: 80px;
+        text-align: center;
+        min-height: 100%;
+        width: 100%;
+
+
+    }
+    .txt-width{
+        width: 30%;
+        text-align: center;
+
+    }
+    .text-second-a{
+        font-size: 22px;
+        color: #4a4a4a;
+        text-shadow:3px 3px 5px orange,-3px 3px 5px green;
+    }
+    .text-second-b{
+        margin-top: 0.5rem;
+        font-size: 22px;
+    }
+    .content-b-num{
+        margin-top: 0.5rem;
+        font-size: 22px;
+
+    }
+    .content-b{
+        width: 10.8rem;
+        color:white;
+        margin-top: 0.5rem;
+        text-align: center;
+        overflow: hidden;
+        padding-bottom: 1rem;
+
+    }
+    .content-b-a{
+        width:26%;
+        height: 4rem;
+        background-color: #aaaaaa;
+        text-align: center;
+
+        display: inline-block;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
+        vertical-align: middle;
+        padding-top: 1.2rem;
+        margin-top: 0.3rem;
+        border:1px solid #333333;
+        box-shadow: 10px 10px 5px #888888;
+    }
+    .content-b-num{
+        color:white;
+        text-shadow:3px 3px 5px #f56253,-3px 3px 5px green;
+    }
+    .content-b-txt{
+        font-size: 18px;
+        text-shadow:3px 3px 5px #f56253,-3px 3px 5px green;
+    }
+    .reset-pwd-img{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    .content-txt-magin{
+        margin-top: 45px;
+    }
+    .content-txt-a{
+        width: 100%;
+        padding-top: 0.5rem;
+        background-color: #e7fadf;
+        padding-bottom: 0.5rem;
+    }
+    .content-txt-b{
+        width: 100%;
+        padding-top: 0.5rem;
+        background-color: #fbeefd;
+        padding-bottom: 0.5rem;
+    }
+    .right-btn-a{
+        float: right;
+        display: block;
+        margin-right: 0.5rem;
+    }
+    .left-btn-a{
+        margin-left: 0.6rem;
+    }
+    .left-btn-b{
+
+        margin-left: 0.6rem;
+    }
+
+
+    .bar-light-div{
+        font-size: 1.2em;
+    }
+    input[type=text]{
+        font-size: 1.3em;
+    }
+    input[type=number]{
+        font-size: 1.3em;
+    }
+    .home_tab_div_left{
+        font-size: 1.4em;
+    }
+    .home_tab_div_right{
+        font-size: 1.4em;
+    }
+    button{
+        font-size: 1.4em;
+    }
+    .title-color{
+        font-size: 1.4em;
+    }
+    .input-group{
+        height: 1rem;
+        font-size: 1.4em;
+    }
+    .tabs{
+        height: 1.4rem;
+        font-size: 1.3em;
+    }
+</style>
+
+<div ng-controller="WorkMoreCtrl">
+    <div class="bar bar-header bar-light bar-light-div">
+        <!--<button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+        <h1 class="title"><span class="title-color" style="font-size: 1.8em;">设置</span></h1>
+    </div>
+
+    <div class="content-txt-a content-txt-magin">
+        <div class="text_inline left-btn-a"><img class="reset-pwd-img" src="../../../vendor/images/zsx/reset-pwd.png"/></div>
+        <div class="text_inline left-btn-b" style="font-size: 1.8em;">修改密码</div>
+        <div class="text_inline right-btn-a"><img  class="reset-pwd-img" src="../../../vendor/images/zsx/right_btn.png"></div>
+        
+    </div>
+    <div class="content-txt-b">
+        <div class="text_inline left-btn-a"><img class="reset-pwd-img" src="../../../vendor/images/zsx/contact-us.png"/></div>
+        <div class="text_inline left-btn-b" style="font-size: 1.8em;">联系我们</div>
+        <div class="text_inline right-btn-a"><img  class="reset-pwd-img" src="../../../vendor/images/zsx/right_btn.png"></div>
+
+    </div>
+
+    <div class="content-txt-a" ng-click="checkVersion()">
+        <div class="text_inline left-btn-a"><img class="reset-pwd-img" src="../../../vendor/images/zsx/check-update.png"/></div>
+        <div class="text_inline left-btn-b" style="font-size: 1.8em;">检查更新</div>
+        <div class="text_inline right-btn-a"><img  class="reset-pwd-img" src="../../../vendor/images/zsx/right_btn.png"></div>
+
+    </div>
+
+    <div class="content-txt-b" ng-click="exitLogin()">
+        <div class="text_inline left-btn-a"><img class="reset-pwd-img" src="../../../vendor/images/zsx/quit-btn.png"/></div>
+        <div class="text_inline left-btn-b" style="font-size: 1.8em;">退出登录</div>
+        <div class="text_inline right-btn-a"><img  class="reset-pwd-img" src="../../../vendor/images/zsx/right_btn.png"></div>
+
+    </div>
+
+
+
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" ui-sref="home">
+            <div>
+                <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                     src="../../../vendor/images/zsx/recever_hand_gray.png"/>
+
+                <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车辆接待</div>
+            </div>
+
+        </a>
+        <a class="tab-item" ui-sref="FactoryPage">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/factory_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车间管理</div>
+
+        </a>
+        <a class="tab-item" ui-sref="CompanyTop">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/condition_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">整厂概况</div>
+
+        </a>
+        <a class="tab-item" ui-sref="Usercenter">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/msg_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">信息中心</div>
+
+        </a>
+
+        <a class="tab-item">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/setting_blue.png"/>
+
+            <div style="color: #1296db;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">设置</div>
+
+        </a>
+    </div>
+</div>
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>

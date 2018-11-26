@@ -1,0 +1,417 @@
+<style>
+    body{
+        background-color: #F8F8F8;
+    }
+    .bdd_basic_hold{
+        width: 1200px;
+        margin: 0 auto;
+        margin-bottom:140px;
+
+    }
+    .bdd_basic_top{
+        width: 1200px;
+        height: 140px;
+        margin: 0 auto;
+        background-color: white;
+        overflow: hidden;
+    }
+    .bdd_basic_top_l {
+        width: 80px;
+        height: 80px;
+        background-color: #ccbebe;
+        float: left;
+
+    }
+    .bdd_basic_conter{
+        width: 1170px;
+        height: 80px;
+        margin-top:30px;
+        margin-left:30px;
+    }
+    .bdd_basic_top_r{
+        float: left;
+        margin-left:20px;
+    }
+    .bdd_basic_P_size{
+        font-size: 24px;
+        color: #4d3a3a;
+        float: left;
+    }
+    .bdd_basic_P_span{
+        font-size: 14px;
+        color: #ccbebe;
+        padding-top:20px;
+        margin-left:-28px;
+        line-height:60px;
+
+    }
+    .bdd_basic_P_span_value{
+        padding:0 30px;
+    }
+    .bdd_basic_P_span_xu{
+        width:50px;
+        height:20px;
+        border-radius:10px;
+        background-color: #A7BC6E;
+        font-size: 12px;
+        color: #ffffff;
+        text-align: center;
+        padding-top:1px;
+        float: right;
+        margin-top:7px;
+        margin-left:10px;
+    }
+    /*微博*/
+    .bdd_follow_weibo{
+        width: 115px;
+        height:25px;
+        text-align: center;
+        font-size: 14px;
+        color: #4d3a3a;
+        margin-left:-20px;
+    }
+    .bdd_follow{
+        float: left;
+    }
+    .bdd_follow_foll{
+        margin-top:30px;
+        padding-left:400px;
+    }
+    .bdd_follow_pyq{
+        margin-top:30px;
+        padding-left:10px;
+    }
+    .bdd_follow_zb{
+        padding-left:210px;
+    }
+    .bdd_follow_info{
+        width: 890px;
+        height: 800px;
+        border: 1px solid #ccc;
+        float: left;
+    }
+    .bdd_follow_info{
+        width: 890px;
+        margin-top:70px;
+
+    }
+    .bdd_follow_left{
+        width: 890px;
+        height: 70px;
+        background-color:white;
+        margin-top:20px;
+        float: left;
+        padding:20px 10px;
+        font-size: 16px;
+        color: #cea63f;
+
+    }
+    .bdd_follow_span{
+        margin: 30px 0 0 120px;
+    }
+    .bdd_follow_span{
+        padding-left:400px;
+    }
+
+    /*导航栏*/
+    .bdd_basic_nav{
+        width: 1200px;
+        height:35px;
+        margin:0 auto;
+        background-color:white;
+    }
+
+    .bdd_basic_nav_title{
+        width:300px;
+        height:35px;
+        float: left;
+        color: #4d3a3a;
+        font-size: 18px;
+        text-align: center;
+        padding: 5px  20px 0px 20px;
+
+    }
+    .bdd_follow_dv{
+        width: 1200px;
+        height:150px;
+        margin-top:5px;
+    }
+    /*信誉总分*/
+    .bdd_reput_top{
+        width: 1200px;
+        height: 250px;
+        background-color: white;
+        margin-top: 30px;
+    }
+    .bdd_reput_top_title{
+        font-size: 18px;
+        color: #ccbebe;
+        text-align: center;
+        padding-top:100px;
+        padding-left:150px;
+    }
+    /*获奖情况头部*/
+    .bdd_scope{
+        width: 1200px;
+        margin: 0 auto;
+        height:200px;
+        background-color:white;
+        margin-top:30px;
+        overflow: hidden;
+
+    }
+    .bdd_scope_conter_left{
+        width: 10px;
+        height: 10px;
+        background-color: #cea63f;
+        float: left;
+        margin-top:17px;
+        margin-left:10px;
+
+    }
+    .bdd_scope_conter_right {
+        float: left;
+        margin-left: 10px;
+        color: #4d3a3a;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    /*获奖情况*/
+    .bdd_reput_conter{
+        width: 1200px;
+        height: 480px;
+        margin: 0 auto;
+        background-color: white;
+        margin-top:30px;
+        overflow: hidden;
+    }
+    .bdd_scopr_prize_span{
+        width: 890px;
+        height:40px;
+        margin-top:50px;
+    }
+    .bdd_scopr_prize{
+        display: inline;
+        font-size: 16px;
+        color: #4d3a3a;
+    }
+    .bdd_scope_reput{
+        padding-left:30px;
+    }
+    .bdd_scope_list{
+        margin-left:80px;
+    }
+    /*鲁班奖*/
+    .bdd_lauban_left{
+        width: 5px;
+        height: 5px;
+        background-color: #cea63f;
+        margin:10px 0 0 30px;
+
+    }
+    .bdd_lauban_rihgt{
+        font-size: 16px;
+        color: #4d3a3a;
+        margin-left:40px;
+        margin-top:-14px;
+    }
+    .bdd_lauban_conter{
+        width: 1140px;
+        height: 80px;
+        margin: 0 auto;
+        background-color:#F7F7F7;
+        padding-top:18px;
+        overflow: hidden;
+    }
+    .bdd_lauban_conter_left{
+        font-size: 14px;
+        color: #4d3a3a;
+        float: left;
+        margin-left:20px;
+        line-height:20px;
+    }
+    .bdd_lauban_conter_right{
+        float: right;
+        font-size: 14px;
+        color: #4d3a3a;
+        margin-right:20px;
+    }
+    .bdd_lauban_news{
+        width: 1200px;
+        height: 100px;
+        margin-top:10px;
+    }
+    /*装饰奖*/
+    .bdd_decorate{
+        margin-top:100px;
+        font-size: 18px;
+        color: #4d3a3a;
+        margin-left:30px;
+        line-height: 40px;
+    }
+    /*不良记录*/
+    .bdd_lauban_conter_mess{
+        height:200px;
+
+    }
+    .bdd_lauban_conter_footer{
+        width: 1100px;
+        height:50px;
+        margin-top:60px;
+        margin: 0 auto;
+        margin-top:60px;
+        color: #4d3a3a;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height:20px;
+    }
+
+</style>
+<!--头部-->
+<nav class="bdd-nav">
+    <div class="bdd-nav-div">
+        <div class="bdd-img-div"><div class="bdd-img-one"><img class="bdd-img" src="../../../vendor/images/logo.png" alt=""/></div></div>
+        <div class="bdd-nav-title"><a href="./bdd-test.html"></a>首页</div>
+        <div class="bdd-nav-title"><a href="./bdd_scerrn.html">标讯</a></div>
+        <div class="bdd-nav-title">企信</div>
+        <div class="bdd-nav-title">动态</div>
+        <div class="bdd-nav-title">应用</div>
+        <div class="bdd-nav-title bdd-nav-title-hide"><div class="search-status">
+            <div class="search-filter">
+                <a href="javascript:;"><span class="tit">作品</span><i class="icon-down"></i></a>
+                <ul class="options">
+                    <li><a href="javascript:;" data-rel="project">作品</a></li>
+                    <li><a href="javascript:;" data-rel="experience">文章</a></li>
+                    <li><a href="javascript:;" data-rel="source">源文件</a></li>
+                    <li><a href="javascript:;" data-rel="designer">设计师</a></li>
+                    <li><a href="javascript:;" data-rel="inspiration">灵感</a></li>
+                    <li><a href="javascript:;" data-rel="talk">话题</a></li>
+                    <li><a href="javascript:;" data-rel="activity">活动</a></li>
+                    <li><a href="javascript:;" data-rel="veer">素材</a></li>
+                </ul>
+            </div>
+            <div class="search-select">
+                <input type="text" class="search-val" placeholder="请输入您要查找的内容" autocomplete="off" value="" name="keywords" id="keywords">
+                <ul class="options" style="display: none;">
+                    <li><a href="javascript:;">app</a></li><li><a href="javascript:;">logo</a></li><li><a href="javascript:;">icon</a></li><li><a href="javascript:;">AE</a></li><li><a href="javascript:;">作品集</a></li>								</ul>
+            </div>
+        </div>
+            <input type="hidden" name="type" value="project" id="sType"></div>
+        <div class="bdd-nav-title bdd-nav-search"><a href="#"><img src="../../../vendor/images/nav_icon_search.png" alt=""></a></div>
+        <div class="bdd-nav-title bdd-nav-right">APP下载</div>
+        <div class="bdd-nav-title bdd-nav-right">登录/注册</div>
+    </div>
+</nav>
+</div>
+</div>
+<!--图片-->
+<div class="bdd_basic_hold">
+    <div class="bdd_basic_top">
+        <div class="bdd_basic_conter">
+            <div class="bdd_basic_top_l"></div>
+            <div class="bdd_basic_top_r">
+                <div class="bdd_basic_top_p bdd_basic_P_size">益阳市城市生活垃圾发电厂建设项目拆迁安置基地配套项目<div class="bdd_basic_P_span_xu">存续</div></div>
+                <div class="bdd_basic_top_p bdd_basic_P_span"><span class="bdd_basic_P_span_value">法人：希希</span><span class="bdd_basic_P_span_value">法人：希希</span><span class="bdd_basic_P_span_value">法人：希希</span></div>
+            </div>
+        </div>
+    </div>
+    <!--微信-->
+    <div class="bdd_follow_dv">
+        <div class="bdd_follow bdd_follow_foll "><img src="../../../vendor/images/zb_btn_follow.png" alt=""></div>
+        <div class="bdd_follow bdd_follow_pyq bdd_follow_zb bdd_follow_span"><img src="../../../vendor/images/zb_icon_weibo.png" alt=""></div>
+        <div class="bdd_follow bdd_follow_pyq"><img src="../../../vendor/images/zb_icon_wechat.png" alt=""></div>
+        <div class="bdd_follow bdd_follow_pyq"><img src="../../../vendor/images/zb_icon_qq.png" alt=""></div>
+        <div class="bdd_follow bdd_follow_pyq"><img src="../../../vendor/images/zb_icon_pyq.png" alt=""></div>
+        <div class="bdd_follow "><input class="bdd_follow_weibo" type="text" value="分享到微博"></div>
+    </div>
+    <!--导航-->
+    <div class="bdd_basic_nav">
+        <div  class="bdd_basic_nav_title">基本信息</div>
+        <div  style="background-color:#4d3a3a;color: white"class="bdd_basic_nav_title">信誉信息</div>
+        <div class="bdd_basic_nav_title">资质信息</div>
+        <div class="bdd_basic_nav_title">人员信息</div>
+    </div>
+    <!--信誉信用总分-->
+    <div class="bdd_reput_top">
+        <div class="bdd_reput_top_title">"现在的普通改变，将改变未来的普通"</div>
+    </div>
+    <!--获奖情况-->
+    <div class="bdd_reput_conter">
+        <div class="bdd_scope_conter"><div class="bdd_scope_conter_left"></div><div class="bdd_scope_conter_right">获奖信息</div></div>
+        <div class="bdd_scopr_prize_span">
+            <div class="bdd_scopr_prize bdd_scope_reput">国家级奖项<span style="color: #cea63f">（10）</span></div>
+            <div class="bdd_scopr_prize bdd_scope_list">省级奖项<span style="color: #cea63f">（10）</span></div>
+            <div class="bdd_scopr_prize bdd_scope_list">市级奖项<span style="color: #cea63f">（10）</span></div>
+            <div class="bdd_scopr_prize bdd_scope_list">其他级奖项<span style="color: #cea63f">（10）</span></div>
+        </div>
+        <!--鲁班奖-->
+        <div class="bdd_lauban">
+            <div class="bdd_lauban_left"></div>
+            <div class="bdd_lauban_rihgt">鲁班奖</div>
+            <div class="bdd_lauban_news">
+                <div class="bdd_lauban_conter">
+                    <div class="bdd_lauban_conter_left">项目名称:湖南省株洲市芦淞区建设中路28号</div>
+                    <div class="bdd_lauban_conter_right">项目分值：5</div><br>
+                    <div class="bdd_lauban_conter_left">项目类型：建筑工程</div>
+                    <div class="bdd_lauban_conter_right">年度：2018</div>
+                </div>
+                <div style="margin-top: 10px" class="bdd_lauban_conter">
+                    <div class="bdd_lauban_conter_left">项目名称:湖南省株洲市芦淞区建设中路28号</div>
+                    <div class="bdd_lauban_conter_right">项目分值：5</div><br>
+                    <div class="bdd_lauban_conter_left">项目类型：建筑工程</div>
+                    <div class="bdd_lauban_conter_right">年度：2018</div>
+                </div>
+            </div>
+            <!--装饰奖-->
+            <div class="bdd_decorate">
+                <ul>
+                    <li><img src="./images/qx_origin_greeen.png" alt=""><span style="margin-left: 5px;">全国建筑工程装饰奖</span></li>
+                    <li><img src="./images/qx_origin_greeen.png" alt=""><span style="margin-left: 5px;">金杯奖</span></li>
+                    <li><img src="./images/qx_origin_greeen.png" alt=""><span style="margin-left: 5px;">金杯奖</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--不良记录-->
+    <div class="bdd_reput_conter">
+        <div class="bdd_scope_conter"><div class="bdd_scope_conter_left"></div><div class="bdd_scope_conter_right">不良记录</div></div>
+        <div class="bdd_scopr_prize_span">
+            <div style="color: #761c19" class="bdd_scopr_prize bdd_scope_reput">性质严重<span style="color: #cea63f">（10）</span></div>
+            <div class="bdd_scopr_prize bdd_scope_list">性质一般<span style="color: #cea63f">（10）</span></div>
+
+        </div>
+        <!--鲁班奖-->
+        <div class="bdd_lauban">
+            <div class="bdd_lauban_left"></div>
+            <div class="bdd_lauban_rihgt">鲁班奖</div>
+            <div class="bdd_lauban_news">
+                <div class="bdd_lauban_conter bdd_lauban_conter_mess">
+                    <div class="bdd_lauban_conter_left">项目名称:湖南省株洲市芦淞区建设中路28号</div>
+                    <div class="bdd_lauban_conter_right">项目分值：5</div><br>
+                    <div class="bdd_lauban_conter_left">项目类型：建筑工程</div>
+                    <div class="bdd_lauban_conter_right">年度：2018</div><br>
+                    <div class="bdd_lauban_conter_left">项目类型：建筑工程</div>
+                    <div class="bdd_lauban_conter_right">年度：2018</div>
+                    <div class="bdd_lauban_conter_footer">本招标项目长沙城南（寺冲）220千伏输变电项目土石方工程已由暮管发[2018]3号批准建设，建设资金来自 国网长沙市供电公司专项资金 。招标人（项目业主）为湖南长沙暮云经济开发区城建开发有限公司 ，项目已具备招标条件，现对该项目的施工进行公开招标。</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="bdd_footer_left">
+    <div class="bdd_footer_news">
+        <div class="bdd_footer_content"><a href="#"><img class="bdd_footer_logo" src="./images/logo.png" alt=""/></a></div>
+        <div class="bdd_footer_content  bdd_footer_side"><a href="#">关于我们</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">加入我们</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">商务合作</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">新手指南</a></div>
+        <div class="bdd_footer_content  bdd_footer_megges"><a href="#">网站声明</a></div>
+        <div class="bdd_footer_content bdd_footer_aido"><a href="#"><img class="bdd_footer_logo" src="./images/bottom_icon_andriod.png" alt=""/></a></div>
+        <div class="bdd_footer_content"><a href="#"><img class="bdd_footer_logo"  src="./images/bottom_icon_ios.png" alt=""/></a></div>
+        <div class="bdd_footer_content"><a href="#"><img  class="bdd_footer_logo" src="./images/bottom_icon_wechat.png" alt=""/></a></div>
+    </div>
+</div>

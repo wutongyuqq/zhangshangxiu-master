@@ -1,0 +1,63 @@
+<div class="bdd_vitality_right_header">
+    <div class="bdd_vitality_right_hrader_li bdd_vita_right" ng-click="ctrl.clearAllList();ctrl.queryCollNoticeList('0')">招标<span ng-if="ctrl.param.type=='0'"><div class="bdd_vita_span"></div></span></div>
+    <div class="bdd_vitality_right_hrader_li bdd_vita_top" ng-click="ctrl.clearAllList();ctrl.queryCollNoticeList('2')">中标<span ng-if="ctrl.param.type=='2'"><div class="bdd_vita_span"></div></span></div>
+    <div class="bdd_vitality_right_hrader_li bdd_vita_top" ng-click="ctrl.clearAllList();ctrl.queryCollComList();">企业<span ng-if="ctrl.choiceCompanyList"><div class="bdd_vita_span"></div></span></div>
+</div>
+<div class="bdd_vitality_vita_br"></div>
+<!--下拉框-->
+
+<div id="bdd_adver_header" class="bdd_adver_header" infinite-scroll="ctrl.nextPage()"
+     infinite-scroll-disabled='ctrl.busy' infinite-scroll-distance='1' style="height:auto;" >
+
+    <div   class="bdd_win_conter bdd_win_conter_last" ng-repeat="tender in ctrl.tenderList ">
+        <div class="bdd_text_z" > <a href="#/tenderDetail/{{tender.id}}"><span ng-bind="tender.title"></span></a>
+            <span ng-if="tender.id">
+                <span ng-click="ctrl.cancelCollectionNotice({{tender.id}},0,tender)"><img style="vertical-align: middle;margin-left:140px;" src="../../../vendor/images/wode_but_delate.png" alt="取消关注"></span>
+            </span>
+        </div>
+        <div class="bdd_text_y" >资质要求：<span>{{tender.certificate ? tender.certificate:'详见原文'}}</span></div>
+        <div class="bdd_text_p" >评标办法：<span>{{tender.pbMode ? tender.pbMode:'详见原文'}}</span></div>
+        <div class="bdd_text_invite"><span ng-bind="tender.projectType"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="bdd_text_invite bdd_text_pading"><span ng-bind="tender.noticeType"></span></div>
+        <div class="bdd_text_riqi"><span ng-bind="tender.opendate"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+
+    <div class="bdd_win_conter bdd_win_conter_last" ng-repeat="notice in ctrl.biddingList ">
+        <div class="bdd_text_z">
+            <a href="#/winbding/{{notice.id}}"><span ng-bind="notice.title"></span></a>
+            <span ng-if="notice.id"></ng-if><span ng-click="ctrl.cancelCollectionNotice({{notice.id}},2,notice)">
+                <img style="vertical-align: middle;margin-left:140px;" src="../../../vendor/images/wode_but_delate.png" alt="取消关注"></span>
+            </span>
+        </div>
+        <div class="bdd_text_y" >中标企业：<span>{{notice.oneName ? notice.oneName:'详见原文'}}</span></div>
+        <div class="bdd_text_p" >项目金额：<span>{{notice.projSum ? notice.projSum+'万元':'详见原文'}}</span></div>
+        <div class="bdd_text_invite"><span ng-bind="notice.projectType"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="bdd_text_invite bdd_text_pading"><span ng-bind="notice.noticeType"></span></div>
+        <div class="bdd_text_riqi"><span ng-bind="notice.opendate"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+    <div class="bdd_win_conter bdd_win_conter_last" ng-repeat="company in ctrl.companyList">
+            <a href="#/companydetail?comId={{company.comId}}">
+                <div class="bdd_win_conter_header" ng-bind="company.comName"></div>
+            </a>
+            <div class="bdd_win_conter_d"><span class="bdd_win_conter_span"  ng-bind="company.subsist|limitTo:2"></span>
+                <span ng-if="company.comId">
+                    <span ng-click="ctrl.cancelCollectionCompany({{company.comId}},company)"><img style="vertical-align: middle;margin-left:140px;" src="../../../vendor/images/wode_but_delate.png" alt="取消关注"></span>
+                </span>
+            </div>
+            <br>
+            <div style="margin-top:-2px" class="bdd_hold_top">法定代表人：<span ng-bind="company.legalPerson"></span>
+            </div>
+            <div class="bdd_hold_top bdd_hold_list">注册资本：<span ng-bind="company.regisCapital"></span></div>
+            <br>
+            <div class="bdd_hold_top bdd_hold_top_addr">地址：<span ng-bind="company.comAddress"></span></div>
+    </div>
+
+    <div  class="bdd_win_conter bdd_win_conter_last" ng-if="ctrl.info">
+        <span style="font-weight:bold" ng-bind="ctrl.info"></span>
+    </div>
+    <div  class="bdd_win_conter bdd_win_conter_last" ng-if="ctrl.noResultList" style="margin-bottom:1cm;">
+        <span style="font-weight:bold" ng-bind="ctrl.noResultList"></span>
+    </div>
+</div>

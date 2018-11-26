@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+.all {
+    width: 1200px;
+    height: 500px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.screen {
+    width: 1200px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen li {
+    width: 1200px;
+    height: 500px;
+    overflow: hidden;
+    float: left;
+}
+
+.screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 7200px;
+
+}
+
+.all ol {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.all ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.all ol li.current {
+    background: yellow;
+}
+
+#arr {
+    display: none;
+}
+
+#arr span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -20px;
+    background: #000;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'ºÚÌå';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+#arr #right {
+    right: 5px;
+    left: auto;
+}
+
+.jd_layout {
+    margin-top: 100px;
+    z-index: 999;
+}
+
+.sidenav-header {
+    margin-left: 25px;
+}
+
+. table-condensed {
+    padding: 0 100px;
+}
+
+.jd_layout {
+    margin-top: 105px;
+}
+
+.bdd_footer_news {
+    width: 1200px;
+    margin: 0 auto;
+}
+.txt-inline{
+    display: inline-block;
+
+}
+.search-tender{
+    width:auto;
+    height:20px;
+    position: fixed;
+    background-color:#212121;
+    z-index: 1009;
+}
+.bdd-nav-search{
+    position: fixed;
+    z-index: 2000;
+}
+.bdd-nav-app{
+    margin-left: 350px;
+}
+
+.bdd-nav-search{
+    margin-left: 1100px;
+}
+.bdd_black{
+    width: 100px;
+    background: #212121;
+    border: 0px;
+    background-color: white;
+    border-radius:5px;
+
+
+
+}
+.bdd_select_op{
+    background: #212121;
+    border: 0px;
+    font-size: 12px;
+}
+.bdd_select_op>option{
+    background: #212121;
+    border: 0px;
+    font-size: 12px;
+}
+.bdd-nav-ser-div{
+    width: 230px;
+    background: #212121;
+    text-align: left;
+    margin-left:60px;
+    color: #666;
+    font-size: 16px;
+}
+
+.bdd-nav-title-t{
+    line-height: 80px;
+}
+.bdd-nav-div{
+    margin-left: 363px;
+
+}
+.bdd_user_top{
+    position: absolute;
+    left:170px;
+    top:0px;
+}
+.bdd_font_span{
+    position: absolute;
+    left:311px;
+    top:0px;
+    width: 50px;
+}
+.bdd_black_a{
+    position: absolute;
+    left:359px;
+    top:0px;
+    width: 112px;
+}
+.btn-default{
+    position: absolute;
+    top:5px;
+}
+.dropup, .dropdown {
+    position: relative;
+    top:-20px;
+    left:217px;
+}
+
+.search-tender-a{
+    display: none;
+}

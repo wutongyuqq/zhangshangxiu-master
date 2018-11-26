@@ -1,0 +1,26 @@
+<div class="bdd_vitality_right_header">
+    <div class="bdd_vitality_right_hrader_li bdd_vita_right" ng-click="ctrl.getMessage(0)">系统消息
+        <div class="bdd_vita_span_a" ng-if="ctrl.isSystem==0"></div>
+    </div>
+    <div class="bdd_vitality_right_hrader_li bdd_vita_top" ng-click="ctrl.getMessage(1)">服务消息
+        <div class="bdd_vita_span" ng-if="ctrl.isSystem==1"></div>
+    </div>
+</div>
+<div class="bdd_vitality_vita_br"></div>
+
+
+<div style="height: auto" id="bdd_adver_header" class="bdd_adver_header" infinite-scroll='ctrl.nextPage()'
+     infinite-scroll-disabled='ctrl.busy' infinite-scroll-distance='0.5'>
+
+    <div style="height: auto" class="bdd_qinximessage_border">
+        <div class="bdd_qinximessage_boder_news" ng-repeat="message in ctrl.messageList">
+            <div style="margin-top: 40px" class="bdd_qinximessage_text_side">
+                <div class="bdd_qinximessage_text"><span ng-bind="message.title"></span></div>
+                <div class="bdd_qinximessage_data"><span ng-bind="message.createdate"></span></div>
+            </div>
+            <div class="bdd_qinximessage_tet"><span ng-bind="message.message"></span></div>
+            <div class="bdd_qinximessage_br"></div>
+        </div>
+    </div>
+    <!--<div style="margin-top: 20px;text-align: center" ng-show='ctrl.busy'>数据加载中...</div>-->
+</div>

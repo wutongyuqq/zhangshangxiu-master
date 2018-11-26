@@ -1,0 +1,162 @@
+/*µÇÂ¼Ò³Ãæ*/
+body{
+    background-color: #F8F8F8;
+}
+.bdd_login_content{
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+
+}
+.bdd_login_banner{
+    width: 1040px;
+    height:500px;
+    margin: 200px auto 0px  auto;
+    background-color: white;
+
+}
+.bdd_login_banner_left{
+    width: 600px;
+    height: 500px;
+    float: left;
+}
+.bdd_login_banner_right{
+    width: 438px;
+    height:400px;
+    float: left;
+    margin-top:50px;
+   border-left: 1px solid #E6DFDF;
+}
+.bdd_login_banner_header{
+    width: 500px;
+    height: 400px;
+    margin:50px auto;
+
+}
+.bdd_logoin_banner_border{
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+
+}
+.bdd_logoin_banner_bor_l{
+    float: left;
+    color: #4d3a3a;
+    font-size: 18px;
+    font-family: Arial;
+}
+.bdd_logoin_banner_bor_r{
+    float: left;
+    margin-left:50px;
+    font-size: 14px;
+    color: #4d3a3a;
+    margin-top:4px;
+    font-family: Arial;
+}
+.bdd_logoin_banner_conter{
+    width: 400px;
+    height: 50px;
+    margin-top:58px;
+    margin: 0 auto;
+}
+.bdd_logoin_placeholder{
+    border: none;
+    background-color:white;
+    font-size: 16px;
+    color:#ccbebe;
+    font-family: Arial;
+
+}
+.bdd_logoin_hr{
+    width: 400px;
+    height: 1px;
+    background-color: #ccbebe;
+    margin-top:6px;
+    opacity: 0.5;
+
+}
+.bdd_logoin_mi{
+    width: 400px;
+    height: 50px;
+    margin-top:20px;
+}
+.bdd_logoin_mi_l{
+    color: #ccbebe;
+    font-size: 14px;
+    float: left;
+    font-family: Arial;
+}
+.bdd_logoin_mi_r{
+    color:#cea63f;
+    font-size: 14px;
+    float:right;
+    font-family: Arial;
+}
+.bdd_login_buttom{
+    width: 400px;
+    height: 46px;
+    background-color: #212121;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    margin-top:60px;
+    font-family: Arial;
+}
+.bdd_login_pic{
+    width:400px;
+    height: 50px;
+    margin-top:50px;
+
+}
+.bdd_login_pic_left{
+    color: #ccbebe;
+    font-size: 14px;
+    float: left;
+    font-family: Arial;
+}
+.bdd_login_pic_right{
+    float: right;
+
+}
+.bdd_login_banner_right_conter{
+    width: 300px;
+    height: 400px;
+    margin:50px auto 0px auto;
+}
+.bdd_login_banner_right_text{
+    text-align: center;
+    color: #ccbebe;
+    font-size: 24px;
+    letter-spacing:1px;
+    font-family: Arial;
+
+}
+.bdd_login_banner_logo{
+    width: 300px;
+    height: 50px;
+    margin-top:240px;
+}
+.bdd_login_banner_logo_text_br{
+    width: 2px;
+    height: 28px;
+    background-color: #cea63f;
+}
+.bdd_login_banner_logo_text_span{
+    font-size: 14px;
+    color: #4d3a3a;
+    font-family: Arial;
+}
+.bdd_login_banner_logo_text_br{
+    float: left;
+    margin-left:28px;
+    margin-top:5px;
+}
+.bdd_login_banner_logo_text{
+    float: left;
+    margin-top:2px;
+}
+.bdd_login_banner_logo_text_span{
+    float: right;
+    font-family: Arial;
+
+}

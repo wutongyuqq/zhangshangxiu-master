@@ -1,0 +1,438 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .item-input-a {
+        width: 90%;
+    }
+
+    .bts-magin {
+
+        width: 80%;
+        margin: 60px auto 0px auto;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    .form-control-a {
+        width: 95%;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .input-label-a {
+        width: 30%;
+    }
+
+    .input-left-div {
+        padding-left: 1.3rem;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        margin-top: 0.55rem;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: -3px;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+
+        text-align: center;
+
+        border: none;
+    }
+
+    .back-line-red {
+        width: 100%;
+        height: 3px;
+        margin-top: 20px;
+        background-color: #ff9db4;
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .btn_inline {
+        width: 100%;
+    }
+
+    .btn_width_div {
+        width: 100%;
+        height: 2.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn_gz_left {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_jc_right {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_a {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .btn_b {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .span_card {
+        position: relative;
+        text-decoration: none;
+        color: #1296db;
+    }
+
+    .span_card_list {
+        position: fixed;
+        left: 0rem;
+        top: 5.5rem;
+        z-index: 1009;
+        width: 10.8rem;
+    }
+
+    .home_ul {
+
+        width: 10.8rem;
+        overflow: auto;
+        padding: 0.5rem;
+        background-color: #eeeeee;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .home_li {
+        float: left;
+        margin-top: 0.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .home_li_a {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: white;
+        text-align: center;
+        padding: 0.3rem;
+        background-color: #89c997;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+    .modal-header{
+        background-color: #333333;
+        color:white;
+        border: none;
+    }
+    .modal-title{
+        color:white;
+    }
+    .btn-primary{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997 ;
+    }
+    .btn-warning{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997;
+        margin-left: 1rem;
+    }
+    .modal-footer{
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+    .modal-content{
+        border: none;
+    }
+    .card_ul{
+        position: fixed;
+        top:5.2rem;
+        background-color: #f4f1f1;
+        width: 5rem;
+        left:3.3rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        z-index: 1010;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-height: 7rem;
+        color: #7d7e7d;
+        overflow: scroll;
+
+    }
+
+</style>
+
+<div ng-controller="HomeCtrl">
+    <div class="bar bar-header bar-light bar-light-div">
+        <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+        <h1 class="title"><span class="title-color">车辆接待</span></h1>
+    </div>
+    <div class="col-lg-6 bts-magin">
+        <div class="input-group">
+            <input type="text" class="form-control-a" placeholder="姓名/卡号/手机号">
+            <span class="input-group-btn">
+        <button class="btn-search" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
+      </span>
+        </div>
+        <!-- /input-group -->
+    </div>
+    <!-- /.col-lg-6 -->
+
+    <div class="home_tab_div {{showMore==0?'home_tab_div_right_color':'home_tab_div_left_color'}}">
+        <div class="text_inline home_tab_div_left {{showMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(0)">基本信息
+        </div>
+        <div class="text_inline home_tab_div_right  {{showMore==0?'home_tab_div_right_color':'home_tab_div_left_color'}}"
+             ng-click="showMoreView(1)">更多信息
+        </div>
+
+    </div>
+    <div ng-show="showMore==0" class="input-left-div">
+        <any class="item-input" style="overflow: visible">
+            <span class="input-label input-label-a">车辆
+                &nbsp;&nbsp;&nbsp;
+                <a class="span_card text_inline" ng-click="showCardMore(showCard)">{{proName?proName:'闽'}}</a>
+                <div ng-show="showCard" class="span_card_list text_inline">
+                    <ul class="home_ul">
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('闽')">闽</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('京')">京</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('津')">津</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('沪')">沪</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('渝')">渝</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('蒙')">蒙</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('新')">新</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('藏')">藏</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('宁')">宁</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('桂')">桂</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('港')">港</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('澳')">澳</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('黑')">黑</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('吉')">吉</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('辽')">辽</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('晋')">晋</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('冀')">冀</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('青')">青</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('鲁')">鲁</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('豫')">豫</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('苏')">苏</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('皖')">皖</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('浙')">浙</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('湘')">湘</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('鄂')">鄂</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('粤')">粤</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('琼')">琼</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('甘')">甘</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('陕')">陕</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('黔')">黔</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('滇')">滇</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('川')">川</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('临')">临</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('警')">警</a></li>
+                        <li class="home_li"><a class="home_li_a" ng-click="selectCard('测')">测</a></li>
+                    </ul>
+                </div>
+            </span>
+            <div class="text_inline">
+                <input placeholder="输入" type="text" ng-model="carInfo.cardName" ng-blur="showCardList=false" ng-focus="showCardList=true"/>
+                <ul class="card_ul"  ng-show="showCardList">
+                    <li ng-repeat="item in cardDataList" ng-click="showCardName(item)">{{item.mc}}</li>
+
+
+                </ul>
+            </div>
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">车架号</span>
+            <input placeholder="输入" ng-model="carInfo.cjhm" type="text"/>
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">公里数</span>
+            <input placeholder="输入" ng-model="carInfo.gls" type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">报修人</span>
+            <input placeholder="输入" ng-model="carInfo.linkman" type="text">
+        </any>
+
+    </div>
+
+
+    <div ng-show="showMore==1" class="input-left-div">
+        <any class="item-input">
+            <span class="input-label input-label-a">推荐人</span>
+            <input placeholder="输入" ng-model="carInfo.custom5" type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">故障描述</span>
+            <input placeholder="输入" ng-model="carInfo.gzms"  type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">钥匙牌号</span>
+            <input placeholder="输入" ng-model="carInfo.ysph"  type="text">
+        </any>
+        <any class="item-input">
+            <span class="input-label input-label-a">备注</span>
+            <input placeholder="输入" ng-model="carInfo.ywtx" type="text">
+        </any>
+
+    </div>
+
+
+    <div class="back-line-red">
+    </div>
+    <div class="btn_width_div">
+        <div class="text_inline btn_gz_left">
+            <button class="btn_a" ui-sref="CompanyDetail">关注</button>
+        </div>
+        <div class="text_inline btn_jc_right">
+            <button class="btn_b" ng-click="uploadCardInfo(carInfo)">接车</button>
+        </div>
+
+    </div>
+
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" href="../../../vendor/images/zsx/recever_hand_blue.png">
+            <div>
+                <img style="width: 22px;height: 22px;margin-top: 5px;"
+                     src="../../../vendor/images/zsx/recever_hand_blue.png"/>
+
+                <div>车辆接待</div>
+            </div>
+
+        </a>
+        <a class="tab-item">
+            <img style="width: 22px;height: 22px;margin-top: 5px;" src="../../../vendor/images/zsx/factory_gray.png"/>
+
+            <div>车间管理</div>
+
+        </a>
+        <a class="tab-item">
+            <img style="width: 22px;height: 22px;margin-top: 5px;" src="../../../vendor/images/zsx/condition_gray.png"/>
+
+            <div>整厂概况</div>
+
+        </a>
+        <a class="tab-item">
+            <img style="width: 22px;height: 22px;margin-top: 5px;" src="../../../vendor/images/zsx/msg_gray.png"/>
+
+            <div>信息中心</div>
+
+        </a>
+
+        <a class="tab-item">
+            <img style="width: 22px;height: 22px;margin-top: 5px;" src="../../../vendor/images/zsx/setting_gray.png"/>
+
+            <div>设置</div>
+
+        </a>
+    </div>
+
+</div>
+
+
+<script type="text/ng-template" id="modal.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                该车辆已进场
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 2rem">
+
+                <div><span>接待人员：</span><span>张三</span></div>
+                <div><span>进厂时间：</span><span>2018-05-08</span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">
+                进入该车
+            </button>
+            <button class="btn btn-warning" ng-click="cancel()" style="margin-left: 2rem">
+                返回接车
+            </button>
+        </div>
+    </div>
+</script>

@@ -1,0 +1,45 @@
+<script src="../vendor/My97DatePicker/WdatePicker.js"></script>
+<div class="bdd_vitality_right_header">
+    <div class="bdd_vitality_right_hrader_li bdd_vita_right" >申请保证金借款</div>
+    <div class="bdd_vitality_hr"></div>
+
+    <form style="padding-right: 20px;padding-left: 20px;line-height: 30px;" name="finanialForm" novalidate ng-submit="ctrl.submit(finanialForm.$valid)">
+        <div class="bdd_fin_parent" id="parent">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区
+            <select class="bdd_fin_select" ng-model="ctrl.province" ng-options="province.name for province in selectDatas" ng-change="ctrl.changeProvince()">
+                <option value="">请选择</option>
+            </select>
+            <select style="margin-left: 1px;" class="bdd_fin_select" ng-model="ctrl.city" ng-options="city for city in ctrl.province.list" ng-change="ctrl.changeCity()">
+                <option value="">请选择</option>
+            </select>
+        </div>
+        <div class="bdd_fin_parent" id="par">项目名称
+            <input name="projName" style="margin-left: 30px; margin-top: 20px;cursor: pointer;border-radius: 5px" type="text" class="placeholder" ng-model="ctrl.projName" required>
+            <span class="error" style="color: red" ng-show="finanialForm.$submitted && finanialForm.projName.$error.required">*项目名称不能为空</span>
+        </div>
+        <div style="margin-top: 10px;" class="bdd_fin_parent" id="paren">开标时间
+            <input id="kbTime" name="kbTime" style="margin-left: 30px;border-radius: 5px;" type="text" class="placeholder Wdate" ng-model="ctrl.kbTime" onclick="WdatePicker({skin:'twoer',readOnly:true,errDealMode:1,isShowToday:false,dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'%y-%M-%d %H:%m:{%s+1}'})">
+            格式：2018-01-01 00:00:00
+        </div>
+        <div style="margin-top: 10px;" class="bdd_fin_parent" id="pa">借&nbsp;&nbsp;款&nbsp;&nbsp;人
+            <input name="borrower" style="margin-left: 28px;border-radius:5px;" type="text" class="placeholder" ng-model="ctrl.borrower" required>
+            <span class="error" style="color: red" ng-show="finanialForm.$submitted && finanialForm.borrower.$error.required">*借款人不能为空</span>
+        </div>
+        <div style="margin-top: 10px;border-radius: 5px;" class="bdd_fin_parent" id="p">手机号码
+            <input name="phone" style="margin-left: 30px;border-radius: 5px;" type="text" class="placeholder" ng-model="ctrl.phone" required ng-pattern="ctrl.mobileRegx">
+            <span class="error" style="color: red" ng-show="finanialForm.$submitted && finanialForm.phone.$error.required">*手机号不能为空</span>
+            <span class="error" style="color: red" ng-show="finanialForm.$submitted && finanialForm.phone.$error.pattern">*手机号不合法</span>
+        </div>
+        <div style="margin-top: 10px;border-right: 5px;" class="bdd_fin_parent" id="prt">借款时间
+            <input id="borrowTime" name="borrowTime" style="margin-left: 30px;border-radius: 5px;" type="text" class="placeholder Wdate" ng-model="ctrl.borrowTime" onclick="WdatePicker({skin:'twoer',readOnly:true,errDealMode:1,isShowToday:false,dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'%y-%M-%d %H:%m:{%s+1}'})">
+            格式：2018-01-01 00:00:00
+        </div>
+        <div style="margin-top: 10px;" class="bdd_fin_parent">借款金额
+            <input name="money" style="margin-left: 30px;border-radius: 5px;" type="text" class="placeholder" maxlength="13" ng-model="ctrl.money" required ng-pattern="ctrl.moneyReg" onkeyup="this.value=this.value.replace(/[^\d|\.]/g,'');">
+            <span class="error" style="color: red" ng-show="finanialForm.$submitted && finanialForm.money.$error.required">*借款金额不能为空</span>
+            <span class="error" style="color: red" ng-show="finanialForm.$submitted && finanialForm.money.$error.pattern">*借款金额最多2位小数</span>
+        </div>
+        <input type="submit" class="bdd_vita_footer_title_text" value="提交"/>
+    </form>
+
+    </div>
+<div class="bdd_fin_nav"></div>

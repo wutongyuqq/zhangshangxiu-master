@@ -1,0 +1,244 @@
+﻿body{
+    background-color: #F8F8F8;
+}
+.bdd_trends_contont{
+    width: 100%;
+    margin-bottom:240px;
+}
+.bdd_trends_border{
+    width: 1200px;
+    margin:  0 auto;
+}
+.bdd_trends_pic{
+    width: 1200px;
+    height: 500px;
+    margin:  0 auto;
+}
+/*内容*/
+.bdd_homepage_header{
+    width: 1200px;
+    height: 55px;
+    margin: 0 auto;
+    margin-top:108px;
+}
+.bdd_homepage_header_left{
+    width: 590px;
+    height: 55px;
+    float: left;
+    position: absolute;
+}
+.bdd_homepage_header_right{
+    width: 590px;
+    height: 55px;
+    float: right;
+    margin-left:5px;
+}
+.bdd_homepage_header_qin{
+    position: relative;
+    font-size: 16px;
+    color: #ccbebe;
+    top:-45px;
+    left:65px;
+
+}
+.bdd_homepage_header_qin{
+    float: left;
+}
+.bdd_homepage_header_qi{
+    position: relative;
+    left: 430px;
+    top: -46px;
+}
+.bdd_homepage_list{
+    width: 1200px;
+    height: 140px;
+    margin-top:20px;
+
+}
+.bdd_homepage_left{
+    float: left;
+    width: 590px;
+    height: 140px;
+    background-color: white;
+}
+.bdd_homepage_right{
+    float: right;
+    width: 590px;
+    height: 140px;
+    background-color: white;
+
+}
+/*内容*/
+.bdd_per_content{
+    width: 1200px;
+    margin-top:15px;
+    margin-bottom:200px;
+}
+.bdd_per_content_left{
+    width: 590px;
+    height: 140px;
+    background-color: white;
+    float: left;
+    border-radius: 5px;
+    margin-top:10px;
+}
+.bdd_per_content_right{
+    width: 590px;
+    height:140px;
+    background-color: white;
+    float:right;
+    border-radius: 5px;
+    margin-top:10px;
+
+}
+.bdd_per_content_left_news{
+    float: left;
+    padding:25px 0 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4d3a3a;
+    font-family: "微软雅黑", sans-serif;
+}
+.bdd_per_content_left_data{
+    float: right;
+    padding:25px 10px 0 0;
+    font-size: 14px;
+    color: #ccbebe;
+    font-family: "微软雅黑", sans-serif;
+}
+.bdd_per_content_text{
+    font-size: 16px;
+    color: #4d3a3a;
+    margin-top:6px;
+    margin-left:18px;
+    font-family: "微软雅黑", sans-serif;
+
+}
+.bdd_per_border {
+    width: 590px;
+    height: 20px;
+    margin-top: 70px;
+}
+.bdd_per_span_news{
+    font-size:18px;
+    color:#4d3a3a;
+
+}
+.bdd_per_content_boeder{
+    width: 590px;
+    height: 48px;
+    border: 1px solid #ccc;
+}
+.bdd_per_content_hrader{
+    width: 48px;
+    height: 48px;
+    background-color: #5cb85c;
+    float: left;
+}
+.bdd_per_content_messg{
+    width: 50px;
+    height:22px;
+    background-color:#A7BC6D;
+    font-size:16px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    float: right;
+    margin-top:10px;
+    margin-right:300px;
+
+}
+.bdd_per_content_tex{
+    font-size: 18px;
+    font-family: Arial;
+    color: #212121;
+    float: left;
+    padding-left:10px;
+    margin-top:10px;
+    font-weight: 700;
+
+}
+.bdd_pers_content_boder{
+    width: 590px;
+    height: 50px;
+    margin-top:10px;
+}
+.bdd_pers_conter_border_left{
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-left:32px;
+}
+.bdd_pers_conter_border_right{
+    width: 500px;
+    height: 48px;
+    float: left;
+}
+.bdd_pers_left_aide{
+    width: 48px;
+    height: 48px;
+
+
+}
+.bdd_pers_conter_spans{
+    float: left;
+    color: #4d3a3a;
+    font-size: 18px;
+    margin-left:10px;
+    margin-top:10px;
+    font-weight: 700;
+    font-family: "微软雅黑", sans-serif;
+}
+.bdd_pers_conter_aide{
+    float: left;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    color: white;
+    background-color:#A7BC6D;
+    border-radius:10px;
+    text-align: center;
+    margin-left:10px;
+    margin-top:13px;
+}
+.bdd_pers_top_boder_left{
+    font-size: 16px;
+    color: #4d3a3a;
+    float: left;
+    padding-left:53px;
+    margin-top:19px;
+}
+.bdd_pers_top_boder_ad{
+    width: 500px;
+    height: 30px;
+    overflow: hidden;
+    color: #4d3a3a;
+    font-size: 16px;
+    margin:12px 0 0  50px ;
+}
+.bdd_pers_ad{
+    margin-top:2px;
+    padding-left:2px;
+}
+.bdd_pers_conter_boder_a{
+    width: 590px;
+    float: left;
+
+}
+bdd_pers_conter_boder_b{
+    width: 580px;
+    float: right;
+
+}
+.bdd_per_conter_left_a{
+    width: 590px;
+    float: left;
+    margin-bottom:140px;
+
+}
+.bdd_per_conter_left_b{
+    width: 590px;
+    float:right;
+    margin-bottom:140px;
+}
+

@@ -1,0 +1,291 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .bar_second_pink {
+        width: 100%;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+        margin-top: 44px;
+    }
+
+    .bar_second_pink_a {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        text-align: left;
+        background-color: #ff9db4;
+        vertical-align: middle;
+        line-height: 1rem;
+        padding-left: 1rem;
+        color: white;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .text-inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .confirm-nav-btn {
+        width: 3rem;
+        background-color: #89c997;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .confirm-a {
+        vertical-align: middle;
+    }
+
+    .confirm-div {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        position: fixed;
+        padding-bottom: 0.5rem;
+        bottom: 0;
+        left: 0;
+        display: block;
+    }
+
+    .content-list-div {
+        width: 100%;
+    }
+
+    .content-list-div-a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tb_content_b > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_c > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_a > td {
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    .tb_content_td_a {
+        padding-left: 0.2rem;
+    }
+
+    .position-left > div {
+        line-height: 0.7rem;
+        height: 0.7rem;
+        color: #333333;
+    }
+
+    .position-left-b > div {
+        line-height: 0.7rem;
+        height: 0.7rem;
+        color: #333333;
+    }
+
+    .position-left {
+        text-align: left;
+        margin-left: 0.5rem;
+    }
+
+    .position-left-b {
+        text-align: left;
+        margin-left: 2rem;
+    }
+
+    .content-list-div-a-res {
+        margin-top: 0.2rem;
+    }
+
+    .select-all {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .content-list-div-a {
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+        background-color: #eeeeee;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        color: #333333;
+        font-weight: 600;
+    }
+
+    .text-inline-c {
+        margin-left: 1rem;
+    }
+
+    .second-div-a {
+        width: 100%;
+        text-align: center;
+    }
+    .action-back{
+
+        width: 1rem;
+        height: 0.5rem;
+        background-image: url("../../../vendor/images/zsx/back_blue.png");
+        background-repeat:no-repeat;
+    }
+    .img-gray{
+        background-image: url("../../../vendor/images/zsx/back_gray.png");
+    }
+    .sel-lb-op{
+        width: 1.2rem;
+    }
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+</style>
+
+<div>
+
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+        </ion-header-bar>
+        <h1 class="title">历史记录</h1>
+    </div>
+
+    <div class="bar_second_pink">
+        <a ui-sref="czInfo">
+            <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+            <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+        <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+    </div>
+    <div class="second-div-a" style="margin-top: 0.3rem;padding-bottom: 0.2rem;">
+        <div  class="text-inline"><select class="sel-lb-op"  style="width: 2rem;height: 0.8rem;font-size: 1.2em;border:none;background-color: #f0ecec;" ng-model="selectData.xllb">
+            <option style="font-size: 1em;">机修</option>
+            <option style="font-size: 1em;">大修</option>
+        </select></div>
+        <div class="text-inline text-right" style="margin-left: 0.2rem;"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                                  style="width: 2.9rem;height: 0.8rem;font-size: 1.4em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.startData"
+                                                   type="text" id="start_date" placeholder="选择起始日期"
+                                                   readonly="readonly"/></div>
+        <div class="text-inline">至</div>
+        <div class="text-inline text-right"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                                   style="width: 2.9rem;height: 0.8rem;font-size: 1.4em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.endData" type="text" id="end_date" placeholder="选择结束日期" readonly="readonly"/>
+        </div>
+       <!-- <button class="text-inline text-right" ng-click="getWxHistory(selectData)" style="font-size: 1.4em;">搜索</button>-->
+
+        <button class="text-inline btn-search"  ng-click="getWxHistory(selectData)" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
+
+
+    </div>
+    <!-- 项目-->
+    <ion-list>
+        <ion-item ng-repeat="item in data">
+            <div class="content-list-div">
+                <div class="text_inline content-list-div-a content-list-div-a-res">
+
+                    <div class="text-inline position-left">
+                        <div>本次工单：</div>
+                        <div>修理类别：</div>
+                        <div>进厂日期：</div>
+                        <div>进厂里程：</div>
+                    </div>
+                    <div class="text-inline position-left-b">
+                        <div>{{item.jsd_id}}</div>
+                        <div>{{item.xllb}}</div>
+                        <div>{{item.jc_date}}</div>
+                        <div>{{item.jclc}}</div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</div>
+
+
+</div>
+
+<script>
+
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#start_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+    var calendar2 = new LCalendar();
+    calendar2.init({
+        'trigger': '#end_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+</script>

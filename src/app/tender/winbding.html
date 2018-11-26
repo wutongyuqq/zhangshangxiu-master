@@ -1,0 +1,848 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .text-inline {
+        display: inline-block;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        margin-left: -3px;
+        height: 100%;
+        line-height: 1rem;
+        text-align: center;
+        vertical-align: middle;
+        border: none;
+    }
+
+    .home_tab_div_right {
+        margin-left: -3px;
+        width: 49.9%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+        text-align: center;
+        border: none;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        margin-top: 0.55rem;
+        text-align: center;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .form-control-a {
+        width: 6rem;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .bts-magin-a {
+        width: 100%;
+        margin: 20px auto 0px auto;
+        text-align: center;
+    }
+
+    .btn-search {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .confirm-nav-btn {
+        width: 3rem;
+        background-color: #89c997;
+        padding: 10px 10px;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .confirm-nav-btn-a {
+        width: 3rem;
+        background-color: darkgray;
+        padding: 10px 10px;
+        color: white;
+        border-radius: 5px;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .confirm-a {
+        vertical-align: middle;
+    }
+
+    .confirm-div {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        position: fixed;
+        padding-bottom: 0.5rem;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background-color: white;
+    }
+
+    .wb_btn_img {
+        width: 0.6rem;
+        height: 0.6rem;
+
+    }
+
+    .wb_second_line {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .wb_second_line_qw {
+        margin-left: 0.2rem;
+    }
+
+    .content-list-div {
+        width: 100%;
+    }
+
+    .content-list-div-a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-list-div-table {
+
+        width: 100%;
+        margin-top: 2px;
+        border-collapse: separate;
+        border-spacing: 0px 3px;
+
+    }
+
+    .img-minus {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .tb_content_a {
+        background-color: #7ff7fb;
+        height: 1rem;
+    }
+
+    .tb_content_b {
+
+        background-color: #eeeeee;
+        height: 2rem;
+        vertical-align: middle;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .tb_content_c {
+        padding-top: 0.45rem;
+        height: 2rem;
+        background-color: #fdfcfd;
+        vertical-align: middle;
+    }
+
+    .tb_content_b > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_c > td {
+        text-align: center;
+        padding-top: 0.6rem;
+    }
+
+    .tb_content_a > td {
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    .tb_content_td_a {
+        padding-left: 0.2rem;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+
+    .modal-header {
+        background-color: #333333;
+        color: white;
+        border: none;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .btn-primary {
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color: #89c997;
+    }
+
+    .btn-warning {
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color: #89c997;
+        margin-left: 1rem;
+    }
+
+    .modal-footer {
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+
+    .modal-content {
+        border: none;
+    }
+
+    .model-margin-top {
+        margin: 0.3rem 0.01rem;
+    }
+
+    .action-back {
+
+        width: 1rem;
+        height: 0.5rem;
+        background-image: url("../../../vendor/images/zsx/back_blue.png");
+    }
+
+    .action-back {
+
+        width: 1rem;
+        height: 0.5rem;
+        background-image: url("../../../vendor/images/zsx/back_blue.png");
+        background-repeat: no-repeat;
+    }
+
+    .img-gray {
+        background-image: url("../../../vendor/images/zsx/back_gray.png");
+    }
+    .claim_input{
+        width: 2.5rem;
+    }
+</style>
+
+<div>
+
+
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"
+                        style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img
+                        src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button" ui-sref="home">首页</button>
+            </div>
+
+        </ion-header-bar>
+        <h1 class="title">工单(NO:{{jsd_id}})</h1>
+    </div>
+
+    <div class="bar_second_pink">
+        <a ui-sref="czInfo">
+            <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+            <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+        <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+    </div>
+    <div class="wb_second_line">
+        <div class="text_inline"><span class="text_inline" style="font-size: 1.4em;">公里数:</span><span
+                class="text_inline" ng-show="!showInputGls">{{gonglishu}}</span>
+
+            <div class="text_inline" ng-show="showInputGls">
+                <input placeholder="输入" ng-model="gonglishu" style="width: 1.4rem;height: 0.6rem;border:none;background-color: #eeeeee;"/></div>
+        </div>
+        <div class="text_inline"><img ng-click="showKell(showInputGls)" class="text_inline wb_btn_img"
+                                      src="{{showInputGls?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}"/>
+        </div>
+        <div class="text_inline wb_second_line_qw"><span class="text_inline" style="font-size: 1.4em;">预完工日期：
+        </span><span ng-show="!showTicheTime" class="text_inline">{{ticheTime}}</span><span></span>
+
+           <!-- <div class="text_inline" ng-show="showTicheTime">
+                <input ng-model="ticheTime" placeholder="输入" style="width: 1.2rem;height: 0.6rem"/>
+            </div>-->
+
+
+            <div class="text-inline" style="font-size: 1.4em;" ng-show="showTicheTime">
+                <input  style="font-size: 1em;"  ng-model="ticheTime"  class="claim_input" type="text"  id="start_date" placeholder="输入" readonly="readonly"/>
+            </div>
+
+
+
+        </div>
+        <div class="text_inline"><img ng-click="showTiche(showTicheTime)" class="text_inline wb_btn_img"
+                                      src="{{showTicheTime?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}"/>
+        </div>
+    </div>
+    <div class="bts-magin-a">
+        <div class="input-group-a">
+            <div class="text_inline" style="font-size: 1.4em;">故障描述：</div>
+            <div class="text_inline">
+                <span ng-show="showGuzhang">{{guzhangDes}}</span> <input ng-show="!showGuzhang" ng-model="guzhangDes"
+                                                                          class="form-control-a" type="text"
+                                                                          placeholder="请输入"/>
+            </div>
+            <img  ng-hide="showFloatImg" ng-click="showGuzhangT(showGuzhang)" class="text_inline wb_btn_img"
+                 src="{{!showGuzhang?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}">
+
+        </div>
+        <!-- /input-group -->
+    </div>
+    <!-- /.col-lg-6 -->
+    <div class="home_tab_div">
+        <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(0)" style="font-size: 1.4em;">项目
+        </div>
+        <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(1)" style="font-size: 1.4em;">配件
+        </div>
+
+    </div>
+    <!-- 项目-->
+    <div class="content-list-div" ng-show="showSelectMore==0">
+        <div class="text_inline content-list-div-a">
+            <table class="content-list-div-table">
+
+                <tr class="tb_content_a">
+                    <td></td>
+                    <td style="font-size: 1.4em;">项目名称</td>
+                    <td style="font-size: 1.4em; max-width: 1rem;">性质</td>
+                    <td style="font-size: 1.4em; max-width: 1rem;">修理费</td>
+                    <td style="font-size: 1.4em;">优惠</td>
+                    <td></td>
+                </tr>
+                <tr class="tb_content_b" ng-repeat="item in repairDataList">
+                    <td class="tb_content_td_a" style="font-size: 1.4em; ">{{$index+1}}</td>
+                    <td style="font-size: 1.4em; max-width: 1.2rem;">{{item.xlxm}}</td>
+                    <td style="font-size: 1.4em; max-width: 1rem;">{{item.wxgz}}</td>
+                    <td style="font-size: 1.4em; max-width: 1rem;">{{item.xlf}}</td>
+                    <td style="font-size: 1.4em; max-width: 1rem;">{{item.zk}}</td>
+                    <td style="padding-bottom: 0.3rem;padding-top:0.3rem"  ng-hide="allBtnUnable==1"><img ng-hide="notDelete==1" ng-click="deleteItem($index,item)"
+                                                                               class="img-minus"
+                                                                               src="../../../vendor/images/zsx/minus_img.png"/>
+                        <br/>
+                        <img ng-click="editProjectForXm($index,item)" class="img-minus"
+                             src="../../../vendor/images/zsx/edit.png"/></td>
+                </tr>
+
+
+            </table>
+
+        </div>
+        <div class="text_inline content-list-div-a">
+            <table class="content-list-div-table">
+                <tr class="tb_content_a">
+                    <td style="font-size: 1.4em;">工时：{{xlfTotal}}</td>
+                    <td></td>
+                    <td style="font-size: 1.4em;">总计：{{xlfTotal}}</td>
+                </tr>
+                <tr class="tb_content_c">
+                    <td style="font-size: 1.4em;">工时打折</td>
+                    <td></td>
+                    <td style="font-size: 1.4em;">{{numZk}}</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="text_inline content-list-div-a" style="margin-bottom:2.5rem;">
+            <table class="content-list-div-table">
+                <tr class="tb_content_a">
+                    <td style="font-size: 1.4em;padding-top: 0.3rem;">总应收</td>
+                    <td style="padding-top: 0.3rem;"></td>
+                    <td colspan="2" style="font-size: 1.4em;padding-top: 0.3rem;">总计：￥{{xlfTotal}}</td>
+                </tr>
+            </table>
+                <div class="tb_content_c" style="text-align: left;padding-left: 2rem;">
+                    <div class="text_inline" style="font-size: 1.4em;width: 2rem;">备注:</div>
+
+                    <div class="text_inline"  style="font-size: 1.4em;"><div ng-show="!showBeizhu" ng-model="memo" ng-bind="memo"></div><div><input  ng-model="memo" ng-show="showBeizhu" type="text" placeholder="输入" style="width: 5rem;font-size: 1.2em;"/></div></div>
+                    <div class="text_inline" ng-hide="showFloatImg"> <img ng-click="showBeizhuT(showBeizhu)" class="text_inline wb_btn_img"
+                              src="{{showBeizhu?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+
+
+                </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="confirm-div" ng-show="showSelectMore==0">
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.4em">
+            钣金喷漆
+        </div>
+        <div class="text-inline confirm-a {{allBtnUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="toProjectFactory()" style="font-size: 1.4em">
+            项目库
+        </div>
+        <div class="text-inline confirm-a {{allBtnUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="addTempProject()" style="font-size: 1.4em">
+            临时项目
+        </div>
+        <div class="text-inline confirm-a confirm-nav-btn" ui-sref="Tender" style="font-size: 1.4em">
+            本车首页
+        </div>
+        <div class="text-inline confirm-a {{djztUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}"
+             ng-click="judgeToStatu(djzt)" style="font-size: 1.4em">
+            {{djzt}}
+        </div>
+        <div class="text-inline confirm-a {{yccType==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="toJiesuan()" style="font-size: 1.4em">
+            结&#12288;算
+        </div>
+    </div>
+
+
+    <!-- 配件-->
+    <div class="content-list-div" ng-show="showSelectMore==1">
+        <div class="text_inline content-list-div-a">
+            <table class="content-list-div-table">
+
+                <tr class="tb_content_a">
+                    <td></td>
+                    <td style="font-size: 1.4em" style="font-size: 1.4em">配件名称</td>
+                    <td style="font-size: 1.4em" style="font-size: 1.4em">规格</td>
+                    <td style="font-size: 1.4em" style="font-size: 1.4em">数量</td>
+                    <td style="font-size: 1.4em" style="font-size: 1.4em">单价</td>
+                    <td style="font-size: 1.4em" style="font-size: 1.4em">合计</td>
+                    <td></td>
+                </tr>
+                <tr class="tb_content_b" ng-repeat="item in pjDataList">
+                    <td class="tb_content_td_a" style="font-size: 1.4em">{{$index+1}}</td>
+                    <td style="font-size: 1.4em" style="font-size: 1.4em">{{item.pjmc}}</td>
+                    <td style="font-size: 1.4em">{{item.pjbm}}</td>
+                    <td style="font-size: 1.4em">{{item.sl}}</td>
+                    <td style="font-size: 1.4em">{{item.ssj}}</td>
+                    <td style="font-size: 1.4em">{{(item.sl*item.ssj)}}</td>
+                    <td><img ng-click="deletePjItem($index,item)" class="img-minus"
+                             src="../../../vendor/images/zsx/minus_img.png"/>
+                        <br/>
+                        <img ng-click="editItemForPj($index,item)" class="img-minus"
+                             src="../../../vendor/images/zsx/edit.png"/></td>
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </div>
+        <div class="text_inline content-list-div-a">
+            <table class="content-list-div-table">
+                <tr class="tb_content_a">
+                    <td style="font-size: 1.4em;">配件</td>
+                    <td></td>
+                    <td><span style="font-size: 1.4em;">总计：</span><span style="font-size: 1.4em;">{{pjTotal}}</span>
+                    </td>
+                </tr>
+                <tr class="tb_content_c">
+                    <td style="font-size: 1.4em;">配件打折</td>
+                    <td style="font-size: 1.4em;"></td>
+                    <td style="font-size: 1.4em;"></td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="text_inline content-list-div-a" style="margin-bottom: 2rem;">
+            <table class="content-list-div-table">
+                <tr class="tb_content_a">
+                    <td style="font-size: 1.4em;padding-top: 0.3rem;">总应收</td>
+                    <td style="padding-top: 0.3rem;"></td>
+                    <td style="padding-top: 0.3rem;"><span style="font-size: 1.4em;">总计：</span><span style="font-size: 1.4em;">{{pjTotal}}</span></td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="confirm-div" ng-show="showSelectMore==1">
+
+        <div class="text-inline confirm-a confirm-nav-btn" ng-click="toPjkSelect()" style="font-size: 1.4em;">
+            配件库
+        </div>
+
+        <div class="text-inline confirm-a confirm-nav-btn" ui-sref="Tender" style="font-size: 1.4em;">
+            本车首页
+        </div>
+
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.4em;"  ui-sref="wintotal" >
+            结&#12288;算
+        </div>
+    </div>
+    <div ng-show="showAllPro" class="div-all-page">
+
+
+    </div>
+    <div style="width: 100%;position: absolute;float: left;top:8rem;left: 2rem;" ng-show="showFloatImg">
+
+        <img style="width: 6.8rem;" src="../../../vendor/images/zsx/img-wg.png">
+    </div>
+
+</div>
+
+
+<script type="text/ng-template" id="modal2.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                确认
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 2rem">
+
+                <div><span>确定删除</span><span>{{data.wxgz}}</span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok(data)" style="margin-left: 2rem">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="modal3.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                修改项目
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 1rem;">
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">项&#12288;&#12288;目:</div>
+                    <div style="display: inline-block;vertical-align: middle;"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text"
+                            ng-model="xlxm"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">项目名称:</div>
+                    <div style="display: inline-block;vertical-align: middle;"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem;" type="text"
+                            ng-model="wxgz"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">价&#12288;&#12288;格:</div>
+                    <div style="display: inline-block;vertical-align: middle;"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem;" ng-change="updatePrice()" type="text"
+                            ng-model="xlf"/></div>
+                </div>
+
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">优&#12288;&#12288;惠:</div>
+                    <div style="display: inline-block;vertical-align: middle;"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" ng-readonly="true" type="text"
+                            ng-model="yhje"/></div>
+                </div>
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: top;">保存新价格:</div>
+                    <div style="display: inline-block;vertical-align: top;"><input type="checkbox"
+                                                                                   style="width:0.5rem;height:0.5rem;margin-left: 0.7rem"
+                                                                                   ng-model="isNewPrice"/></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf,yhje)" style="margin-left: 2rem">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+<script type="text/ng-template" id="modal_edit.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                修改配件
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 1rem;">
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">配件名称:</div>
+                    <div style="display: inline-block;vertical-align: middle;">
+                        <input  style="width: 6rem;background-color: lightgray;margin-left: 1rem" ng-model="dataEdit.pjmc" type="text"/>
+                    </div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">规&#12288;&#12288;格:</div>
+                    <div style="display: inline-block;vertical-align: middle;">
+                        <input style="width: 6rem;background-color: lightgray;margin-left: 1rem;"  ng-model="dataEdit.pjbm" type="text"/>
+                    </div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">数&#12288;&#12288;量:</div>
+                    <div style="display: inline-block;vertical-align: middle;">
+                        <input style="width: 6rem;background-color: lightgray;margin-left: 1rem;"   ng-model="dataEdit.sl"  type="text"/>
+                    </div>
+                </div>
+
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">单&#12288;&#12288;价:</div>
+                    <div style="display: inline-block;vertical-align: middle;">
+                        <input style="width: 6rem;background-color: lightgray;margin-left: 1rem" ng-model="dataEdit.ssj" type="text"/></div>
+                </div>
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: top;">保存新价格:</div>
+                    <div style="display: inline-block;vertical-align: top;">
+                        <input type="checkbox" style="width:0.5rem;height:0.5rem;margin-left: 0.7rem"/></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok()" style="margin-left: 2rem">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="modal5.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                增加临时项目
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 1rem">
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">项目名称:</div>
+                    <div style="display: inline-block;vertical-align: middle;">
+                        <input style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text" ng-model="tempData.mc"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">维修成本:</div>
+                    <div style="display: inline-block;vertical-align: middle;"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text"
+                            ng-model="tempData.wxcb"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: middle;">项目价格:</div>
+                    <div style="display: inline-block;vertical-align: middle;"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text"
+                            ng-model="tempData.xmjg"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block;vertical-align: top;">项目类别:</div>
+                    <div style="display: inline-block;vertical-align: top;">
+                        <select style="width: 6rem;height:0.7rem;background-color: lightgray;margin-left: 1rem"
+                                ng-model="tempData.xmlb">
+                            <option ng-repeat="item in firstIconArr">{{item.wxgz}}</option>
+
+
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok(tempData)" style="margin-left: 2rem">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="modal4.html">
+    <div class="modal-top" align="center">
+        <div class="modal-header">
+            <h4 class="modal-title" align="center">
+                修改项目
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: left;margin-left: 1rem">
+
+                <div class="model-margin-top">
+                    <div style="display: inline-block">&#12288;项&#12288;&#12288;目:</div>
+                    <div style="display: inline-block"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text"
+                            ng-model="xlxm"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block">&#12288;项目名称:</div>
+                    <div style="display: inline-block"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text"
+                            ng-model="wxgz"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block">&#12288;价&#12288;&#12288;格:</div>
+                    <div style="display: inline-block"><input
+                            style="width: 6rem;background-color: lightgray;margin-left: 1rem" type="text"
+                            ng-model="xlf"/></div>
+                </div>
+                <div class="model-margin-top">
+                    <div style="display: inline-block">保存新价格:</div>
+                    <div style="display: inline-block"><input type="checkbox" style="width:10px;height:10px"
+                                                              checked="isNewPrice" ng-model="isNewPrice"/></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="cancel()">
+                取消
+            </button>
+            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf,isNewPrice)" style="margin-left: 2rem">
+                确定
+            </button>
+        </div>
+    </div>
+</script>
+
+<script>
+
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#start_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+
+    /**
+     * 解决ios键盘弹出遮挡input
+     */
+    var winHeight = $(window).height();   //获取当前页面高度
+    $(window).resize(function () {
+        var thisHeight = $(this).height();
+        if (winHeight - thisHeight > 50) {
+            $(".confirm-div").hide();
+        } else {
+            $(".confirm-div").show();
+        }
+    });
+</script>

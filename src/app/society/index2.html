@@ -1,0 +1,314 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+        display: block;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+
+    }
+
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+
+    .border-color {
+
+        height: 1rem;
+        background-color: #eeeeee;
+        text-align: left;
+        margin: 0 auto;
+        border-left: 2px solid #b5d2e5;
+        border-right: 2px solid #b5d2e5;
+        border-bottom: 1px solid #99a5ac;
+
+    }
+
+    .border-center {
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .text-inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .border-first {
+
+        border-top: 2px solid #b5d2e5;
+    }
+
+    .border-last {
+        border-bottom: 2px solid #b5d2e5;
+    }
+
+    .text-left {
+        width: 3.5rem;
+        height: 100%;
+        vertical-align: top;
+        padding-top: 0.25rem;
+        margin: 0 auto;
+        text-align: right;
+        padding-right: 0.25rem;
+    }
+
+    .text-right {
+        width: 5rem;
+        height: 100%;
+        vertical-align: middle;
+        padding-top: 0.15rem;
+
+    }
+
+    .edit-img {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-left: 4.5rem;
+    }
+
+    .select-img {
+        width: 1.0rem;
+        height: 1.0rem;
+    }
+
+    .select-item {
+        width: 33%;
+        float: left;
+        margin-top: 0.3rem;
+    }
+
+    .select_pro {
+        text-align: center;
+        margin-top: 0.3rem;
+        background-color: #f8fbf8;
+        overflow: hidden;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        color: #1296db;
+        font-weight: 700;
+    }
+
+    .select-text {
+        padding-top: 0.15rem;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 0.5rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 2.5rem;
+    }
+
+    .text-gray {
+        color: #707070;
+    }
+
+    .text-input-a {
+        border: none;
+        width: 4rem;
+        float: left;
+        display: block;
+    }
+
+    .edit-img-a {
+        width: 0.5rem;
+        height: 0.5rem;
+        float: right;
+        display: block;
+        margin-top: 0.1rem;
+        margin-left: 0.4rem;
+
+    }
+
+    input[type=text] {
+        height: 0.7rem;
+    }
+
+    .block_color_b {
+        color: white;
+        margin-left: 0.2rem;
+        font-size: 12px;
+    }
+
+    .bar_conter_a {
+        width: 100%;
+        height: 1rem;
+        background-color: #7FF7FB;
+        margin-top: 0.2rem;
+        font-size: 18px;
+        color: #4d3a3a;
+        padding-top: 0.25rem;
+        padding-left: 1rem;
+    }
+
+    .bar_conter_p {
+        width: 10.8rem;
+        height: 1rem;
+        background-color: #DBDBDB;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        line-height: 1rem;
+    }
+
+    .bar_conter_y {
+        float: left;
+        width: 33%;
+    }
+
+    .bar_conter_d {
+        float: left;
+        width: 60%;
+    }
+
+    .bar_conter_q {
+        width: 7%;
+        float: right;
+        color: white;
+    }
+
+    .bar_conter_p_color {
+        background-color: #FFDBDB;
+    }
+
+    .bdd_sumit {
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        background-color: #31b0d5;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        margin-top: 0.1rem;
+
+    }
+
+    .action-sheet_i {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+</style>
+<div ng-controller="SocietyCtrl">
+    <div class="bar bar-header bar-light bar-light-div">
+        <button class="button-clear" onClick="javascript :history.back(-1);"><img
+                src="../../../vendor/images/zsx/back_blue.png"></button>
+        <h1 class="title"><span class="title-color">车主信息</span></h1>
+    </div>
+    <div class="bar_second_pink">
+        <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+
+        <div class="color-white bar-white-home">车主：王总</div>
+        <img class="color-white color-white-img color-white-img-card"
+             src="../../../vendor/images/zsx/car_yellow.png"><span class="block_color_b">车牌号：闽A2A93p</span>
+    </div>
+
+    <!--类容-->
+    <div class="action-sheet_i">
+        <div class="bar_conter_a">车辆信息</div>
+        <div class="bar_conter_p">
+            <div class="bar_conter_y">车牌</div>
+            <div class="bar_conter_d">闽A63859</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">微信</div>
+            <div class="bar_conter_d">已绑定</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">行驶里程</div>
+            <div class="bar_conter_d">8000（km）</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">车驾号</div>
+            <div class="bar_conter_d">LAI12345+987L</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">车型</div>
+            <div class="bar_conter_d">宝马</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">发动机型号</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">专属顾问</div>
+            <div class="bar_conter_d">张三丰</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">推荐人</div>
+            <div class="bar_conter_d">张三</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_a">驾驶证信息</div>
+        <div class="bar_conter_p">
+            <div class="bar_conter_y">驾驶证号</div>
+            <div class="bar_conter_d">421081199110012300</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p bar_conter_p_color">
+            <div class="bar_conter_y">驾照年检时间</div>
+            <div class="bar_conter_d">2018-5-5</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_p ">
+            <div class="bar_conter_y">初次领证时间</div>
+            <div class="bar_conter_d">2015-2-2</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bar_conter_a">会员卡</div>
+        <div class="bar_conter_p">
+            <div class="bar_conter_y">是否为会员</div>
+            <div class="bar_conter_d">否</div>
+            <div class="bar_conter_q">></div>
+        </div>
+        <div class="bdd_sumit">提交</div>
+
+    </div>
+</div>

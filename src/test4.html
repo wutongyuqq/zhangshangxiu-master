@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>无标题文档</title>
+
+
+
+
+
+</head>
+
+<body>
+<div style="margin: 100px 100px;">
+    <button style="padding: 20px 20px;" onclick="postData()">点我请求接口</button>
+
+</div>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+ var postFlag = "0";
+ postData();
+function postData(){
+    if(postFlag=="end"){
+        return;
+    }
+    $.ajax({
+        url:"http://121.43.148.193:5555/restful/pro",
+        type:"post",
+        data:'{"db":locals.get("Data_Source_name"),"function":"sp_fun_down_maintenance_project","previous_xh":'+postFlag+'}',
+        dataType:"json",
+        success:function(data){
+            console.log(data);
+        postFlag = data.Previous_xh;
+            postData();
+        },
+        error:function(res,status){
+            console.log(res.responseText);
+            alert("请求接口错误");
+        }
+    })
+}
+
+
+</script>
+</body>
+</html>  

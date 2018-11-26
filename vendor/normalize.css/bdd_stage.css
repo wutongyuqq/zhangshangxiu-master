@@ -1,0 +1,97 @@
+/*多标段样式*/
+.bdd_stage{
+    width: 890px;
+    height:255px;
+    background-color: white;
+    float: left;
+    margin-top:40px;
+}
+.bdd_stage_img{
+    position: absolute;
+    margin-left:300px;
+}
+.bdd_stage_one{
+   position: relative;
+    left:123px;
+    top:-7px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.bdd_stage_news{
+    color: #ccbebe;
+   font-size: 16px;
+}
+
+.bdd_stage_conter{
+    width: 810px;
+    height:210px;
+    margin:  0 auto;
+    margin-top:40px;
+}
+
+.bdd_stage_top_left{
+    float: left;
+}
+.bdd_stage_top_right{
+    float: right;
+
+}
+.bdd_stage_top{
+    margin-top:13px;
+    font-size: 16px;
+    color: #ccbebe;
+}
+.bdd_stage_color{
+    font-size: 16px;
+    color: #4d3a3a;
+}
+.bdd_stage_foll{
+    color: #cea63f;
+}
+/*多标段按钮*/
+.bdd_stage_bottom{
+    width: 890px;
+    height: 130px;
+    background-color: white;
+    float: left;
+    margin-top:20px;
+}
+.bdd_stage_bottom_top{
+    width: 890px;
+    height:70px;
+    margin: 10px auto 0px auto;
+
+}
+.bdd_stage_bottom_list{
+    width:60px;
+    height: 25px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: absolute;
+    border: none;
+
+}
+.bdd_stage_bottom_span{
+    position: relative;
+    left: 25px;
+    top: -3px;
+    color: #4d3a3a;
+    font-size: 16px;
+}
+.bdd_stage_bottom_news{
+    float: left;
+    padding: 4px 30px;
+
+}
+.bdd_stage_bd{
+   font-size: 16px;
+    color: #ccbebe;
+    padding-left:30px;
+    margin-top:15px;
+
+}
+.bdd_style_img_pic{
+    margin-top:-8px;
+}
+

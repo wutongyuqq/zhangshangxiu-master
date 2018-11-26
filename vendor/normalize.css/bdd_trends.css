@@ -1,0 +1,73 @@
+body{
+    background-color: #F8F8F8;
+}
+.bdd_trends_contont{
+    width: 100%;
+    height: 1400px;
+
+}
+.bdd_trends_border{
+    width: 1200px;
+    height: 1400px;
+    margin:  0 auto;
+}
+.bdd_trends_pic{
+    width: 1200px;
+    height: 500px;
+    margin:  0 auto;
+}
+.bdd_trends_header{
+    width: 1200px;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+.bdd_trends_header_title{
+    font-size: 18px;
+    color: #4d3a3a;
+    float: left;
+    line-height:80px;
+}
+.bdd_trends_hrader_tex{
+    padding-left:50px;
+}
+.bdd_trends_header_hr{
+    width:80px;
+    height: 2px;
+    background-color: #4d3a3a;
+}
+.bdd_trends_conter_pic{
+    width: 1200px;
+    height: 180px;
+    background-color: white;
+    margin-top:20px;
+}
+.bdd_trends_conter_pic_left{
+    width: 140px;
+    height: 140px;
+    float: left;
+    background-color:#ccbebe;
+    margin-top:20px;
+    margin-left:20px;
+    border-radius: 5px;
+
+}
+.bdd_trends_conter_pic_right{
+    width: 1000px;
+    height: 140px;
+    float: left;
+    margin-left:40px;
+    margin-top:30px;
+
+}
+.bdd_trends_conter_pic_top{
+    font-size: 18px;
+    color: #4d3a3a;
+    padding-top:10px;
+}
+.bdd_trends_conter_pic_news{
+    font-size: 16px;
+    color: #ccbebe;
+    padding-top:40px;
+}
