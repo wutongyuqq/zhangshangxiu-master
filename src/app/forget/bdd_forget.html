@@ -6,9 +6,6 @@
         border: 0;
     }
 
-    .title-color {
-        color: #3ca2dd;
-    }
 
     .container-fluid {
         padding: 0 0;
@@ -26,7 +23,7 @@
     }
 
     .bar-light-div {
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
 
     input[type=text] {
@@ -38,11 +35,11 @@
     }
 
     button {
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
 
     .title-color {
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
 
     .text_inline {
@@ -53,13 +50,13 @@
 
     .text_inline_cen {
         display: inline-block;
-        font-size: 1.2em;
+        font-size: 1.0em;
         vertical-align: middle;
     }
 
     .input-group {
         height: 1rem;
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
 
     .tabs {
@@ -180,20 +177,17 @@
     }
 
     .bar-light-div {
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
 
     button {
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
 
-    .title-color {
-        font-size: 1.4em;
-    }
 
     .input-group {
         height: 1rem;
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
 
     .tabs {
@@ -203,7 +197,7 @@
     }
 
     .search_select_div {
-        width: 3.2rem;
+        min-width: 3.2rem;
         height: 1rem;
         border: 3px solid #ff9db4;
     }
@@ -215,8 +209,9 @@
     }
 
     .search_div {
-        margin-top: 0.3rem;
-        margin-left: 0.5rem;
+        margin: 0.3rem auto;
+        text-align: center;
+
     }
 
     .search_select_div_left {
@@ -316,7 +311,7 @@
 
     .content-list-div-table-a > tbody > tr > td {
         padding: 0.3rem 0.3rem;
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
 
     .content-list-div-content {
@@ -331,7 +326,7 @@
     .select_div_text {
         position: fixed;
         z-index: 1001;
-        font-size: 1.4em;
+        font-size: 1.0em;
         top: 1rem;
         left:1rem;
         background-color: white;
@@ -359,7 +354,7 @@
     }
     .text_inline_cen_a{
         padding: 0.2rem 0.2rem 0 0.2rem;
-        font-size: 1.2em;
+        font-size: 1.0em;
         color:dodgerblue;
     }
 
@@ -367,14 +362,14 @@
 
 </style>
 
-<ion-header-bar class="bar-white">
-    <h1 class="title" style="font-size: 1.4em;color:#3ca2dd;">车间管理</h1>
-</ion-header-bar>
-
+<div class="bar bar-header bar-light bar-light-div">
+    <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+    <h1 class="title"><span class="title-color">车间管理</span></h1>
+</div>
 
 <ion-content>
 
-    <div>
+    <div style="margin-top: 46px;">
 
         <div class="home_tab_div {{showMore==0?'home_tab_div_right_color':'home_tab_div_left_color'}}">
             <div class="text_inline home_tab_div_right {{showMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
@@ -439,9 +434,9 @@
                 <table class="content-list-div-table">
 
                     <tr class="tb_content_a">
-                        <td style="font-size: 1.4em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$index+1}}</td>
-                        <td style="font-size: 1.4em;">车牌：{{item.cp}}</td>
-                        <td style="font-size: 1.4em;">结算单：{{item.jsd_id}}</td>
+                        <td style="font-size: 1.0em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$index+1}}</td>
+                        <td style="font-size: 1.0em;">车牌：{{item.cp}}</td>
+                        <td style="font-size: 1.0em;">结算单：{{item.jsd_id}}</td>
                     </tr>
                 </table>
                 <div class="content-list-div-content">
@@ -477,13 +472,13 @@
 
 
 <div  id="tab_nav" class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow
-     style="border-top: 1px solid #1296db;height: 1.4rem;position: fixed;">
+      style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;">
     <a class="tab-item" ui-sref="home">
         <div>
             <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
                  src="../../../vendor/images/zsx/recever_hand_gray.png"/>
 
-            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车辆接待</div>
+            <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 5px;">车辆接待</div>
         </div>
 
     </a>
@@ -491,21 +486,21 @@
         <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
              src="../../../vendor/images/zsx/factory_blue.png"/>
 
-        <div style="color: #1296db;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车间管理</div>
+        <div style="color: #1296db;height: 0.6rem;font-size: 1.0em;margin-top: 5px;">车间管理</div>
 
     </a>
     <a class="tab-item" ui-sref="CompanyTop">
         <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
              src="../../../vendor/images/zsx/condition_gray.png"/>
 
-        <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">整厂概况</div>
+        <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 5px;">整厂概况</div>
 
     </a>
     <a class="tab-item" ui-sref="Usercenter">
         <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
              src="../../../vendor/images/zsx/msg_gray.png"/>
 
-        <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">信息中心</div>
+        <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 5px;">信息中心</div>
 
     </a>
 
@@ -513,7 +508,7 @@
         <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
              src="../../../vendor/images/zsx/setting_gray.png"/>
 
-        <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">设置</div>
+        <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 5px;">设置</div>
 
     </a>
 </div>
@@ -526,11 +521,6 @@
     }
     if(!isIos()) {
         iosInput();
-    }else{
-        $("#tab_nav").css("height","1.9rem");
-        $("#text-card").css("font-size","0.8em");
-        $("#tab_nav").css("padding-bottom","0.1rem");
-
     }
 </script>
 

@@ -246,42 +246,42 @@
     <div class="bar_second_pink">
         <a ui-sref="czInfo">
         <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
-        <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+        <div class="color-white bar-white-home" style="font-size: 1.0em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
         <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
-        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+        <div class="color-white bar-white-card" style="font-size: 1.0em;">{{carInfo.cardName}}</div></a>
     </div>
     <div class="border-center">
         <div class="border-color border-first">
-            <div class="text-inline text-left" style="font-size: 1.6em;">公里数</div>
-            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowGls">{{carInfo.gls}}</span><input  style="font-size: 1.0em;" ng-show="isShowGls" ng-model="carInfo.gls"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowGls,1)" class="edit-img-a" src="{{isShowGls?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">公里数</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowGls">{{carInfo.gls}}</span><input  style="font-size: 1.0em;" ng-show="isShowGls" ng-model="carInfo.gls"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowGls,1)" class="edit-img-a" src="{{isShowGls?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
         </div>
         <div class="border-color">
-            <div class="text-inline text-left" style="font-size: 1.6em;">车架号</div>
-            <div class="text-inline text-right" style="font-size: 1.4em;"><span ng-show="!isShowCjh">{{carInfo.cjhm}}</span><input  style="font-size: 1.0em;" ng-show="isShowCjh" ng-model="carInfo.cjhm" type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowCjh,2)" class="edit-img-a" src="{{isShowCjh?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">车架号</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowCjh">{{carInfo.cjhm}}</span><input  style="font-size: 1.0em;" ng-show="isShowCjh" ng-model="carInfo.cjhm" type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowCjh,2)" class="edit-img-a" src="{{isShowCjh?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
         </div>
         <div class="border-color">
-            <div class="text-inline text-left" style="font-size: 1.6em;">车型</div>
-            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowCx">{{carInfo.cx}}</span><input  style="font-size: 1.0em;" ng-show="isShowCx"   ng-model="carInfo.cx" type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowCx,3)" class="edit-img-a" src="{{isShowCx?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">车型</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowCx">{{carInfo.cx}}</span><input  style="font-size: 1.0em;" ng-show="isShowCx"   ng-model="carInfo.cx" type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowCx,3)" class="edit-img-a" src="{{isShowCx?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
 
         </div>
         <div class="border-color">
-            <div class="text-inline text-left" style="font-size: 1.6em;">预完工日期</div>
-            <div class="text-inline text-right" style="font-size: 1.6em;">   <input  style="font-size: 1em;" ng-change="updateCarInfo('',4)" class="claim_input" type="text" ng-model="carInfo.ticheTime" id="start_date" placeholder="选择起始日期" readonly="readonly"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">预完工日期</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;">   <input  style="font-size: 1em;" ng-change="updateCarInfo('',4)" class="claim_input" type="text" ng-model="carInfo.ticheTime" id="start_date" placeholder="选择起始日期" readonly="readonly"/></div>
 
         </div>
         <div class="border-color">
-            <div class="text-inline text-left" style="font-size: 1.6em;">故障描述</div>
-            <div class="text-inline text-right" style="font-size: 1.6em;" ng-click="updateCarInfo(isShowGzms,5)"><span>{{carInfo.gzms}}</span><img  class="edit-img-a" src="../../../vendor/images/zsx/right_btn.png"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">故障描述</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;" ng-click="updateCarInfo(isShowGzms,5)"><span>{{carInfo.gzms}}</span><img  class="edit-img-a" src="../../../vendor/images/zsx/right_btn.png"/></div>
 
         </div>
         <div class="border-color">
-            <div class="text-inline text-left" style="font-size: 1.6em;">介绍人</div>
-            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowJsr">{{carInfo.jsr}}</span><input  style="font-size: 1.0em;" ng-show="isShowJsr"  ng-model="carInfo.jsr"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowJsr,6)" class="edit-img-a" src="{{isShowJsr?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">介绍人</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowJsr">{{carInfo.jsr}}</span><input  style="font-size: 1.0em;" ng-show="isShowJsr"  ng-model="carInfo.jsr"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowJsr,6)" class="edit-img-a" src="{{isShowJsr?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
 
         </div>
         <div class="border-color border-last">
-            <div class="text-inline text-left" style="font-size: 1.6em;">备注</div>
-            <div class="text-inline text-right" style="font-size: 1.6em;"><span ng-show="!isShowBz">{{carInfo.ywtx}}</span><input  style="font-size: 1.0em;" ng-show="isShowBz"  ng-model="carInfo.ywtx"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowBz,7)" class="edit-img-a" src="{{isShowBz?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+            <div class="text-inline text-left" style="font-size: 1.0em;">备注</div>
+            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowBz">{{carInfo.ywtx}}</span><input  style="font-size: 1.0em;" ng-show="isShowBz"  ng-model="carInfo.ywtx"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowBz,7)" class="edit-img-a" src="{{isShowBz?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
 
         </div>
     </div>
@@ -289,42 +289,42 @@
     <div class="select_pro select_pro_div">
         <div class="select-item select_one" ng-click="toProjectSelect()">
             <img class="select-img" src="{{projectPer.new=='1'?'../../../vendor/images/zsx/select_pro.png':'../../../vendor/images/zsx/select_gray.png'}}"/>
-            <div class="select-text {{projectPer.new=='1'?'':'text-gray'}}" style="font-size: 1.6em;">项目选择</div>
+            <div class="select-text {{projectPer.new=='1'?'':'text-gray'}}" style="font-size: 1.0em;">项目选择</div>
 
         </div>
         <div class="select-item select_one"  ng-click="toBjSelect()">
             <img class="select-img" src="{{projectPer.new=='1'?'../../../vendor/images/zsx/car_door.png':'../../../vendor/images/zsx/car_gray.png'}}"/>
-            <div class="select-text {{projectPer.new=='1'?'':'text-gray'}}" style="font-size: 1.6em;">钣金喷漆</div>
+            <div class="select-text {{projectPer.new=='1'?'':'text-gray'}}" style="font-size: 1.0em;">钣金喷漆</div>
 
         </div>
         <div class="select-item select_one">
             <img class="select-img" src="../../../vendor/images/zsx/check_plan.png"/>
-            <div class="select-text" style="font-size: 1.6em;">车辆检查</div>
+            <div class="select-text" style="font-size: 1.0em;">车辆检查</div>
 
         </div>
         <div class="select-item select_one">
             <img class="select-img" src="../../../vendor/images/zsx/tc_work.png"/>
-            <div class="select-text" style="font-size: 1.6em;">套餐业务</div>
+            <div class="select-text" style="font-size: 1.0em;">套餐业务</div>
 
         </div>
         <div class="select-item select_one">
             <img class="select-img" src="../../../vendor/images/zsx/you_ticket.png"/>
-            <div class="select-text" style="font-size: 1.6em;">优惠券</div>
+            <div class="select-text" style="font-size: 1.0em;">优惠券</div>
 
         </div>
         <div class="select-item select_one" ng-click="toHistoryRecord()">
             <img class="select-img" src="../../../vendor/images/zsx/history.png"/>
-            <div class="select-text" style="font-size: 1.6em;">历史记录</div>
+            <div class="select-text" style="font-size: 1.0em;">历史记录</div>
 
         </div>
         <div class="select-item select_one" ng-click="toWinbding()">
             <img class="select-img" src="../../../vendor/images/zsx/work_order.png"/>
-            <div class="select-text" style="font-size: 1.6em;">工单汇总</div>
+            <div class="select-text" style="font-size: 1.0em;">工单汇总</div>
 
         </div>
         <div class="select-item select_one" ng-click="cancleJieche()">
             <img class="select-img" src="../../../vendor/images/zsx/cancle_reciver.png"/>
-            <div class="select-text" style="font-size: 1.6em;">取消接车</div>
+            <div class="select-text" style="font-size: 1.0em;">取消接车</div>
 
         </div>
 

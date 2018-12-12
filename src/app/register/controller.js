@@ -12,8 +12,8 @@ app.controller('RegisterCtrl', ['$http','$scope','ionicToast','locals','$state',
         if(cardDataList!=null && cardDataList.length!=null && cardDataList.length>0){
             for(var i=0;i<cardDataList.length;i++){
                 var car=cardDataList[i];
-                if(car.mobile!=null && car.mobile.indexOf(searchName)!=-1||car.vipnumber!=null && car.vipnumber.indexOf(searchName)!=-1||
-                    car.cz!=null && car.cz.indexOf(searchName)!=-1||car.mc!=null&&car.mc.indexOf(searchName)!=-1){
+                if(car!=null&&(car.mobile&& (car.mobile+"").indexOf(searchName)!=-1||car.vipnumber && (car.vipnumber+"").indexOf(searchName)!=-1||
+                    car.cz && (car.cz+"").indexOf(searchName)!=-1||car.mc&&(car.mc+"").indexOf(searchName)!=-1)){
                     hasCarListData.push(car);
                 }
             }

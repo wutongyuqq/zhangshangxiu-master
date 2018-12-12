@@ -153,7 +153,7 @@
 
     .home_ul {
 
-        width:100%;
+        width: 100%;
         overflow: auto;
         padding: 0.5rem;
         text-align: center;
@@ -190,41 +190,48 @@
         background-color: transparent;
         border: none;
     }
-    .modal-header{
+
+    .modal-header {
         background-color: #333333;
-        color:white;
+        color: white;
         border: none;
     }
-    .modal-title{
-        color:white;
+
+    .modal-title {
+        color: white;
     }
-    .btn-primary{
+
+    .btn-primary {
         background-color: #89c997;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        border-color:#89c997 ;
+        border-color: #89c997;
     }
-    .btn-warning{
+
+    .btn-warning {
         background-color: #89c997;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        border-color:#89c997;
+        border-color: #89c997;
         margin-left: 1rem;
     }
-    .modal-footer{
+
+    .modal-footer {
         text-align: center;
         background-color: #abadab;
         border: none;
 
     }
-    .modal-content{
+
+    .modal-content {
         border: none;
     }
-    .card_ul{
+
+    .card_ul {
         position: absolute;
         background-color: #f4f1f1;
         width: 4rem;
-        left:3rem;
+        left: 3rem;
         padding: 0.3rem 0.3rem;
         z-index: 1010;
         max-height: 7rem;
@@ -232,39 +239,50 @@
         overflow: scroll;
 
     }
-    .showCard-height{
+
+    .showCard-height {
         height: 0.8rem;
         font-size: 2.3em;
     }
-    .bar-light-div{
-        font-size:2.2em;
+
+    .bar-light-div {
+        font-size: 2.2em;
     }
-    input[type=text]{
+
+    input[type=text] {
         font-size: 2.3em;
     }
-    input[type=number]{
+
+    input[type=number] {
         font-size: 2.3em;
     }
-    .home_tab_div_left{
+
+    .home_tab_div_left {
         font-size: 2.4em;
     }
-    .home_tab_div_right{
+
+    .home_tab_div_right {
         font-size: 2.4em;
     }
-    button{
+
+    button {
         font-size: 2.4em;
     }
-    .title-color{
+
+    .title-color {
         font-size: 2.4em;
     }
-    .input-group{
+
+    .input-group {
         height: 1rem;
         font-size: 2.4em;
     }
-    .tabs{
+
+    .tabs {
         height: 1.4rem;
         font-size: 2.4em;
     }
+
     .text-inline {
         display: inline-block;
     }
@@ -300,9 +318,11 @@
         margin-left: 0.2rem;
         margin-top: 0.32rem;
     }
+
     .text-inline {
         display: inline-block;
     }
+
     .bar_second_pink {
         width: 100%;
         margin-top: 44px;
@@ -343,6 +363,7 @@
 
         border: none;
     }
+
     .home_tab_div {
         padding: 0 0;
         width: 100%;
@@ -357,27 +378,31 @@
         display: inline-block;
         vertical-align: middle;
     }
-    .text-inline-left{
+
+    .text-inline-left {
         height: 100%;
         width: 4rem;
         text-align: center;
         background-color: #fbe2e2;
         padding: 0.3rem 0.2rem;
         font-size: 2.0em;
-        color:#000000
+        color: #000000
     }
-    .text-inline-right{
+
+    .text-inline-right {
         height: 100%;
         width: 6.8rem;
         text-align: left;
         background-color: #eeeeee;
         padding: 0.3rem 0.3rem 0.3rem 1rem;
         font-size: 2.0em;
-        color:#000000
+        color: #000000
     }
-.item{
-    padding: 0;
-}
+
+    .item {
+        padding: 0;
+    }
+
     .content-list-div {
         width: 100%;
     }
@@ -395,6 +420,7 @@
         border-spacing: 0px 3px;
 
     }
+
     .tb_content_a {
         background-color: #7ff7fb;
     }
@@ -435,106 +461,108 @@
     }
 
 
+
 </style>
 
-<div>
+
     <div class="bar bar-header bar-light bar-light-div">
         <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
-        <h1 class="title"><span class="title-color">信息中心</span></h1>
+        <h1 class="title"><span class="title-color">已完成工单</span></h1>
     </div>
 
-    <div class="home_tab_div">
-        <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(0)">销售
+
+    <div style="width: 100%;text-align: center;margin-top: 0.6rem;">
+        <div class="text-inline text-right" style="margin-left: 0.2rem;"><input ng-change="updateCarInfo(isShowGzms,4)"
+                                                                                class="claim_input"
+                                                                                style="width: 2.9rem;height: 0.8rem;font-size: 2.4em;background-color: #f0ecec;padding-left: 0.2rem;"
+                                                                                ng-model="selectData.startData"
+                                                                                type="text" id="start_date"
+                                                                                placeholder="选择起始日期"
+                                                                                readonly="readonly"/></div>
+        <div class="text-inline" style="font-size: 2.4em">至</div>
+        <div class="text-inline text-right"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                                   style="width: 2.9rem;height: 0.8rem;font-size: 2.4em;background-color: #f0ecec;padding-left: 0.2rem;"
+                                                   ng-model="selectData.endData" type="text" id="end_date"
+                                                   placeholder="选择结束日期" readonly="readonly"/>
         </div>
-        <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(1)">施工
-        </div>
+        <!-- <button class="text-inline text-right" ng-click="getWxHistory(selectData)" style="font-size: 1.4em;">搜索</button>-->
 
-
-    </div>
-    <div style="width: 100%;text-align: center;margin-top: 0.2rem;">
-    <div class="text-inline text-right" style="margin-left: 0.2rem;"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
-                                                                            style="width: 2.9rem;height: 0.8rem;font-size: 2.4em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.startData"
-                                                                            type="text" id="start_date" placeholder="选择起始日期"
-                                                                            readonly="readonly"/></div>
-    <div class="text-inline" style="font-size: 2.4em">至</div>
-    <div class="text-inline text-right"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
-                                               style="width: 2.9rem;height: 0.8rem;font-size: 2.4em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.endData" type="text" id="end_date" placeholder="选择结束日期" readonly="readonly"/>
-    </div>
-    <!-- <button class="text-inline text-right" ng-click="getWxHistory(selectData)" style="font-size: 1.4em;">搜索</button>-->
-
-    <button class="text-inline btn-search"  ng-click="getCardListData(selectData)" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
+        <button class="text-inline btn-search" ng-click="getCardListData(selectData)" type="button"><img
+                src="../../../vendor/images/zsx/search_white.png"></button>
 
     </div>
 
-    <!-- 项目-->
-    <div class="content-list-div" ng-show="showSelectMore==0">
-        <div class="text_inline content-list-div-a">
-            <table class="content-list-div-table">
-
-                <tr class="tb_content_a">
-                    <td style="font-size: 1.0em;">工单号</td>
-                    <td style="font-size: 1.0em; max-width: 1rem;">进厂日期</td>
-                    <td style="font-size: 1.0em; max-width: 1rem;">车牌号</td>
-                    <td style="font-size: 1.0em;">工种</td>
-                    <td style="font-size: 1.0em;">金额</td>
-                </tr>
-                <tr class="tb_content_b" ng-repeat="item in dataArray">
-                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.jsd_id}}</td>
-                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.jc_date|limitTo:10 }}</td>
-                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.cp}}</td>
-                    <td style="font-size: 0.8em; max-width: 1rem;">{{item.wxgz_collect}}</td>
-                    <td style="font-size: 0.8em; max-width: 1rem;">￥{{item.zje}}</td>
-                </tr>
 
 
 
-            </table>
-
-            
-        </div>
 
 
-    </div>
-    <div class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.4rem">
-        <a class="tab-item" ui-sref="home">
-            <div>
-                <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
-                     src="../../../vendor/images/zsx/recever_hand_gray.png"/>
 
-                <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车辆接待</div>
+
+<div class="content has-header" style="margin-left: 0.2rem;overflow: auto">
+        <div class="row  row-center">
+            <div class="col  text-center" ng-click="toPage('3')">
+                <div class="col-demo">
+                    工单号
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    进厂日期
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    车牌号
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo col-demo-width">
+                    工种
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    金额
+                </div>
             </div>
 
-        </a>
-        <a class="tab-item" ui-sref="FactoryPage">
-            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/factory_gray.png"/>
+        </div>
+    <ion-scroll has-bouncing="false"  style="width: 10.8rem; height: 15rem" direction="y">
 
-            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">车间管理</div>
 
-        </a>
-        <a class="tab-item" ui-sref="CompanyTop">
-            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/condition_gray.png"/>
 
-            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">整厂概况</div>
+        <div class="row  row-center" ng-repeat="item in dataArray">
+            <div class="col  text-center" ng-click="toPage('3')">
+                <div class="col-demo">
+                    {{item.jsd_id}}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    {{item.jc_date|limitTo:10 }}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    {{item.cp}}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo col-demo-width">
+                    {{item.wxgz_collect}}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    ￥{{item.zje}}
+                </div>
+            </div>
 
-        </a>
-        <a class="tab-item">
-            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/msg_blue.png"/>
-
-            <div style="color: #1296db;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">信息中心</div>
-
-        </a>
-
-        <a class="tab-item" ui-sref="workmore">
-            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;" src="../../../vendor/images/zsx/setting_gray.png"/>
-
-            <div style="color: #515151;height: 0.6rem;font-size: 1.8em;margin-top: 5px;">设置</div>
-
-        </a>
+        </div>
+    </ion-scroll>
     </div>
 
-</div>
 <script>
 
     var calendar = new LCalendar();
@@ -551,8 +579,6 @@
         'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
         'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
     });
-
-
 
 
 </script>

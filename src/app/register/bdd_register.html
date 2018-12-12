@@ -25,8 +25,8 @@
     }
     .bts-magin {
 
-        width: 80%;
-        margin: 60px auto 0px auto;
+        width: 100%;
+        margin: 60px auto 10px auto;
     }
     .input-group{
         height: 1rem;
@@ -63,7 +63,7 @@
 -->
 
 
-<div class="bar bar-header bar-light" style="height: 1.1rem;">
+<div class="bar bar-header bar-light">
 
     <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border: none;background-image: none;">
         <div class="buttons" style="background-color: transparent;border-bottom: none;height: 1.1rem;">
@@ -74,17 +74,17 @@
             <button class="button" ui-sref="home">首页</button>
         </div>
     </ion-header-bar>
-    <h1 class="title" style="font-size: 28px;margin-top: 5px;">搜索车辆</h1>
+    <h1 class="title title-color" style="font-size: 1.2em;color:#3ca2dd">搜索车辆</h1>
 </div>
 
 
 
-<ion-content>
+<ion-content style="top:0px">
 
-    <div class="col-lg-6 bts-magin">
-        <div class="input-group">
-            <input class="input-text" style="padding:5px 10px;height:44px;font-size: 26px;border: 1px solid lightgray;margin-top: 0.2rem;" type="text"  class="form-control-a" ng-model="searchName" placeholder="姓名/卡号/ch手机号">
-      <span class="input-group-btn">
+    <div class="col-lg-6 bts-magin"  style="margin: 1.3rem auto 10px auto;">
+        <div class="input-group" style="margin: 0 auto">
+            <input class="input-text" style="padding:5px 10px;height:44px;font-size: 1.0em;margin: 0.2rem auto 0 auto;border: 1px solid lightgray;" type="text"  class="form-control-a" ng-model="searchName" placeholder="姓名/卡号/ch手机号">
+      <span class="input-group-btn" style="width: auto;padding-top: 0.2rem;padding-left: 0.1rem;">
         <button class="btn-search" ng-click="searchData(searchName)" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
       </span>
         </div>

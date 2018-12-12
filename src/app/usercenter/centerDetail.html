@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding: 0.2rem;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 3px;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .bar-light-div {
+        font-size: 2.2em;
+    }
+
+    button {
+        font-size: 2.4em;
+    }
+
+    .title-color {
+        font-size: 2.4em;
+    }
+
+    .text-inline {
+        display: inline-block;
+    }
+    .text-inline-left{
+        height: 100%;
+        width: 4rem;
+        text-align: center;
+        background-color: #fbe2e2;
+        padding: 0.3rem 0.2rem;
+        font-size: 2.0em;
+        color:#000000
+    }
+    .text-inline-right{
+        height: 100%;
+        width: 6.8rem;
+        text-align: left;
+        background-color: #eeeeee;
+        padding: 0.3rem 0.3rem 0.3rem 1rem;
+        font-size: 2.0em;
+        color:#000000
+    }
+
+    .item{
+        padding: 0;
+    }
+
+
+</style>
+
+
+<div class="bar bar-header bar-light bar-light-div">
+    <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+    <h1 class="title"><span class="title-color">绩效详情</span></h1>
+</div>
+
+
+<div class="content has-header" style="overflow: auto">
+    <ul class="list" style="height: 2rem">
+        <li class="item">
+            <div class="text-inline text-inline-left">施工车次</div><div class="text-inline text-inline-right">{{shigongData.service_time?shigongData.service_time:'0'}}</div>
+        </li>
+        <li class="item">
+            <div class="text-inline text-inline-left">施工项目数</div><div class="text-inline text-inline-right">{{shigongData.repair_time?shigongData.repair_time:'0'}}</div>
+        </li>
+    </ul>
+
+    <div class="row  row-center">
+        <div class="col  text-center" ng-click="toPage('3')">
+            <div class="col-demo">
+                日期
+            </div>
+        </div>
+        <div class="col  text-center">
+            <div class="col-demo">
+                车牌
+            </div>
+        </div>
+        <div class="col  text-center">
+            <div class="col-demo">
+                检查人
+            </div>
+        </div>
+        <div class="col  text-center">
+            <div class="col-demo col-demo-width">
+                项目金额
+            </div>
+        </div>
+        <div class="col  text-center">
+            <div class="col-demo">
+                项目绩效
+            </div>
+        </div>
+
+    </div>
+    <ion-scroll has-bouncing="false" style="width: 10.8rem; height: 15rem" direction="y">
+
+        <div class="row  row-center" ng-repeat="item in dataArray">
+            <div class="col  text-center" ng-click="toPage('3')">
+                <div class="col-demo">
+                    {{item.date}}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    {{item.cp|limitTo:10 }}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    {{item.check_man}}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo col-demo-width">
+                    {{item.sale_money}}
+                </div>
+            </div>
+            <div class="col  text-center">
+                <div class="col-demo">
+                    ￥{{item.sale_achievement}}
+                </div>
+            </div>
+
+        </div>
+    </ion-scroll>
+</div>
+
+
+

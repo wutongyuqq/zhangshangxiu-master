@@ -1135,7 +1135,7 @@ app.controller('modalEditCtrl', function ($scope, $state, $modalInstance, locals
 
 
 //{"db":locals.get("Data_Source_name"),"function":"sp_fun_down_stock","comp_code":"A","pjbm":"","cd":"","ck":""}
-app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$state', 'locals', '$anchorScroll', "$location", function ($http, $scope, utils, $stateParams, $state, locals, $anchorScroll, $location) {
+app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$state', 'locals', '$anchorScroll', "$location","ionicToast", function ($http, $scope, utils, $stateParams, $state, locals, $anchorScroll, $location,ionicToast) {
     var selt = this;
     var carInfo = locals.getObject("carInfo");
     $scope.carInfo = carInfo;

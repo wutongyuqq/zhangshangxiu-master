@@ -180,7 +180,6 @@
     .content-list-div-a {
         width: 90%;
         text-align: left;
-        padding-left: 1rem;
         background-color: #ebccd1;
 
         margin: 2px auto;
@@ -392,7 +391,7 @@
 
             <div class="list list-margin">
 
-                <ion-checkbox class="content-list-div-a" ng-repeat="item in dataList track by $index"
+                <ion-checkbox class="content-list-div-a" style="padding-left: 1rem;" ng-repeat="item in dataList track by $index"
                               ng-model="item.checked"
                               ng-checked="item.checked" ng-click="checkPjkItem($index)">
                     <div class="text_inline content-list-div-a">

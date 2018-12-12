@@ -468,10 +468,22 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
             }
         })
 
-        .state('Usercenter', {
-            url: '/usercenter',
-            templateUrl: window.rootSrc + 'app/usercenter/index.tpl.html',
+        .state('mycenter', {
+            url: '/mycenter',
+            templateUrl: window.rootSrc + 'app/usercenter/mycenter.html',
             controller: 'userCenterCtrl as ctrl',
+            title:'标大大-个人中心',
+            resolve: {
+                load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/usercenter/controller.js'
+                    ]);
+                }]
+            }
+        }).state('centerDetail', {
+            url: '/centerDetail/:startDate/:endDate/:mType/:name',
+            templateUrl: window.rootSrc + 'app/usercenter/centerDetail.html',
+            controller: 'centerDetailCtrl as ctrl',
             title:'标大大-个人中心',
             resolve: {
                 load: ['$ocLazyLoad', function ($ocLazyLoad) {
@@ -485,6 +497,18 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
             url: '/msgInfoCenter',
             templateUrl: window.rootSrc + 'app/usercenter/msgInfoCenter.html',
             controller: 'msgInfoCenterCtrl as ctrl',
+            title:'信息中心',
+            resolve: {
+                load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/usercenter/controller.js'
+                    ]);
+                }]
+            }
+        }).state('Usercenter', {
+            url: '/usercenter',
+            templateUrl: window.rootSrc + 'app/usercenter/center.html',
+            controller: 'centerCtrl as ctrl',
             title:'信息中心',
             resolve: {
                 load: ['$ocLazyLoad', function ($ocLazyLoad) {

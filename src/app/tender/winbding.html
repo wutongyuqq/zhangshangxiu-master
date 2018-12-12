@@ -335,12 +335,12 @@
     <div class="bar_second_pink">
         <a ui-sref="czInfo">
             <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
-            <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+            <div class="color-white bar-white-home" style="font-size: 1.0em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
         <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
-        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+        <div class="color-white bar-white-card" style="font-size: 1.0em;">{{carInfo.cardName}}</div></a>
     </div>
     <div class="wb_second_line">
-        <div class="text_inline"><span class="text_inline" style="font-size: 1.4em;">公里数:</span><span
+        <div class="text_inline"><span class="text_inline" style="font-size: 1.1em;">公里数:</span><span
                 class="text_inline" ng-show="!showInputGls">{{gonglishu}}</span>
 
             <div class="text_inline" ng-show="showInputGls">
@@ -349,7 +349,7 @@
         <div class="text_inline"><img ng-click="showKell(showInputGls)" class="text_inline wb_btn_img"
                                       src="{{showInputGls?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}"/>
         </div>
-        <div class="text_inline wb_second_line_qw"><span class="text_inline" style="font-size: 1.4em;">预完工日期：
+        <div class="text_inline wb_second_line_qw"><span class="text_inline" style="font-size: 1.1em;">预完工日期：
         </span><span ng-show="!showTicheTime" class="text_inline">{{ticheTime}}</span><span></span>
 
            <!-- <div class="text_inline" ng-show="showTicheTime">
@@ -357,7 +357,7 @@
             </div>-->
 
 
-            <div class="text-inline" style="font-size: 1.4em;" ng-show="showTicheTime">
+            <div class="text-inline" style="font-size: 1.1em;" ng-show="showTicheTime">
                 <input  style="font-size: 1em;"  ng-model="ticheTime"  class="claim_input" type="text"  id="start_date" placeholder="输入" readonly="readonly"/>
             </div>
 
@@ -370,7 +370,7 @@
     </div>
     <div class="bts-magin-a">
         <div class="input-group-a">
-            <div class="text_inline" style="font-size: 1.4em;">故障描述：</div>
+            <div class="text_inline" style="font-size: 1.1em;">故障描述：</div>
             <div class="text_inline">
                 <span ng-show="showGuzhang">{{guzhangDes}}</span> <input ng-show="!showGuzhang" ng-model="guzhangDes"
                                                                           class="form-control-a" type="text"
@@ -385,10 +385,10 @@
     <!-- /.col-lg-6 -->
     <div class="home_tab_div">
         <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(0)" style="font-size: 1.4em;">项目
+             ng-click="showMoreView(0)" style="font-size: 1.1em;">项目
         </div>
         <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(1)" style="font-size: 1.4em;">配件
+             ng-click="showMoreView(1)" style="font-size: 1.1em;">配件
         </div>
 
     </div>
@@ -399,18 +399,18 @@
 
                 <tr class="tb_content_a">
                     <td></td>
-                    <td style="font-size: 1.4em;">项目名称</td>
-                    <td style="font-size: 1.4em; max-width: 1rem;">性质</td>
-                    <td style="font-size: 1.4em; max-width: 1rem;">修理费</td>
-                    <td style="font-size: 1.4em;">优惠</td>
+                    <td style="font-size: 1.1em;">项目名称</td>
+                    <td style="font-size: 1.1em; max-width: 1rem;">性质</td>
+                    <td style="font-size: 1.1em; max-width: 1rem;">修理费</td>
+                    <td style="font-size: 1.1em;">优惠</td>
                     <td></td>
                 </tr>
                 <tr class="tb_content_b" ng-repeat="item in repairDataList">
-                    <td class="tb_content_td_a" style="font-size: 1.4em; ">{{$index+1}}</td>
-                    <td style="font-size: 1.4em; max-width: 1.2rem;">{{item.xlxm}}</td>
-                    <td style="font-size: 1.4em; max-width: 1rem;">{{item.wxgz}}</td>
-                    <td style="font-size: 1.4em; max-width: 1rem;">{{item.xlf}}</td>
-                    <td style="font-size: 1.4em; max-width: 1rem;">{{item.zk}}</td>
+                    <td class="tb_content_td_a" style="font-size: 1.1em; ">{{$index+1}}</td>
+                    <td style="font-size: 1.1em; max-width: 1.2rem;">{{item.xlxm}}</td>
+                    <td style="font-size: 1.1em; max-width: 1rem;">{{item.wxgz}}</td>
+                    <td style="font-size: 1.1em; max-width: 1rem;">{{item.xlf}}</td>
+                    <td style="font-size: 1.1em; max-width: 1rem;">{{item.zk}}</td>
                     <td style="padding-bottom: 0.3rem;padding-top:0.3rem"  ng-hide="allBtnUnable==1"><img ng-hide="notDelete==1" ng-click="deleteItem($index,item)"
                                                                                class="img-minus"
                                                                                src="../../../vendor/images/zsx/minus_img.png"/>
@@ -426,14 +426,14 @@
         <div class="text_inline content-list-div-a">
             <table class="content-list-div-table">
                 <tr class="tb_content_a">
-                    <td style="font-size: 1.4em;">工时：{{xlfTotal}}</td>
+                    <td style="font-size: 1.1em;">工时：{{xlfTotal}}</td>
                     <td></td>
-                    <td style="font-size: 1.4em;">总计：{{xlfTotal}}</td>
+                    <td style="font-size: 1.1em;">总计：{{xlfTotal}}</td>
                 </tr>
                 <tr class="tb_content_c">
-                    <td style="font-size: 1.4em;">工时打折</td>
+                    <td style="font-size: 1.1em;">工时打折</td>
                     <td></td>
-                    <td style="font-size: 1.4em;">{{numZk}}</td>
+                    <td style="font-size: 1.1em;">{{numZk}}</td>
                 </tr>
 
             </table>
@@ -443,15 +443,15 @@
         <div class="text_inline content-list-div-a" style="margin-bottom:2.5rem;">
             <table class="content-list-div-table">
                 <tr class="tb_content_a">
-                    <td style="font-size: 1.4em;padding-top: 0.3rem;">总应收</td>
+                    <td style="font-size: 1.1em;padding-top: 0.3rem;">总应收</td>
                     <td style="padding-top: 0.3rem;"></td>
-                    <td colspan="2" style="font-size: 1.4em;padding-top: 0.3rem;">总计：￥{{xlfTotal}}</td>
+                    <td colspan="2" style="font-size: 1.1em;padding-top: 0.3rem;">总计：￥{{xlfTotal}}</td>
                 </tr>
             </table>
                 <div class="tb_content_c" style="text-align: left;padding-left: 2rem;">
-                    <div class="text_inline" style="font-size: 1.4em;width: 2rem;">备注:</div>
+                    <div class="text_inline" style="font-size: 1.1em;width: 2rem;">备注:</div>
 
-                    <div class="text_inline"  style="font-size: 1.4em;"><div ng-show="!showBeizhu" ng-model="memo" ng-bind="memo"></div><div><input  ng-model="memo" ng-show="showBeizhu" type="text" placeholder="输入" style="width: 5rem;font-size: 1.2em;"/></div></div>
+                    <div class="text_inline"  style="font-size: 1.1em;"><div ng-show="!showBeizhu" ng-model="memo" ng-bind="memo"></div><div><input  ng-model="memo" ng-show="showBeizhu" type="text" placeholder="输入" style="width: 5rem;font-size: 1.2em;"/></div></div>
                     <div class="text_inline" ng-hide="showFloatImg"> <img ng-click="showBeizhuT(showBeizhu)" class="text_inline wb_btn_img"
                               src="{{showBeizhu?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
 
@@ -467,23 +467,23 @@
 
 
     <div class="confirm-div" ng-show="showSelectMore==0">
-        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.4em">
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.1em">
             钣金喷漆
         </div>
-        <div class="text-inline confirm-a {{allBtnUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="toProjectFactory()" style="font-size: 1.4em">
+        <div class="text-inline confirm-a {{allBtnUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="toProjectFactory()" style="font-size: 1.1em">
             项目库
         </div>
-        <div class="text-inline confirm-a {{allBtnUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="addTempProject()" style="font-size: 1.4em">
+        <div class="text-inline confirm-a {{allBtnUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="addTempProject()" style="font-size: 1.1em">
             临时项目
         </div>
-        <div class="text-inline confirm-a confirm-nav-btn" ui-sref="Tender" style="font-size: 1.4em">
+        <div class="text-inline confirm-a confirm-nav-btn" ui-sref="Tender" style="font-size: 1.1em">
             本车首页
         </div>
         <div class="text-inline confirm-a {{djztUnable==1?'confirm-nav-btn-a':'confirm-nav-btn'}}"
-             ng-click="judgeToStatu(djzt)" style="font-size: 1.4em">
+             ng-click="judgeToStatu(djzt)" style="font-size: 1.1em">
             {{djzt}}
         </div>
-        <div class="text-inline confirm-a {{yccType==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="toJiesuan()" style="font-size: 1.4em">
+        <div class="text-inline confirm-a {{yccType==1?'confirm-nav-btn-a':'confirm-nav-btn'}}" ng-click="toJiesuan()" style="font-size: 1.1em">
             结&#12288;算
         </div>
     </div>
@@ -496,20 +496,20 @@
 
                 <tr class="tb_content_a">
                     <td></td>
-                    <td style="font-size: 1.4em" style="font-size: 1.4em">配件名称</td>
-                    <td style="font-size: 1.4em" style="font-size: 1.4em">规格</td>
-                    <td style="font-size: 1.4em" style="font-size: 1.4em">数量</td>
-                    <td style="font-size: 1.4em" style="font-size: 1.4em">单价</td>
-                    <td style="font-size: 1.4em" style="font-size: 1.4em">合计</td>
+                    <td style="font-size: 1.1em" style="font-size: 1.1em">配件名称</td>
+                    <td style="font-size: 1.1em" style="font-size: 1.1em">规格</td>
+                    <td style="font-size: 1.1em" style="font-size: 1.1em">数量</td>
+                    <td style="font-size: 1.1em" style="font-size: 1.1em">单价</td>
+                    <td style="font-size: 1.1em" style="font-size: 1.1em">合计</td>
                     <td></td>
                 </tr>
                 <tr class="tb_content_b" ng-repeat="item in pjDataList">
-                    <td class="tb_content_td_a" style="font-size: 1.4em">{{$index+1}}</td>
-                    <td style="font-size: 1.4em" style="font-size: 1.4em">{{item.pjmc}}</td>
-                    <td style="font-size: 1.4em">{{item.pjbm}}</td>
-                    <td style="font-size: 1.4em">{{item.sl}}</td>
-                    <td style="font-size: 1.4em">{{item.ssj}}</td>
-                    <td style="font-size: 1.4em">{{(item.sl*item.ssj)}}</td>
+                    <td class="tb_content_td_a" style="font-size: 1.1em">{{$index+1}}</td>
+                    <td style="font-size: 1.1em" style="font-size: 1.1em">{{item.pjmc}}</td>
+                    <td style="font-size: 1.1em">{{item.pjbm}}</td>
+                    <td style="font-size: 1.1em">{{item.sl}}</td>
+                    <td style="font-size: 1.1em">{{item.ssj}}</td>
+                    <td style="font-size: 1.1em">{{(item.sl*item.ssj)}}</td>
                     <td><img ng-click="deletePjItem($index,item)" class="img-minus"
                              src="../../../vendor/images/zsx/minus_img.png"/>
                         <br/>
@@ -525,15 +525,15 @@
         <div class="text_inline content-list-div-a">
             <table class="content-list-div-table">
                 <tr class="tb_content_a">
-                    <td style="font-size: 1.4em;">配件</td>
+                    <td style="font-size: 1.1em;">配件</td>
                     <td></td>
-                    <td><span style="font-size: 1.4em;">总计：</span><span style="font-size: 1.4em;">{{pjTotal}}</span>
+                    <td><span style="font-size: 1.1em;">总计：</span><span style="font-size: 1.1em;">{{pjTotal}}</span>
                     </td>
                 </tr>
                 <tr class="tb_content_c">
-                    <td style="font-size: 1.4em;">配件打折</td>
-                    <td style="font-size: 1.4em;"></td>
-                    <td style="font-size: 1.4em;"></td>
+                    <td style="font-size: 1.1em;">配件打折</td>
+                    <td style="font-size: 1.1em;"></td>
+                    <td style="font-size: 1.1em;"></td>
                 </tr>
 
             </table>
@@ -543,9 +543,9 @@
         <div class="text_inline content-list-div-a" style="margin-bottom: 2rem;">
             <table class="content-list-div-table">
                 <tr class="tb_content_a">
-                    <td style="font-size: 1.4em;padding-top: 0.3rem;">总应收</td>
+                    <td style="font-size: 1.1em;padding-top: 0.3rem;">总应收</td>
                     <td style="padding-top: 0.3rem;"></td>
-                    <td style="padding-top: 0.3rem;"><span style="font-size: 1.4em;">总计：</span><span style="font-size: 1.4em;">{{pjTotal}}</span></td>
+                    <td style="padding-top: 0.3rem;"><span style="font-size: 1.1em;">总计：</span><span style="font-size: 1.1em;">{{pjTotal}}</span></td>
                 </tr>
 
 
@@ -559,15 +559,15 @@
 
     <div class="confirm-div" ng-show="showSelectMore==1">
 
-        <div class="text-inline confirm-a confirm-nav-btn" ng-click="toPjkSelect()" style="font-size: 1.4em;">
+        <div class="text-inline confirm-a confirm-nav-btn" ng-click="toPjkSelect()" style="font-size: 1.1em;">
             配件库
         </div>
 
-        <div class="text-inline confirm-a confirm-nav-btn" ui-sref="Tender" style="font-size: 1.4em;">
+        <div class="text-inline confirm-a confirm-nav-btn" ui-sref="Tender" style="font-size: 1.1em;">
             本车首页
         </div>
 
-        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.4em;"  ui-sref="wintotal" >
+        <div class="text-inline confirm-a confirm-nav-btn" style="font-size: 1.1em;"  ui-sref="wintotal" >
             结&#12288;算
         </div>
     </div>

@@ -269,22 +269,22 @@
     <div class="bar_second_pink">
         <a ui-sref="czInfo">
             <img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
-            <div class="color-white bar-white-home" style="font-size: 1.6em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
+            <div class="color-white bar-white-home" style="font-size: 1.0em;">{{carInfo.cz}}</div></a> <a ui-sref="carInfo">
         <img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
-        <div class="color-white bar-white-card" style="font-size: 1.6em;">{{carInfo.cardName}}</div></a>
+        <div class="color-white bar-white-card" style="font-size: 1.0em;">{{carInfo.cardName}}</div></a>
     </div>
 
 
     <div class="home_tab_div">
         <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(0)" style="font-size: 1.6em;">快捷业务
+             ng-click="showMoreView(0)" style="font-size: 1.0em;">快捷业务
         </div>
         <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(1)" style="font-size: 1.6em;">常规项目
+             ng-click="showMoreView(1)" style="font-size: 1.0em;">常规项目
         </div>
 
         <div class="text_inline home_tab_div_right  {{showSelectMore==2?'home_tab_div_left_color':'home_tab_div_right_color'}}"
-             ng-click="showMoreView(2)" style="font-size: 1.6em;">保养套餐
+             ng-click="showMoreView(2)" style="font-size: 1.0em;">保养套餐
         </div>
 
     </div>
@@ -292,7 +292,7 @@
 
     <div class="col-lg-6 bts-magin">
         <div class="input-group">
-            <input type="text"  style="font-size: 1.6em;" ng-model="searchName"  class="form-control-a" placeholder="姓名/卡号/手机号">
+            <input type="text"  style="font-size: 1.0em;" ng-model="searchName"  class="form-control-a" placeholder="姓名/卡号/手机号">
       <span class="input-group-btn">
         <button class="btn-search" type="button" ng-click="toSelectPage()"><img src="../../../vendor/images/zsx/search_white.png"></button>
       </span>
@@ -304,9 +304,9 @@
 
     <div class="select_pro" ng-show="showMore==0">
         <div class="select-item select_one" ng-repeat="item in firstIconArr" ng-click="showDetailImgPro(0,item.wxgz)">
-            <img class="select-img"  style="font-size: 1.2em;" src="{{item.imageurl?('../../../vendor/images/zsx/'+item.imageurl):'../../../vendor/images/zsx/fold_img.png'}}"/>
+            <img class="select-img"  style="font-size: 1.0em;" src="{{item.imageurl?('../../../vendor/images/zsx/'+item.imageurl):'../../../vendor/images/zsx/fold_img.png'}}"/>
 
-            <div class="select-text"  style="font-size: 1.2em;">{{item.wxgz}}</div>
+            <div class="select-text"  style="font-size: 1.0em;">{{item.wxgz}}</div>
 
         </div>
 
@@ -316,7 +316,7 @@
         <div class="select-item select_one" ng-repeat="item in firstIconArr" ng-click="showDetailImgPro(1,item.wxgz)">
             <img class="select-img" src="{{item.imageurl?('../../../vendor/images/zsx/'+item.imageurl):'../../../vendor/images/zsx/fold_img.png'}}"/>
 
-            <div class="select-text"  style="font-size: 1.2em;">{{item.wxgz}}</div>
+            <div class="select-text"  style="font-size: 1.0em;">{{item.wxgz}}</div>
 
         </div>
 
@@ -327,26 +327,26 @@
         <div class="select-item select_one" ng-click="showMoreChange()">
             <img class="select-img" src="../../../vendor/images/zsx/fold_back_img.png"/>
 
-            <div class="select-text"  style="font-size: 1.2em;">返回</div>
+            <div class="select-text"  style="font-size: 1.0em;">返回</div>
 
         </div>
 
         <div ng-repeat="item in sencondPageData" style="margin-top: 0.3rem;" class="select-item select_one  {{item.selected?'choose_back':''}}"   ng-click="chooseProject($index,item,item.selected)">
             <img class="select-img" src="../../../vendor/images/zsx/file_img.png"/>
 
-            <div class="select-text" style="font-size: 1.2em;">{{item.mc}}<br/><span style="font-size: 1.2em;">￥</span><span style="font-size: 1.2em;">{{item.xlf}}</span></div>
+            <div class="select-text" style="font-size: 1.0em;">{{item.mc}}<br/><span style="font-size: 1.0em;">￥</span><span style="font-size: 1.0em;">{{item.xlf}}</span></div>
 
         </div>
     </div>
     <div class="confirm-div">
 
-    <div class="text-inline confirm-a confirm-nav-btn" ui-sref="home"  style="font-size: 1.2em;">
+    <div class="text-inline confirm-a confirm-nav-btn" ui-sref="home"  style="font-size: 1.0em;">
         返回至接车
 
     </div>
         <img class="text-inline confirm-a food_car_img" src="../../../vendor/images/zsx/car_food.png"/>
 
-        <div class="text-inline confirm-a confirm-nav-btn" ng-click="toGdListPage()"  style="font-size: 1.2em;">
+        <div class="text-inline confirm-a confirm-nav-btn" ng-click="toGdListPage()"  style="font-size: 1.0em;">
             确认至工单
 
         </div>

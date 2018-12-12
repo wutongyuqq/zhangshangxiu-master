@@ -17,6 +17,10 @@
 
     .item-input-a {
         width: 90%;
+
+    }
+    .item-input{
+        padding: 3px 0 3px 16px;
     }
 
     .bts-magin {
@@ -85,7 +89,6 @@
     .back-line-red {
         width: 100%;
         height: 3px;
-        margin-top: 20px;
         background-color: #ff9db4;
     }
 
@@ -114,7 +117,6 @@
 
     .btn_width_div {
         width: 100%;
-        height: 1.2rem;
         margin-top: 0.2rem;
     }
 
@@ -224,7 +226,7 @@
     .card_ul{
         position: absolute;
         background-color: #f4f1f1;
-        width: 4rem;
+        width: 6rem;
         left:3rem;
         padding: 0.3rem 0.3rem;
         z-index: 1010;
@@ -236,36 +238,36 @@
     }
     .showCard-height{
         height: 0.8rem;
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
     .bar-light-div{
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     input[type=text]{
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
     input[type=number]{
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
     .home_tab_div_left{
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     .home_tab_div_right{
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     button{
         font-size: 1.0em;
     }
     .title-color{
-         font-size: 1.4em;
+         font-size: 1.0em;
      }
     .input-group{
         height: 1rem;
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     .tabs{
         height: 1.4rem;
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
 </style>
 
@@ -277,9 +279,9 @@
     <div class="bts-magin" style="width: 100%;height: auto;"><img  style="width: 100%;height: auto;" src="../../../vendor/images/zsx/take_photo.png"></div>
     <div  style="width: 100%;text-align: center">拍摄车牌</div>
 
-    <div class="col-lg-6" style="margin-top: 0.1rem;width: 8rem;margin-left: 1.4rem">
+    <div class="col-lg-10" style="margin-top: 0.1rem;width: 90%;text-align:center;margin:0 auto;">
         <div class="input-group">
-            <input id="text-card" type="text" ng-focus="toSelectPage()" class="form-control-a" placeholder="姓名/卡号/手机号">
+            <input id="text-card" style="font-size: 0.7em;" type="text" ng-focus="toSelectPage()" class="form-control-a" placeholder="姓名/卡号/手机号">
       <span class="input-group-btn">
         <button class="btn-search" type="button"><img src="../../../vendor/images/zsx/search_white.png"></button>
       </span>
@@ -358,7 +360,7 @@
         </any>
         <any class="item-input">
             <span class="input-label input-label-a">预交车时间</span>
-            <div class="text-inline text-right" style="font-size: 1.6em;">   <input  style="font-size: 1em;"  class="claim_input" type="text" ng-model="carInfo.ywg_date" id="start_date" placeholder="选择日期" readonly="readonly"/></div>
+            <div class="text-inline text-right" style="font-size: 1.2em;">   <input  style="font-size: 0.7em;"  class="claim_input" type="text" ng-model="carInfo.ywg_date" id="start_date" placeholder="选择日期" readonly="readonly"/></div>
 
 
 
@@ -383,7 +385,7 @@
 
     </div>
 
-    <div id="tab_nav" class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.4rem;">
+    <div id="tab_nav" class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;">
         <a class="tab-item">
             <div>
                 <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
@@ -557,13 +559,5 @@
     }
     if(!isIos()) {
         iosInput();
-    }else{
-        $("#tab_nav").css("height","1.9rem");
-        $("#text-card").css("font-size","0.8em");
-        $("#tab_nav").css("padding-bottom","0.1rem");
-
     }
-
-
-
 </script>
