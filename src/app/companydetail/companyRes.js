@@ -15,7 +15,7 @@ app.controller('CompanyResCtrl', ['$http', '$scope', '$state', 'ionicToast', 'lo
         var params = {
             db: locals.get("Data_Source_name"),
             function: "sp_fun_down_repair_state",
-            company_code: user.company_code,
+            company_code: locals.getObject("user").company_code,
             states: chooseName,
             pre_row_number:pre_row_number
         };

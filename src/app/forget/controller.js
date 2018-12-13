@@ -3,6 +3,9 @@ app.controller('ForgetCtrl', ['$http', '$scope', '$state', "locals", "ionicToast
     var pre_row_number = "0";
     var factoryDataArr = new Array();
     var id= $stateParams.id;
+    if(!id){
+        id=0;
+    }
     var queryStatuStr = "待领工";
     $scope.showMore=id;
     if(id==0) {
