@@ -333,7 +333,7 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
         }) .state('workmoreDetail', {
         url: '/workmoreDetail/:id',
         templateUrl: window.rootSrc + 'app/workmore/detail.html',
-        controller: 'WorkMoreDetailCtrl as ctrl',
+        controldler: 'WorkMoreDetailCtrl as ctrl',
         title:'标大大-行业动态',
         resolve: {
             load: ['$ocLazyLoad', function ($ocLazyLoad) {
@@ -427,6 +427,7 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
             }
         })
 
+
         .state('ucenter.personInfo', {
             url: '/personInfo',
             templateUrl: window.rootSrc + 'app/personal/personInfo.html',
@@ -440,6 +441,7 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
                 }]
             }
         })
+
         .state('ucenter.messages', {
             url: '/messages',
             templateUrl: window.rootSrc + 'app/personal/messages.html',
@@ -545,7 +547,6 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
                 }]
             }
         })
-
         .state('Perp', {
             url: '/perp',
             templateUrl: window.rootSrc + 'app/footer/prep.html',
@@ -559,7 +560,6 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
                 }]
             }
         })
-
         .state('UserProtocol', {
             url: '/userProtocol',
             templateUrl: window.rootSrc + 'app/footer/user_protocol.html',
@@ -572,7 +572,6 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
                 }]
             }
         })
-
         .state('Business', {
             url: '/business',
             templateUrl: window.rootSrc + 'app/footer/business.html',

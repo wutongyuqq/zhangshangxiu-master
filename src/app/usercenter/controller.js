@@ -295,4 +295,8 @@ app.controller('centerDetailCtrl', ['$http', '$scope', '$state','locals','$state
         });
     }
     $scope.getDetailData();
+
+    $scope.goBackHistory=function(){
+            history.back();
+    }
 }]);
