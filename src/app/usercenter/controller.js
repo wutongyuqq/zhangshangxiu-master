@@ -4,6 +4,23 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         startData: '2018-11-01',
         endData: '2018-11-30'
     };
+    /**
+     * 获取当前月的第一天
+     */
+    $scope.getCurrentMonthFirst=function(){
+        var myDate = new Date();//获取系统当前时间
+        return myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-01"
+    }
+    /**
+     * 获取当前月的最后一天
+     */
+    $scope.getCurrentMonthLast=function(){
+        var myDate = new Date();//获取系统当前时间
+        return  myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+    }
+
+    selectDate.startData = $scope.getCurrentMonthFirst();
+    selectDate.endData = $scope.getCurrentMonthLast();
     $scope.selectData = selectDate;
     var user = locals.getObject("user");
     $scope.userName = user.userName;
@@ -177,6 +194,7 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         $scope.getShigongData(searchSelectDate);
         $scope.getCardListData(searchSelectDate);
         $scope.getYejiFenzuData(searchSelectDate);
+        $scope.getShigongFenzuData(selectDate);
     }
 
     $scope.toDetailPage = function (name, type) {
@@ -186,21 +204,22 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         $state.go("centerDetail", {startDate: mStartDate, endDate: mEndDate, mType: type, name: name});
     }
 }]);
-app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast','locals',function ($http, $scope, ionicToast,locals) {
+app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',function ($http, $scope, ionicToast,locals) {
 
     $scope.showSelectMore = 0;
     var mSelectDate = {
         startData: '2017-01-01',
         endData: '2018-11-30'
     };
+
     $scope.getCardListData = function () {
 
         var params = {
-            db: "mycon1",
+            db: locals.get("Data_Source_name"),
             function: "sp_fun_query_repair_history",
             company_code: locals.getObject("user").company_code,
-            dates: mSelectDate.startData + " 00:00:00",
-            datee: mSelectDate.endData + " 23:59:59"
+            dates: $scope.selectData.startData + " 00:00:00",
+            datee: $scope.selectData.endData + " 23:59:59"
         };
         var json = angular.toJson(params);
         $http({
@@ -221,6 +240,28 @@ app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast','locals',fu
     }
 
 
+
+
+
+
+    /**
+     * 获取当前月的第一天
+     */
+    $scope.getCurrentMonthFirst=function(){
+        var myDate = new Date();//获取系统当前时间
+        return myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-01"
+    }
+    /**
+     * 获取当前月的最后一天
+     */
+     $scope.getCurrentMonthLast=function(){
+         var myDate = new Date();//获取系统当前时间
+        return  myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+    }
+
+    mSelectDate.startData = $scope.getCurrentMonthFirst();
+    mSelectDate.endData = $scope.getCurrentMonthLast();
+    $scope.selectData = mSelectDate;
     $scope.getCardListData();
 
 }]);
@@ -265,7 +306,7 @@ app.controller('centerDetailCtrl', ['$http', '$scope', '$state', 'locals', '$sta
     $scope.getDetailData = function (selectData) {
 
         var params = {
-            db: "mycon1",
+            db: locals.get("Data_Source_name"), //db: "mycon1",
             function: functionName,
             company_code: locals.getObject("user").company_code,
             employee: user.userName,

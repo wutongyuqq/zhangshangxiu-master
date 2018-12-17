@@ -384,7 +384,7 @@
 
     </div>
 
-    <div id="tab_nav" class="tabs-line  bar  bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;">
+    <div id="tab_nav" class="tabs-line  bar  bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;" ng-show="1==1">
         <a class="tab-item">
 
                 <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;"
@@ -521,7 +521,7 @@
         }
     });
 
-    $("#tab_nav").show();
+
     var calendar = new LCalendar();
     calendar.init({
         'trigger': '#start_date', //标签id
@@ -556,6 +556,7 @@
         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         return isiOS;
     }
+    setTimeout(function(){$("#tab_nav").show()},500);
     if(!isIos()) {
         iosInput();
     }
