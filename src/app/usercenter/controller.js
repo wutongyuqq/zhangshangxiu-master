@@ -186,7 +186,7 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         $state.go("centerDetail", {startDate: mStartDate, endDate: mEndDate, mType: type, name: name});
     }
 }]);
-app.controller('msgInfoCenterCtrl', 'ionicToast', ['$http', '$scope', function ($http, $scope, ionicToast) {
+app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast','locals',function ($http, $scope, ionicToast,locals) {
 
     $scope.showSelectMore = 0;
     var mSelectDate = {
