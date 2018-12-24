@@ -384,8 +384,8 @@
 
     </div>
 
-    <div id="tab_nav" class="tabs-line  bar  bar-footer" keyboardshow style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;" ng-show="1==1">
-        <a class="tab-item">
+    <div id="tab_nav" class="tabs-line bar bar-footer"  style="display:inline-block;border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;" ng-show="1==1">
+        <a class="tab-item" style="display:inline-block;width: 19%;">
 
                 <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;"
                      src="../../../vendor/images/zsx/recever_hand_blue.png"/>
@@ -394,26 +394,26 @@
 
 
         </a>
-        <a class="tab-item" ui-sref="FactoryPage">
+        <a class="tab-item" ui-sref="FactoryPage" style="display:inline-block;width: 19%;">
             <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;" src="../../../vendor/images/zsx/factory_gray.png"/>
 
             <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 1px;">车间管理</div>
 
         </a>
-        <a class="tab-item" ui-sref="CompanyTop">
+        <a class="tab-item" ui-sref="CompanyTop" style="display:inline-block;width: 19%;">
             <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;" src="../../../vendor/images/zsx/condition_gray.png"/>
 
             <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 1px;">整厂概况</div>
 
         </a>
-        <a class="tab-item" ui-sref="Usercenter">
+        <a class="tab-item" ui-sref="Usercenter" style="display:inline-block;width: 19%;">
             <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;" src="../../../vendor/images/zsx/msg_gray.png"/>
 
             <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 1px;">信息中心</div>
 
         </a>
 
-        <a class="tab-item" ui-sref="workmore">
+        <a class="tab-item" ui-sref="workmore" style="display:inline-block;width: 19%;">
             <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;" src="../../../vendor/images/zsx/setting_gray.png"/>
 
             <div style="color: #515151;height: 0.6rem;font-size: 1.0em;margin-top: 1px;">设置</div>
@@ -556,7 +556,9 @@
         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         return isiOS;
     }
-    setTimeout(function(){$("#tab_nav").show()},500);
+    setTimeout(function(){
+        document.getElementById("tab_nav").style.display="inline-block";
+    },1000);
     if(!isIos()) {
         iosInput();
     }
