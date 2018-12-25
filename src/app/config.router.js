@@ -597,6 +597,28 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
                     ]);
                 }]
             }
+        }).state('baoyang', {
+            url: '/baoyang',
+            templateUrl: window.rootSrc + 'app/baoyang/baoyang.html',
+            controller: 'baoyangCtrl as $ctrl',
+            resolve: {
+                load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/baoyang/baoyang.js'
+                    ]);
+                }]
+            }
+        }).state('tipCenter', {
+            url: '/tipCenter',
+            templateUrl: window.rootSrc + 'app/baoyang/tipCenter.html',
+            controller: 'tipCenterCtrl as $ctrl',
+            resolve: {
+                load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/baoyang/baoyang.js'
+                    ]);
+                }]
+            }
         });
     /**
      * 什么都匹配不到的时候就跳转到首页
