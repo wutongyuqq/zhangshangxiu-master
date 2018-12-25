@@ -1,10 +1,9 @@
 app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$state', 'ionicToast', function ($http, $scope, ionicToast, locals, $state, ionicToast) {
-    $scope.showSelectMore = 1;
+    $scope.showSelectMore = 0;
     var selectDate = {
         startData: '2018-11-01',
         endData: '2018-11-30'
     };
-
     /**
      * 获取当前月的第一天
      */
@@ -20,16 +19,7 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         return  myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
     }
 
-    selectDate.startData = $scope.getCurrentMonthFirst();
-    selectDate.endData = $scope.getCurrentMonthLast();
-    if(locals.getObject("selectData")){
-        selectDate = locals.getObject("selectData");
-    };
-    if(locals.getObject("selectDataType")){
-        $scope.showSelectMore = locals.getObject("selectDataType");
-    };
 
-    $scope.selectData = selectDate;
     var user = locals.getObject("user");
     $scope.userName = user.userName;
     $scope.getCardListData = function (selectDate) {
@@ -51,7 +41,6 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
             var state = data.state;
             if (state == "ok") {
                 $scope.dataArray = data.data[0];
-
             } else {
                 ionicToast.show(data.msg, "middle", 2000);
             }
@@ -60,7 +49,7 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         });
     }
 
-    $scope.getCardListData(selectDate);
+
     $scope.getJieDaiData = function (mSelectDate) {
         if (mSelectDate) {
             selectDate = mSelectDate;
@@ -91,7 +80,9 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         });
     }
 
-    $scope.getJieDaiData(selectDate);
+
+
+
     $scope.getShigongData = function (mSelectDate) {
         if (mSelectDate) {
             selectDate = mSelectDate;
@@ -121,10 +112,13 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
             ionicToast.show("服务异常", 'middle', false, 2000);
         });
     }
+
+
     $scope.getYejiFenzuData = function (mSelectDate) {
         if (mSelectDate) {
             selectDate = mSelectDate;
         }
+
         var params = {
             db: locals.get("Data_Source_name"),
             function: "sp_fun_query_achievement_collect",
@@ -150,7 +144,8 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
             ionicToast.show("服务异常", "middle", 2000);
         });
     }
-    $scope.getYejiFenzuData(selectDate);
+
+
     $scope.getShigongFenzuData = function (mSelectDate) {
         if (mSelectDate) {
             selectDate = mSelectDate;
@@ -181,16 +176,17 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         });
     }
 
-    $scope.getShigongFenzuData(selectDate);
+
 
     $scope.showMoreView = function (showSelectMore) {
         $scope.showSelectMore = showSelectMore;
-        if (showSelectMore == 1) {
+        if (showSelectMore == 0) {
             $scope.getJieDaiData(selectDate);
-        } else if (showSelectMore == 2) {
+        } else if (showSelectMore == 1) {
             $scope.getShigongData(selectDate);
         }
     }
+
     $scope.getDataList = function (searchSelectDate) {
         $scope.getJieDaiData(searchSelectDate);
         $scope.getShigongData(searchSelectDate);
@@ -198,36 +194,67 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
         $scope.getYejiFenzuData(searchSelectDate);
         $scope.getShigongFenzuData(selectDate);
     }
+
+
+    selectDate.startData = $scope.getCurrentMonthFirst();
+    selectDate.endData = $scope.getCurrentMonthLast();
+    $scope.selectData = selectDate;
+
     $scope.toDetailPage = function (name, type) {
         var mStartDate = $scope.selectData.startData;
         var mEndDate = $scope.selectData.endData;
 
-        locals.setObject("selectData",$scope.selectData);
-        locals.setObject("selectDataType",type);
         $state.go("centerDetail", {startDate: mStartDate, endDate: mEndDate, mType: type, name: name});
     }
-    $scope.goBackPage=function(){
-        history.back();
-    }
+
+
+
+
+
+
+    $scope.$on('$ionicView.enter',function(){
+        console.log("enter");
+    });
+
+    $scope.$on('$ionicView.loaded',function(){
+        console.log("loaded");
+    });
+
+    $scope.$on('$ionicView.leave',function(){
+        console.log("leave");
+    });
+
+    $scope.$on('$ionicView.beforeEnter',function(){
+        console.log("beforeEnter");
+    });
+
+    $scope.$on('$ionicView.beforeLeave',function(){
+        console.log("beforeLeave");
+    });
+
+    $scope.$on('$ionicView.afterEnter',function(){
+        console.log("afterEnter");
+    });
+
+    $scope.$on('$ionicView.afterLeave',function(){
+        console.log("afterLeave");
+    });
+
+    $scope.$on('$ionicView.unloaded',function(){
+        console.log("unloaded");
+    });
+
 }]);
 app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',function ($http, $scope, ionicToast,locals) {
+
     $scope.showSelectMore = 0;
     var mSelectDate = {
         startData: '2017-01-01',
         endData: '2018-11-30'
     };
-    $scope.wxgz="选择工种";
-    var firstIconArr = ["车牌号","工种类别"];
-    var selectDataArray = new Array();
-    $scope.firstIconArr=firstIconArr;
-    $scope.showSelectDiv = function (isShowSelect) {
-        $scope.isShowSelect = !isShowSelect;
-    }
-    $scope.selectItem = function (item) {
-        $scope.wxgz = item;
-        $scope.isShowSelect = false;
-    }
+
     $scope.getCardListData = function () {
+
         var params = {
             db: locals.get("Data_Source_name"),
             function: "sp_fun_query_repair_history",
@@ -245,7 +272,6 @@ app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',f
             var state = data.state;
             if (state == "ok") {
                 $scope.dataArray = data.data;
-                selectDataArray = data.data;
             } else {
                 ionicToast.show("错误：" + data.msg ? data.msg : "", 'middle', false, 2000);
             }
@@ -253,6 +279,12 @@ app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',f
             ionicToast.show("服务异常", "middle", 2000);
         });
     }
+
+
+
+
+
+
     /**
      * 获取当前月的第一天
      */
@@ -267,49 +299,21 @@ app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',f
          var myDate = new Date();//获取系统当前时间
         return  myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
     }
+
     mSelectDate.startData = $scope.getCurrentMonthFirst();
     mSelectDate.endData = $scope.getCurrentMonthLast();
     $scope.selectData = mSelectDate;
     $scope.getCardListData();
 
-
-
-    $scope.searchData = function(content){
-        var newSelectData = new Array();
-        if(content){
-            for(var i=0;i<selectDataArray.length;i++){
-                var obj = selectDataArray[i];
-                if(obj&&obj.cp){
-                    if($scope.wxgz=="选择工种"){
-                        if(obj.cp.indexOf(content)>-1||obj.wxgz_collect.indexOf(content)>-1){
-                            newSelectData.push(obj);
-                        }
-                    }else if(obj.cp.indexOf(content)>-1 && $scope.wxgz=="车牌号"){
-                        newSelectData.push(obj);
-                    }else if(obj.wxgz_collect.indexOf(content)>-1 && $scope.wxgz=="工种类别"){
-                        newSelectData.push(obj);
-                    }
-
-                }
-
-            }
-            $scope.dataArray = newSelectData;
-
-        }
-
-    }
-    $scope.goBackPage = function () {
-        history.back();
-    }
 }]);
 
 
-app.controller('centerCtrl', ['$http', '$scope', '$state', 'locals',function ($http, $scope, $state,locals) {
+app.controller('centerCtrl', ['$http', '$scope', '$state', function ($http, $scope, $state) {
+
     $scope.showSelectMore = 0;
+
     $scope.toPage = function (selectItem) {
         if (selectItem == '1') {
-            locals.setObject("selectData",null);
-            locals.setObject("selectDataType",null);
             $state.go("mycenter");
 
         } else if (selectItem == '2') {
@@ -323,18 +327,25 @@ app.controller('centerCtrl', ['$http', '$scope', '$state', 'locals',function ($h
         } else if (selectItem == '6') {
             $state.go("msgInfoCenter");
         }
+
     }
+
 }]);
 
+
 app.controller('centerDetailCtrl', ['$http', '$scope', '$state', 'locals', '$stateParams', 'ionicToast', function ($http, $scope, $state, locals, $stateParams, ionicToast) {
+
     var mStartDate = $stateParams.startDate;
     var mEndDate = $stateParams.endDate;
     var type = parseInt($stateParams.mType);
     var name = $stateParams.name;
+
     $scope.showSelectMore = 0;
+
     var user = locals.getObject("user");
     var functionName = type == 1 ? "sp_fun_query_achievement_detail" : "sp_fun_query_achievement_detail_repair";
     $scope.getDetailData = function (selectData) {
+
         var params = {
             db: locals.get("Data_Source_name"), //db: "mycon1",
             function: functionName,
@@ -344,6 +355,7 @@ app.controller('centerDetailCtrl', ['$http', '$scope', '$state', 'locals', '$sta
             datee: mEndDate + " 23:59:59",
             xlxm: name
         };
+
         var json = angular.toJson(params);
         $http({
             method: 'post',
@@ -364,7 +376,8 @@ app.controller('centerDetailCtrl', ['$http', '$scope', '$state', 'locals', '$sta
         });
     }
     $scope.getDetailData();
+
     $scope.goBackHistory=function(){
-            history.back();
+        history.go(-1);
     }
 }]);
