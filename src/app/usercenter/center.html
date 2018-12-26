@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .bar-light-div {
+        font-size:1.2em;
+    }
+
+    input[type=text] {
+        font-size: 2.3em;
+    }
+
+    input[type=number] {
+        font-size: 2.3em;
+    }
+
+    button {
+        font-size: 2.4em;
+    }
+
+    .title-color {
+        font-size: 1.0em;
+    }
+
+    .tabs {
+        height: 1.4rem;
+        font-size: 1.8em;
+    }
+
+    .col {
+        background-color: #F9FAFB;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .row {
+        margin: 0 0;
+    }
+    img{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+</style>
+
+<div>
+    <div class="bar bar-header bar-light bar-light-div">
+        <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+        <h1 class="title"><span class="title-color">信息中心</span></h1>
+    </div>
+    <div class="content has-header" style="height: 10rem;">
+
+        <div class="row">
+            <div class="col" ng-click="toPage('1')">
+                <div class="col-demo">
+
+                    <img src="../../../vendor/images/zsx/center_person_myself.png"/>
+
+                    <div style="font-size:1.2em;margin-top: 0.2rem">
+                        我的绩效
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col" ng-click="toPage('2')">
+                <div class="col-demo">
+
+                    <img src="../../../vendor/images/zsx/center_query.png"/>
+
+                    <div style="font-size:1.2em;margin-top: 0.2rem">
+                        客户查询
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col" ng-click="toPage('3')">
+                <div class="col-demo">
+                    <img src="../../../vendor/images/zsx/center_money_manage.png"/>
+
+                    <div style="font-size:1.2em;margin-top: 0.2rem">
+                        财务管理
+                    </div>
+                </div>
+            </div>
+            <div class="col" ng-click="toPage('4')">
+                <div class="col-demo">
+
+                    <img src="../../../vendor/images/zsx/center_notify.png"/>
+
+                    <div style="font-size:1.2em;margin-top: 0.2rem">
+                        提醒中心
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col" ng-click="toPage('5')">
+                <div class="col-demo">
+                    <img src="../../../vendor/images/zsx/center_work_page.png"/>
+
+                    <div style="font-size:1.2em;margin-top: 0.2rem">
+                        工单查询
+                    </div>
+
+                </div>
+            </div>
+            <div class="col" ng-click="toPage('6')">
+                <div class="col-demo">
+                    <img src="../../../vendor/images/zsx/center_level.png"/>
+
+                    <div style="font-size:1.2em;margin-top: 0.2rem">
+                        绩效管理
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="tabs tabs-icon-top tabs-icon-top-line bar-footer" keyboardshow
+         style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;">
+        <a class="tab-item" ui-sref="home">
+            <div>
+                <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                     src="../../../vendor/images/zsx/recever_hand_gray.png"/>
+
+                <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">车辆接待</div>
+            </div>
+
+        </a>
+        <a class="tab-item" ui-sref="FactoryPage">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                 src="../../../vendor/images/zsx/factory_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">车间管理</div>
+
+        </a>
+        <a class="tab-item" ui-sref="CompanyTop">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                 src="../../../vendor/images/zsx/condition_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">整厂概况</div>
+
+        </a>
+        <a class="tab-item">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                 src="../../../vendor/images/zsx/msg_blue.png"/>
+
+            <div style="color: #1296db;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">信息中心</div>
+
+        </a>
+
+        <a class="tab-item" ui-sref="workmore">
+            <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.13rem;"
+                 src="../../../vendor/images/zsx/setting_gray.png"/>
+
+            <div style="color: #515151;height: 0.6rem;font-size: 1.4em;margin-top: 5px;">设置</div>
+
+        </a>
+    </div>
+
+</div>
+
+

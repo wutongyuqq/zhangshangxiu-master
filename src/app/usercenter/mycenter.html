@@ -1,0 +1,647 @@
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .title-color {
+        color: #3ca2dd;
+    }
+
+    .container-fluid {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .item-input-a {
+        width: 90%;
+    }
+
+    .bts-magin {
+
+        width: 80%;
+        margin: 44px auto 0px auto;
+    }
+
+    .bar-light-div {
+        background-size: 0px;
+        border-bottom: 1px solid #1296db;
+    }
+
+    .form-control-a {
+        width: 95%;
+        background: url("../../../vendor/images/zsx/back_bottom_red.png");
+        text-indent: 6px;
+    }
+
+    .input-label-a {
+        width: 30%;
+        font-size: 2.5em;
+    }
+
+    .input-left-div {
+        padding-left: 1.5rem;
+    }
+
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        font-size: 2.6em;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: -3px;
+        width: 49%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+
+        text-align: center;
+
+        border: none;
+    }
+
+    .back-line-red {
+        width: 100%;
+        height: 3px;
+        margin-top: 20px;
+        background-color: #ff9db4;
+    }
+
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .btn_inline {
+        width: 100%;
+    }
+
+    .btn_width_div {
+        width: 100%;
+        height: 2.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn_gz_left {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_jc_right {
+        width: 49%;
+        text-align: center;
+    }
+
+    .btn_a {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .btn_b {
+        padding: 0.4rem 1.5rem;
+        background-color: #89c997;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .span_card {
+        position: relative;
+        text-decoration: none;
+        color: #1296db;
+    }
+
+    .span_card_list {
+        width: 100%;
+    }
+
+    .home_ul {
+
+        width:100%;
+        overflow: auto;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .home_li {
+        float: left;
+        margin-top: 0.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .home_li_a {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: white;
+        text-align: center;
+        padding: 0.3rem;
+        background-color: #89c997;
+    }
+
+    a:link, a:visited, a:hover {
+        color: #1296db;
+        text-decoration: none;
+    }
+
+    .modal-dialog {
+        margin-top: 4rem;
+        border: none;
+    }
+
+    .modal {
+        background-color: transparent;
+        border: none;
+    }
+    .modal-header{
+        background-color: #333333;
+        color:white;
+        border: none;
+    }
+    .modal-title{
+        color:white;
+    }
+    .btn-primary{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997 ;
+    }
+    .btn-warning{
+        background-color: #89c997;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-color:#89c997;
+        margin-left: 1rem;
+    }
+    .modal-footer{
+        text-align: center;
+        background-color: #abadab;
+        border: none;
+
+    }
+    .modal-content{
+        border: none;
+    }
+    .card_ul{
+        position: absolute;
+        background-color: #f4f1f1;
+        width: 4rem;
+        left:3rem;
+        padding: 0.3rem 0.3rem;
+        z-index: 1010;
+        max-height: 7rem;
+        color: #7d7e7d;
+        overflow: scroll;
+
+    }
+    .showCard-height{
+        height: 0.8rem;
+        font-size: 2.3em;
+    }
+    .bar-light-div{
+        font-size:2.2em;
+    }
+    input[type=text]{
+        font-size: 2.3em;
+    }
+    input[type=number]{
+        font-size: 2.3em;
+    }
+    .home_tab_div_left{
+        font-size: 1.2em;
+    }
+    .home_tab_div_right{
+        font-size: 1.2em;
+    }
+    button{
+        font-size: 1.4em;
+    }
+    .title-color{
+        font-size: 1.0em;
+    }
+    .input-group{
+        height: 1rem;
+        font-size: 2.4em;
+    }
+    .tabs{
+        height: 1.4rem;
+        font-size: 2.4em;
+    }
+    .text-inline {
+        display: inline-block;
+    }
+
+    .color-white-img {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .color-white-img-home {
+        margin-left: 1rem;
+    }
+
+    .color-white-img-card {
+        margin-left: 4.5rem;
+    }
+
+    .color-white {
+        color: white;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+    }
+    .color-black{
+        color: black;
+        display: inline-block;
+        margin-top: 0.3rem;
+        margin-bottom: auto;
+        line-height: 100%;
+        vertical-align: top;
+    }
+    .bar-white-home {
+        margin-left: 0.1rem;
+        margin-top: 0.32rem;
+    }
+
+    .bar-white-card {
+        margin-left: 0.2rem;
+        margin-top: 0.32rem;
+    }
+    .text-inline {
+        display: inline-block;
+    }
+    .bar_second_pink {
+        width: 100%;
+        margin-top: 44px;
+        height: 1rem;
+        background-color: #aa89bd;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+    .bar_second_white {
+        width: 100%;
+        height: 1rem;
+        background-color: #ffffff;
+        vertical-align: middle;
+        line-height: 1rem;
+    }
+    .home_tab_div_left_color {
+        background-color: #ff9db4;
+        color: #ffffff;
+    }
+
+    .home_tab_div_right_color {
+        background-color: #a4a3a3;
+        color: #333333;
+    }
+
+    .home_tab_div_left {
+        padding: 0 0;
+        width: 28%;
+        height: 100%;
+        line-height: 1rem;
+        border-top-left-radius: 0.1rem;
+        border-top-right-radius: 0.1rem;
+        text-align: center;
+        vertical-align: middle;
+
+        border: none;
+    }
+
+    .home_tab_div_right {
+
+        margin-left: 0.1rem;
+        width: 28%;
+        height: 100%;
+        line-height: 1rem;
+        vertical-align: middle;
+        border-top-left-radius: 0.1rem;
+        border-top-right-radius: 0.1rem;
+        text-align: center;
+
+        border: none;
+    }
+    .home_tab_div {
+        padding: 0 0;
+        width: 100%;
+        height: 1rem;
+        text-align: center;
+        border-bottom: 2px solid #ff9db4;
+
+    }
+
+    .text_inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .btn-search {
+        background-color: #ff9db4;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+    .text-inline-left{
+        height: 100%;
+        width: 4rem;
+        text-align: center;
+        background-color: #fbe2e2;
+        padding: 0.3rem 0.2rem;
+        font-size: 1.0em;
+        color:#000000
+    }
+    .text-inline-right{
+        height: 100%;
+        width: 6.8rem;
+        text-align: left;
+        background-color: #eeeeee;
+        padding: 0.3rem 0.3rem 0.3rem 1rem;
+        font-size: 1.0em;
+        color:#000000
+    }
+
+    .item{
+        padding: 0;
+        background-color: #eeeeee;
+    }
+    .row-white{
+        background-color: #cccccc;
+    }
+
+</style>
+
+
+    <div class="bar bar-header bar-light bar-light-div">
+        <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
+        <h1 class="title"><span class="title-color">信息中心</span></h1>
+    </div>
+    <div class="bar_second_pink">
+
+            <div class="color-white bar-white-home" style="font-size: 1.0em;margin-left: 1rem;">姓名：{{userName}}</div>
+        <div class="color-white bar-white-card" style="font-size: 1.0em;margin-left: 2rem;">当月绩效数据</div>
+    </div>
+    <div class="bar_second_white">
+        <div class="color-black bar-white-home" style="font-size: 1.0em;margin-left: 1rem;">施工绩效：{{dataArray.repair_achievement}}</div>
+        <div class="color-black bar-white-card" style="font-size: 1.0em;margin-left: 2.5rem;">销售绩效：{{dataArray.sale_achievement}}</div>
+    </div>
+
+    <div class="home_tab_div">
+        <div class="text_inline home_tab_div_left {{showSelectMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(0)">销售
+        </div>
+
+        <div class="text_inline home_tab_div_right  {{showSelectMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+             ng-click="showMoreView(1)">施工
+        </div>
+
+    </div>
+    <div style="width: 100%;text-align: center;margin-top: 0.2rem;">
+        <div class="text-inline text-right" style="margin-left: 0.2rem;"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                                                                style="width: 2.9rem;height: 0.8rem;font-size: 1.0em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.startData"
+                                                                                type="text" id="start_date" placeholder="选择起始日期"
+                                                                                readonly="readonly"/></div>
+        <div class="text-inline">至</div>
+        <div class="text-inline text-right"><input ng-change="updateCarInfo(isShowGzms,4)" class="claim_input"
+                                                   style="width: 2.9rem;height: 0.8rem;font-size: 1.0em;background-color: #f0ecec;padding-left: 0.2rem;" ng-model="selectData.endData" type="text" id="end_date" placeholder="选择结束日期" readonly="readonly"/>
+        </div>
+        <!-- <button class="text-inline text-right" ng-click="getWxHistory(selectData)" style="font-size: 1.4em;">搜索</button>-->
+
+        <button class="text-inline btn-search"  ng-click="getDataList(selectData)" type="button"><img style="width: 0.4rem;height: 0.4rem" src="../../../vendor/images/zsx/search_white.png"></button>
+
+    </div>
+
+    <div class="content has-header" style="margin-top: 0px;top:10px;">
+
+        <ul class="list" style="height: 4.5rem" ng-show="showSelectMore==0">
+            <li class="item">
+                <div class="text-inline text-inline-left">接待车次</div><div class="text-inline text-inline-right">{{jieDaiData.service_time?jieDaiData.service_time:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">销售项目数</div><div class="text-inline text-inline-right">{{jieDaiData.sale_time?jieDaiData.sale_time:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">销售总金额</div><div class="text-inline text-inline-right">{{jieDaiData.sale_money?jieDaiData.sale_money:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">销售利润</div><div class="text-inline text-inline-right">{{jieDaiData.sale_profit?jieDaiData.sale_profit:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">销售绩效</div><div class="text-inline text-inline-right">{{jieDaiData.sale_achievement?jieDaiData.sale_achievement:'0'}}</div>
+            </li>
+
+        </ul>
+
+        <ul class="list" style="height: 5.5rem" ng-show="showSelectMore==1">
+            <li class="item">
+                <div class="text-inline text-inline-left">施工车次</div><div class="text-inline text-inline-right">{{shigongData.service_time?shigongData.service_time:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">施工项目数</div><div class="text-inline text-inline-right">{{shigongData.repair_time?shigongData.repair_time:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">项目总额</div><div class="text-inline text-inline-right">{{shigongData.repair_money?shigongData.repair_money:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">项目利润</div><div class="text-inline text-inline-right">{{shigongData.repair_profit?shigongData.repair_profit:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">总工时</div><div class="text-inline text-inline-right">{{shigongData.hours?shigongData.hours:'0'}}</div>
+            </li>
+            <li class="item">
+                <div class="text-inline text-inline-left">施工绩效</div><div class="text-inline text-inline-right">{{shigongData.repair_achievement?shigongData.repair_achievement:'0'}}</div>
+            </li>
+
+        </ul>
+
+
+
+        <div class="content has-header" style="text-align:center;overflow: auto;margin: 0 auto;padding-left: 0.2rem;" ng-show="showSelectMore==0">
+            <div class="row  row-center">
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        项目名称
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        销售项目数
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        销售总额
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo col-demo-width">
+                        销售利润
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        销售绩效
+                    </div>
+                </div>
+
+            </div>
+            <ion-scroll has-bouncing="false"  style="width: 100%;min-height: 5rem;overflow: auto" direction="y">
+                <div ng-repeat="item in yejiDataArray track by $index" class="row  row-center  {{$index%2==0?'row-white':'row-gray'}}" style="padding: 0.2rem;width:auto;" ng-click="toDetailPage(item.name,1)">
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            {{item.name}}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            {{item.sale_time|limitTo:10 }}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            {{item.sale_money}}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo col-demo-width">
+                            {{item.sale_profit}}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            ￥{{item.sale_achievement}}
+                        </div>
+                    </div>
+
+                </div>
+            </ion-scroll>
+        </div>
+
+
+
+
+        <div class="content has-header" style="text-align:center;overflow: auto;margin: 0 auto;padding-left: 0.2rem;" ng-show="showSelectMore==1">
+            <div class="row  row-center">
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        项目名称
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        施工项目数
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        项目总额
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo col-demo-width">
+                        项目利润
+                    </div>
+                </div>
+                <div class="col  text-center">
+                    <div class="col-demo">
+                        施工绩效
+                    </div>
+                </div>
+
+            </div>
+            <ion-scroll has-bouncing="false"  style="width:100%; min-height: 3rem;overflow: auto" direction="y">
+                <div  ng-repeat="item in shigongDataArray" class="row  row-center   {{$index%2==0?'row-white':'row-gray'}}" ng-click="toDetailPage(item.name,2)">
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            {{item.name}}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            {{item.sale_time|limitTo:10 }}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            {{item.sale_money}}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo col-demo-width">
+                            {{item.sale_profit}}
+                        </div>
+                    </div>
+                    <div class="col  text-center">
+                        <div class="col-demo">
+                            ￥{{item.sale_achievement}}
+                        </div>
+                    </div>
+
+                </div>
+            </ion-scroll>
+        </div>
+
+
+
+    </div>
+
+
+<script>
+
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#start_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+    var calendar2 = new LCalendar();
+    calendar2.init({
+        'trigger': '#end_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': (new Date().getFullYear() - 40) + '-' + 1 + '-' + 1, //最小日期
+        'maxDate': (new Date().getFullYear() + 20) + '-' + 12 + '-' + 31 //最大日期
+    });
+</script>
+
