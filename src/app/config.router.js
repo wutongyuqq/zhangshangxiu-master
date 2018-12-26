@@ -619,7 +619,29 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
                     ]);
                 }]
             }
-        });
+        }).state('btnCenter', {
+        url: '/btnCenter',
+        templateUrl: window.rootSrc + 'app/baoyang/btnCenter.html',
+        controller: 'btnCenterCtrl as $ctrl',
+        resolve: {
+            load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load([
+                    'app/baoyang/baoyang.js'
+                ]);
+            }]
+        }
+    }).state('sinCenter', {
+        url: '/sinCenter',
+        templateUrl: window.rootSrc + 'app/baoyang/sinCenter.html',
+        controller: 'sinCenterCtrl as $ctrl',
+        resolve: {
+            load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load([
+                    'app/baoyang/baoyang.js'
+                ]);
+            }]
+        }
+    });
     /**
      * 什么都匹配不到的时候就跳转到首页
      */

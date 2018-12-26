@@ -1,4 +1,243 @@
-<!-- 模版中对外只能提供一个(也许可能多个，看版本) 元素节点 ，所以需要用一个容器包起来，这里使用了一个 DIV 标签把其他标签包起来了 -->
-<div>
-	提醒中心页面提醒中心页面提醒中心页面提醒中心页面提醒中心页面提醒中心页面提醒中心页面提醒中心页面
+<link rel="stylesheet" href="../../../vendor/css/ioinc.min.css"/>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	.vs_header{
+		width: 15rem;
+		margin-left: 0.2rem;
+		overflow: hidden;
+		height: 50px;
+		line-height: 50px;
+	}
+	.vs_hd{
+		display: inline;
+
+	}
+	.vs_l{
+		float: left;
+		width: 5rem;
+	}
+	.vs_r{
+		float: left;
+		width: 5rem
+	}
+	.vs_c{
+		float: left;
+		width: 4.5rem;
+		color: #0088cc;
+		font-size: 14px;
+	}
+	.vs_img{
+		vertical-align: middle;
+	}
+	.vs_br{
+		width: 20rem;
+		height: 3px;
+		background-color: #007aff;
+	}
+	.vs_ti{
+		display: inline;
+		float: left;
+		width: 3.8rem;
+		height: 30px;
+		line-height:30px;
+		background-color:#3c3c3c;
+		color: white;
+		margin: 0 0.05rem;
+		border-radius:3px;
+		font-size: 12px;
+	}
+	.vs_nav{
+		overflow:hidden;
+		margin-top:5PX;
+	}
+	.vs_tis{
+		width:2.0rem;
+	}
+	.vs_ping{
+		margin-left: 20px;
+	}
+	.vs_news{
+		margin-top: 5px;
+		width: 20rem;
+		height: 5px;
+		background: -webkit-linear-gradient(red, green, yellow); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(red, green, yellow); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(red, green, yellow); /* Firefox 3.6 - 15 */
+		background: linear-gradient(red, green, yellow);}
+
+	.vs_news{
+		width: 20rem;
+	}
+	.vs_bud{
+		width: 20rem;
+	}
+
+
+	.vs_ta{
+		width:100%;
+		text-align: center;
+		line-height:40px;
+		font-size: 12px;
+		font-family: "微软雅黑", sans-serif;
+
+	}
+	.vs_tr{
+		width:2.5rem;
+		border: 1px solid #ccc;
+	}
+	.vs_color{
+		color: #4b8bf4;
+		background-color: #3c3c3c;
+		text-align: center;
+		font-size: 13px;
+		width: 3rem;
+
+	}
+	td{
+		border: 1px solid #ffff00;
+	}
+	td{
+		border: 1px solid #ffff00;
+	}
+	.vs_boy{
+		background-color: #ccc;
+	}
+	.vs_btn{
+		width:80px;
+		height:30px;
+		background-color: #4b8bf4;
+		display:inline-block;
+		border-radius: 5px;
+		margin-top:50px;
+	}
+	.vs_dv{
+		width: 20rem;
+		background-color: #4d4d4d;
+		color: white;
+		display:table-cell;
+		vertical-align:middle;
+		text-align: center;
+		line-height:240px;
+
+	}
+	.vs_ft{
+		display: inline-block;
+	}
+	.vs_dev{
+		width: 20rem;
+		background-color: lightblue;
+	}
+	.vs_ft{
+		width: 2.1rem;
+		padding-top: 5px;
+		text-align: center;
+		font-size: 12px;
+		font-family: "微软雅黑", sans-serif;
+
+
+	}
+	.vs_col{
+		background-color: #e6b947;
+	}
+	.vs_cars{
+		display: inline;
+		margin: 0 5px;
+
+	}
+	.vs_ca{
+		margin-left:30px;
+	}
+	.vs_jib{
+		margin-left:5px;
+		font-size: 13px;
+		font-family: "微软雅黑", sans-serif;
+		color: #2e2e2e;
+	}
+	.vs_bt{
+		width: 120px;
+		height: 40px;
+		background-color: #9aa6ab;
+		border-radius: 5px;
+	}
+	.vs_bv{
+		display: inline;
+		margin: 0 10px;
+		color: white;
+	}
+	.vs_btn_s{
+		text-align: center;
+		background-color: #2e2e2e;
+		padding: 10px;
+	}
+</style>
+<div class="vs_go">
+	<div class="vs_header">
+		<div class="vs_hd vs_r"><img class="vs_img" src="../../../vendor/images/zsx/back_gray.png" alt=""><span>&nbsp;&nbsp;返回</span></div>
+		<div class="vs_hd vs_c">轮载</div>
+		<div class="vs_hd vs_l"><img class="vs_img" src="../../../vendor/images/zsx/up.png" alt=""></div>
+	</div>
+	<div class="vs_br"></div>
+	<div class="vs_nav">
+		<div class="vs_ti vs_tis"> 提醒&nbsp;&nbsp;<img class="vs_img"  src="../../../vendor/images/zsx/fine.png" alt=""></div>
+		<div class="vs_ti vs_tis vs_ping"><img class="vs_img" src="../../../vendor/images/zsx/man.png" alt="">李总</div>
+		<div class="vs_ti"><img class="vs_img" src="../../../vendor/images/zsx/che.png" alt="">粤B3A897</div>
+	</div>
+	<div class="vs_news"></div>
+	<div>
+		<div class="vs_cars">车辆检查单</div>
+		<div class="vs_cars vs_ca">工单号：2016091009100910</div>
+	</div>
+	<div class="vs_br"></div>
+	<div class="vs_jib">
+	<div>检查时间：2018-1-1</div>
+	<div>车行名称：董车会汽车服务中心</div>
+	<div>车行地址：深圳福田南沙区</div>
+	<div>车行电话：0755-84989988</div>
+	<div>客户姓名：李总</div>
+	<div>车牌：粤B12345</div>
+	<div>客户公司：湖南耀邦建设有限公司</div>
+	<div>车型：2018-1-1</div>
+	<div>里程：2018-1-1</div>
+	<div>油表信息：2018-1-1</div>
+	</div>
+	<div class="vs_br"></div>
+	<table class="vs_ta">
+		<tr class="vs_tr">
+			<th class="vs_color">车辆检查</th>
+			<th class="vs_color">检查结果</th>
+			<th class="vs_color">维修项目</th>
+		</tr>
+		<tr class="vs_tr">
+			<td>左B柱</td>
+			<td>划痕</td>
+			<td>喷漆（左前轮胎）</td>
+
+		</tr>
+		<tr class="vs_tr vs_boy">
+			<td>左前轮载</td>
+			<td>划痕</td>
+			<td>喷漆（左前轮胎）</td>
+		</tr>
+	</table>
+	<div class="vs_jib">
+	<div>车内物品：</div>
+	<div>备注：</div>
+	<div>客户签字：</div>
+	<div>接单人：</div>
+	</div>
+	<div class="vs_btn_s">
+		<div class="vs_bv"><button class="vs_bt">打印</button></div>
+		<div class="vs_bv"><button  class="vs_bt">完成</button></div>
+	</div>
+	<div class="vs_dev">
+		<div class="vs_ft vs_col" ><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/wen.png" alt=""></div>车辆接待</div>
+		<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/tou.png" alt=""></div>透明车间</div>
+		<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/cars.png" alt=""></div>在厂车辆</div>
+		<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/she.png" alt=""></div>信息中心</div>
+		<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/xin.png" alt=""></div>设置</div>
+	</div>
 </div>
