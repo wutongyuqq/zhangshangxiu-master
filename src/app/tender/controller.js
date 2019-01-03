@@ -808,7 +808,7 @@ app.controller('WinbdingCtrl', ['$http', '$scope', '$state', "locals", "ionicToa
 
     $scope.addPjToServer = function (item) {
 
-
+        var user = locals.getObject("user");
         var jsd_id = locals.get("jsd_id");
         var params =
         {
@@ -827,7 +827,8 @@ app.controller('WinbdingCtrl', ['$http', '$scope', '$state', "locals", "ionicToa
             cb: item.cb,
             sl: (item.sl&&Number(item.sl)>0)?item.sl:'1',
             xh: item.xh,
-            comp_code: user.company_code
+            comp_code: user.company_code,
+            operater_code:user.userName
         }
         var jsonStr3=angular.toJson(params);
         $http({
@@ -1249,6 +1250,7 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
 
 
         var jsd_id = locals.get("jsd_id");
+        var user = locals.get("user");
         var params =
         {
             db: locals.get("Data_Source_name"),
@@ -1266,7 +1268,8 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
             cb: item.pjjj,
             sl: (item.sl&&Number(item.sl)>0)?item.sl:'1',
             xh: item.xh,
-            comp_code: user.company_code
+            comp_code: user.company_code,
+            operater_code:user.userName
         }
         var jsonStr3=angular.toJson(params);
         $http({
@@ -1317,6 +1320,7 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
 
 
         var jsd_id = locals.get("jsd_id");
+        var user = locals.get("user");
         var params =
         {
             db: locals.get("Data_Source_name"),
@@ -1334,7 +1338,8 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
             cb: item.cb,
             sl: item.sl,
             xh: item.xh,
-            comp_code: user.company_code
+            comp_code: user.company_code,
+            operater_code:user.userName
         }
         var jsonString = angular.toJson(params);
         $http({

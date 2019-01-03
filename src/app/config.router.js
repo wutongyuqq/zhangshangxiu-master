@@ -247,7 +247,6 @@ function config($stateProvider, $urlRouterProvider, $compileProvider, $httpProvi
         })
         .state('FactoryPage', {
             url: '/factory/:id',
-
             templateUrl: window.rootSrc + 'app/forget/bdd_forget.html',
             controller: 'ForgetCtrl as ctrl',
             title:'标大大-忘记密码',

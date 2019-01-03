@@ -55,7 +55,7 @@ app.controller('tenderIndex', ['$http', '$scope', '$state' , "locals", "ionicToa
                 carToInfo.cz = gdData.cz;
                 carToInfo.car_fault = gdData.car_fault;
                 carToInfo.cardName = gdData.cp;
-                carToInfo.gls = gdData.jclc;
+                carToInfo.gls = gdData.jclc&&gdData.jclc!="undefined"?gdData.jclc:"";
                 carToInfo.cjhm = gdData.cjhm;
                 carToInfo.cx =gdData.cx;
                 carToInfo.gzms = gdData.car_fault;//故障描述

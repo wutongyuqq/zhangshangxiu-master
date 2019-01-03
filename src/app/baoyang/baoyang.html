@@ -110,7 +110,6 @@
 	}
 	.vs_dv{
 		width: 20rem;
-	    background-color: #4d4d4d;
 		color: white;
 		display:table-cell;
 		vertical-align:middle;
@@ -139,19 +138,100 @@
   .vs_col{
 	  background-color: #e6b947;
   }
+
+	.bar-light-div {
+		background-size: 0px;
+		border-bottom: 1px solid #1296db;
+		display: block;
+	}
+	.title-color {
+		color: #3ca2dd;
+	}
+	.bar_second_pink{
+		width: 100%;
+		margin-top: 44px;
+		height: 1rem;
+		background-color: #aa89bd;
+		vertical-align: middle;
+		line-height: 1rem;
+	}
+	.container-fluid{
+		padding: 0 0;
+		margin: 0 0;
+	}
+	.color-white{
+		color: white;
+		display: inline-block;
+		margin-top: 0.3rem;
+		margin-bottom: auto;
+		line-height: 100%;
+		vertical-align: top;
+
+	}
+	.bar-white-home{
+		margin-left: 0.1rem;
+		margin-top: 0.32rem;
+
+	}
+	.bar-white-card{
+		margin-left: 0.2rem;
+		margin-top: 0.32rem;
+	}
+	.border-color{
+		width: 9rem;
+		height: 1rem;
+		background-color: #eeeeee;
+		text-align: left;
+		margin: 0 auto;
+		border-left: 2px solid #b5d2e5;
+		border-right: 2px solid #b5d2e5;
+		border-bottom:  1px solid #99a5ac;
+
+
+	}
+	.border-center{
+		margin-top: 0.5rem;
+		width: 100%;
+		text-align: center;
+
+	}
+	.text-inline{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.color-white-img{
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+	.color-white-img-home{
+		margin-left: 1rem;
+	}
+	.color-white-img-card{
+		margin-left: 3.8rem;
+	}
   </style>
 <div class="vs_go">
-<div class="vs_header">
-	<div class="vs_hd vs_r"><img class="vs_img" src="../../../vendor/images/zsx/back_gray.png" alt=""><span>&nbsp;&nbsp;返回</span></div>
-	<div class="vs_hd vs_c">轮载</div>
-	<div class="vs_hd vs_l"><img class="vs_img" src="../../../vendor/images/zsx/up.png" alt=""></div>
-</div>
-<div class="vs_br"></div>
-<div class="vs_nav">
-	<div class="vs_ti vs_tis"> 提醒&nbsp;&nbsp;<img class="vs_img"  src="../../../vendor/images/zsx/fine.png" alt=""></div>
-	<div class="vs_ti vs_tis vs_ping"><img class="vs_img" src="../../../vendor/images/zsx/man.png" alt="">李总</div>
-	<div class="vs_ti"><img class="vs_img" src="../../../vendor/images/zsx/che.png" alt="">粤B3A897</div>
-</div>
+
+	<div class="bar bar-header bar-light">
+
+		<ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+			<div class="buttons" style="background-color: transparent">
+				<button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+			</div>
+			<h1 class="title"></h1>
+
+		</ion-header-bar>
+		<h1 class="title">轮载</h1>
+
+	</div>
+
+	<div class="bar_second_pink">
+		<a ui-sref="czInfo">
+			<img class="color-white color-white-img color-white-img-home" src="../../../vendor/images/zsx/car_person.png">
+			<div class="color-white bar-white-home" style="font-size: 1.0em;">李总</div></a> <a ui-sref="carInfo">
+		<img  class="color-white color-white-img color-white-img-card" src="../../../vendor/images/zsx/car_yellow.png">
+		<div class="color-white bar-white-card" style="font-size: 1.0em;">闽A12315</div></a>
+	</div>
 <div class="vs_news"></div>
 <table class="vs_ta">
 	<tr class="vs_tr">
@@ -189,11 +269,5 @@
 
 </table>
 <div class="vs_dv"><button class="vs_btn">确定</button></div>
-<div class="vs_dev">
-	<div class="vs_ft vs_col" ><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/wen.png" alt=""></div>车辆接待</div>
-	<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/tou.png" alt=""></div>透明车间</div>
-	<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/cars.png" alt=""></div>在厂车辆</div>
-	<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/she.png" alt=""></div>信息中心</div>
-	<div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/xin.png" alt=""></div>设置</div>
-</div>
+
 </div>

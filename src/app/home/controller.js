@@ -68,12 +68,6 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         }, function () {
 
         });
-
-
-
-
-
-
     }
     $scope.selectCard = function (proviceName) {
         $scope.proName = proviceName;
@@ -142,7 +136,7 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         $state.go("Register");
     }
 
-
+    $scope.tabShow = true;
     $scope.$watch('carInfo.shortCardName',function(){
         var cardDataListForSerch = locals.getObject("cardDataList");
         var searchName =$scope.carInfo.shortCardName;

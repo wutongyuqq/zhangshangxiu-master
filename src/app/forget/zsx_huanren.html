@@ -4,7 +4,7 @@
         margin: 0;
         padding: 0;
         border: 0;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
 
     .title-color {
@@ -20,24 +20,24 @@
         text-decoration: none;
     }
     input[type=text] {
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
     input[type=number] {
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
     button {
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     a:link, a:visited, a:hover {
         color: #1296db;
         text-decoration: none;
     }
     button {
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     .tabs {
         height: 1.4rem;
-        font-size: 1.3em;
+        font-size: 1.0em;
     }
     .content-list-div-table-a {
         width: 100%;
@@ -54,7 +54,7 @@
     }
     .content-list-div-table-a > tbody > tr > td {
         padding: 0.2rem 0.3rem;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     .content-list-div-content {
         background-color: #eeeeee;
@@ -211,7 +211,7 @@
     .li-item{
         width: 100%;
         padding: 0.3rem 0.3rem;
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     .ul-list{
         width: 100%;
@@ -449,7 +449,7 @@
                 <ul class="list">
 
                     <li ng-repeat="item in repairPersonList | unique: 'xlz'"
-                        class="item {{$index==clickIndex?'item-back':''}}" style="padding: 0.4rem 0.6rem;font-size: 1.4em;margin-top: 0;" ng-click="chooseXlz(item,$index)">
+                        class="item {{$index==clickIndex?'item-back':''}}" style="padding: 0.4rem 0.6rem;font-size: 1.0em;margin-top: 0;" ng-click="chooseXlz(item,$index)">
                         {{item.xlz}}
                     </li>
                 </ul>
@@ -458,16 +458,16 @@
                 <ion-checkbox ng-repeat="item2 in personArr"
                               ng-model="item2.checked"
                               ng-checked="item2.checked" style="padding: 0.3rem 0.5rem;margin-top: 0;">
-                    <div  style="width:2rem;padding:0rem 0.6rem;margin-top: 0;font-size: 1.4em;">{{ item2.xlg }}</div>
+                    <div  style="width:2rem;padding:0rem 0.6rem;margin-top: 0;font-size: 1.0em;">{{ item2.xlg }}</div>
                 </ion-checkbox>
 
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="cancel()" style="margin-left: 1rem;padding:0.3rem 0.6rem; font-size: 1.4em;">
+            <button class="btn btn-primary" ng-click="cancel()" style="margin-left: 1rem;padding:0.3rem 0.6rem; font-size: 1.0em;">
                 取消
             </button>
-            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf)" style="margin-left: 2rem;padding:0.3rem 0.6rem;font-size: 1.4em; ">
+            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf)" style="margin-left: 2rem;padding:0.3rem 0.6rem;font-size: 1.0em; ">
                 确定
             </button>
         </div>
@@ -491,7 +491,7 @@
                 <ul class="list">
 
                     <li ng-repeat="item in repairPersonList | unique: 'xlz'"
-                        class="item {{$index==clickIndex?'item-back':''}}" style="padding: 0.4rem 0.6rem;font-size: 1.4em;margin-top: 0;" ng-click="chooseXlz(item,$index)">
+                        class="item {{$index==clickIndex?'item-back':''}}" style="padding: 0.4rem 0.6rem;font-size: 1.0em;margin-top: 0;" ng-click="chooseXlz(item,$index)">
                         {{item.xlz}}
                     </li>
                 </ul>
@@ -500,16 +500,16 @@
                 <ion-checkbox ng-repeat="item2 in personArr"
                               ng-model="item2.checked"
                               ng-checked="item2.checked" style="padding: 0.3rem 0.5rem;margin-top: 0;">
-                    <div  style="width:2rem;padding:0rem 0.6rem;margin-top: 0;font-size: 1.4em;">{{ item2.xlg }}</div>
+                    <div  style="width:2rem;padding:0rem 0.6rem;margin-top: 0;font-size: 1.0em;">{{ item2.xlg }}</div>
                 </ion-checkbox>
 
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="cancel()" style="margin-left: 1rem;padding:0.3rem 0.6rem; font-size: 1.4em;">
+            <button class="btn btn-primary" ng-click="cancel()" style="margin-left: 1rem;padding:0.3rem 0.6rem; font-size: 1.0em;">
                 取消
             </button>
-            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf)" style="margin-left: 2rem;padding:0.3rem 0.6rem;font-size: 1.4em; ">
+            <button class="btn btn-warning" ng-click="ok(xlxm,wxgz,xlf)" style="margin-left: 2rem;padding:0.3rem 0.6rem;font-size: 1.0em; ">
                 确定
             </button>
         </div>

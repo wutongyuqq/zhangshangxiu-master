@@ -10,6 +10,7 @@ app.controller('IndexCtrl', ['$http','$scope','$rootScope',function($http,$scope
     // stateChangeSuccess  当模板解析完成后触发
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $scope.busy = false;
+        $scope.tabShow = true;
     })
     // $stateChangeError  当模板解析过程中发生错误时触发
     $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
@@ -17,4 +18,19 @@ app.controller('IndexCtrl', ['$http','$scope','$rootScope',function($http,$scope
     })
 
     /*"start": "json-mock-kuitos -s / --proxy-host 121.43.148.193 --proxy-port 5555"*/
+
+
 }]);
+
+setTimeout(function(){
+    var tabNav =  document.getElementById("tab_nav");
+    if(tabNav!=null) {
+        tabNav.style.display = "inline-block";
+    }
+},1000);
+setTimeout(function(){
+    var tabNav =  document.getElementById("tab_nav");
+    if(tabNav!=null) {
+        tabNav.style.display = "inline-block";
+    }
+},3000);

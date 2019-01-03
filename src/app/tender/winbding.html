@@ -341,7 +341,7 @@
     </div>
     <div class="wb_second_line">
         <div class="text_inline"><span class="text_inline" style="font-size: 1.1em;">公里数:</span><span
-                class="text_inline" ng-show="!showInputGls">{{gonglishu}}</span>
+                class="text_inline" ng-show="!showInputGls">{{gonglishu&&gonglishu!="undefined"?gonglishu:""}}</span>
 
             <div class="text_inline" ng-show="showInputGls">
                 <input placeholder="输入" ng-model="gonglishu" style="width: 1.4rem;height: 0.6rem;border:none;background-color: #eeeeee;"/></div>
@@ -428,7 +428,7 @@
                 <tr class="tb_content_a">
                     <td style="font-size: 1.1em;">工时：{{xlfTotal}}</td>
                     <td></td>
-                    <td style="font-size: 1.1em;">总计：{{xlfTotal}}</td>
+                    <td style="font-size: 1.1em;">总计：{{xlfTotal|limitNum}}</td>
                 </tr>
                 <tr class="tb_content_c">
                     <td style="font-size: 1.1em;">工时打折</td>
@@ -445,7 +445,7 @@
                 <tr class="tb_content_a">
                     <td style="font-size: 1.1em;padding-top: 0.3rem;">总应收</td>
                     <td style="padding-top: 0.3rem;"></td>
-                    <td colspan="2" style="font-size: 1.1em;padding-top: 0.3rem;">总计：￥{{xlfTotal}}</td>
+                    <td colspan="2" style="font-size: 1.1em;padding-top: 0.3rem;">总计：￥{{xlfTotal|limitNum}}</td>
                 </tr>
             </table>
                 <div class="tb_content_c" style="text-align: left;padding-left: 2rem;">
@@ -527,13 +527,13 @@
                 <tr class="tb_content_a">
                     <td style="font-size: 1.1em;">配件</td>
                     <td></td>
-                    <td><span style="font-size: 1.1em;">总计：</span><span style="font-size: 1.1em;">{{pjTotal}}</span>
+                    <td><span style="font-size: 1.1em;">总计：</span><span style="font-size: 1.1em;">{{pjTotal|limitNum}}</span>
                     </td>
                 </tr>
                 <tr class="tb_content_c">
                     <td style="font-size: 1.1em;">配件打折</td>
                     <td style="font-size: 1.1em;"></td>
-                    <td style="font-size: 1.1em;"></td>
+                    <td style="font-size: 1.0em;"></td>
                 </tr>
 
             </table>
@@ -545,7 +545,7 @@
                 <tr class="tb_content_a">
                     <td style="font-size: 1.1em;padding-top: 0.3rem;">总应收</td>
                     <td style="padding-top: 0.3rem;"></td>
-                    <td style="padding-top: 0.3rem;"><span style="font-size: 1.1em;">总计：</span><span style="font-size: 1.1em;">{{pjTotal}}</span></td>
+                    <td style="padding-top: 0.3rem;"><span style="font-size: 1.1em;">总计：</span><span style="font-size: 1.1em;">{{pjTotal|limitNum}}</span></td>
                 </tr>
 
 

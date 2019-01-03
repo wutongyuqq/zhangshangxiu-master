@@ -317,13 +317,13 @@ app.controller('centerCtrl', ['$http', '$scope', '$state', function ($http, $sco
             $state.go("mycenter");
 
         } else if (selectItem == '2') {
-
+            $state.go("baoyang");
         } else if (selectItem == '3') {
-
+            $state.go("btnCenter");
         } else if (selectItem == '4') {
-
+            $state.go("sinCenter");
         } else if (selectItem == '5') {
-            $state.go("msgInfoCenter");
+            $state.go("tipCenter");
         } else if (selectItem == '6') {
             $state.go("msgInfoCenter");
         }

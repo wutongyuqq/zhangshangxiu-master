@@ -139,8 +139,8 @@ app.controller('ForgetCtrl', ['$http', '$scope', '$state', "locals", "ionicToast
     }
     $scope.content = "";
     $scope.wxgz = "";
-    $scope.searchData = function () {
-        var content = $scope.content;
+    $scope.searchData = function (content) {
+
         var wxgz = $scope.wxgz;
         if (wxgz == '选择工种') {
             wxgz = '';

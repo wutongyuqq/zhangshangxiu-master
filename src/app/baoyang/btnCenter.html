@@ -18,7 +18,6 @@
     }
     .vs_l{
         float: left;
-        width: 5rem;
     }
     .vs_r{
         float: left;
@@ -41,7 +40,7 @@
     .vs_ti{
         display: inline;
         float: left;
-        width:1.1rem;
+        text-align: center;
         height: 30px;
         line-height:30px;
         color:white;
@@ -49,6 +48,8 @@
         border-radius:3px;
         font-size: 14px;
         background-color: #4b8bf4;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
 
 
 
@@ -58,12 +59,7 @@
         overflow:hidden;
         margin-top:5PX;
     }
-    .vs_tis{
-        width:1.0rem;
-    }
-    .vs_ping{
-        margin-left: 20px;
-    }
+
     .vs_news{
         margin-top: 5px;
         width: 20rem;
@@ -181,20 +177,25 @@
 
 </style>
 <div class="vs_go">
-    <div class="vs_header">
-        <div class="vs_hd vs_r"><img class="vs_img" src="../../../vendor/images/zsx/back_gray.png" alt=""><span>返回</span></div>
-        <div class="vs_hd vs_c">保养到期</div>
-        <div class="vs_hd vs_l"><img class="vs_img" src="../../../vendor/images/zsx/up.png" alt=""></div>
+
+    <div class="bar bar-header bar-light">
+
+        <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+            <div class="buttons" style="background-color: transparent">
+                <button class="button" ng-click="goBackPage()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+            </div>
+            <h1 class="title"></h1>
+
+        </ion-header-bar>
+        <h1 class="title">保养到期</h1>
+
     </div>
-    <div class="vs_br"></div>
-    <div class="vs_nav">
+    <div class="vs_nav" style="margin-top:48px;">
         <div class="vs_ti vs_tis vs_vo "><img class="vs_img"  src="../../../vendor/images/zsx/so.png" alt=""><span class="vs_bd"></span></div>
         <div class="vs_ti vs_tis vs_ping">保养到期</div>
         <div class="vs_ti vs_l">22辆</div>
     </div>
     <div class="vs_news"></div>
-    <div class="vs_br"></div>
-    <div class="vs_br"></div>
     <table class="vs_ta">
 
         <tr class="vs_tr">
@@ -260,11 +261,5 @@
         <div class="vs_bv"><button class="vs_bt">全部忽略</button></div>
         <div class="vs_bv"><button  class="vs_bt">全部处理</button></div>
     </div>
-    <div class="vs_dev">
-        <div class="vs_ft vs_col"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/wen.png" alt=""></div>车辆接待</div>
-        <div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/tou.png" alt=""></div>透明车间</div>
-        <div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/cars.png" alt=""></div>在厂车辆</div>
-        <div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/she.png" alt=""></div>信息中心</div>
-        <div class="vs_ft"><div class="vs_kim"><img class="vs_img" src="../../../vendor/images/zsx/xin.png" alt=""></div>设置</div>
-    </div>
+
 </div>>

@@ -62,6 +62,19 @@ app.filter('areaLimit',function () {
     }
 });
 
+
+app.filter('limitNum',function () {
+    return function (name) {
+        var nameStr = name?name+"":"";
+        if(!nameStr||nameStr.indexOf(".")==-1){
+            return nameStr;
+        }else{
+            nameStr = nameStr + "000";
+            return nameStr.substring(0,nameStr.indexOf('.')+3);
+        }
+    }
+});
+
 app.filter('unique', function () {
     return function (collection, keyname) {
         var output = [],

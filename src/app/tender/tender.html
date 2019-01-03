@@ -253,7 +253,7 @@
     <div class="border-center">
         <div class="border-color border-first">
             <div class="text-inline text-left" style="font-size: 1.0em;">公里数</div>
-            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowGls">{{carInfo.gls}}</span><input  style="font-size: 1.0em;" ng-show="isShowGls" ng-model="carInfo.gls"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowGls,1)" class="edit-img-a" src="{{isShowGls?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
+            <div class="text-inline text-right" style="font-size: 1.0em;"><span ng-show="!isShowGls">{{carInfo&&carInfo.gls?carInfo.gls:""}}</span><input  style="font-size: 1.0em;" ng-show="isShowGls" ng-model="carInfo.gls"  type="text" class="text-input-a"/><img ng-click="updateCarInfo(isShowGls,1)" class="edit-img-a" src="{{isShowGls?'../../../vendor/images/zsx/right_now.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
         </div>
         <div class="border-color">
             <div class="text-inline text-left" style="font-size: 1.0em;">车架号</div>
