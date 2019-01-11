@@ -88,15 +88,19 @@
     .first-line-text {
         margin-left: 0.5rem;
     }
+    .first-line-text-left{
+        margin-top: 0.2rem;
+    }
 
     .expect-time {
-        margin-left: 0.2rem;
+        margin-left: 0.5rem;
+        margin-top: 0.1rem;
     }
 
     .first-line-text {
-        font-size: 1.2em;
+        font-size: 1.0em;
         font-weight: 600;
-        margin-top: 0.5rem;
+
     }
 
     .text-left {
@@ -106,7 +110,7 @@
     }
 
     .text-right {
-        width: 5rem;
+        max-width: 6rem;
         text-align: left;
     }
 
@@ -115,7 +119,7 @@
     }
 
     .content-line-txt {
-        font-size: 1.2em;
+        font-size: 1.0em;
         font-weight: 500;
     }
 
@@ -123,7 +127,7 @@
 
         width: 10rem;
 
-        font-size: 1.2em;
+        font-size: 1.0em;
 
     }
     .div-margin-top{
@@ -132,7 +136,8 @@
     }
     .qz-div{
         margin-top: 0.5rem;
-        font-size: 1.2em;
+        font-size: 1.0em;
+        padding-bottom: 3rem;
 
     }
     .qz-div>.qz-left-a{
@@ -211,7 +216,7 @@
         <div class="color-white bar-white-card" style="font-size: 1.0em;">{{carInfo.cardName}}</div></a>
     </div>
 
-    <div class="text_inline first-line-text">结算单号：{{jsd_id}}</div>
+    <div class="text_inline first-line-text first-line-text-left">结算单号：{{jsd_id}}</div>
     <div class="first-line-text text_inline expect-time">预完工时间：{{ticheTime}}</div>
     <div class="second-line-txt content-line-txt">
         <div class="text_inline text-left">修理厂名称：</div>
@@ -285,10 +290,10 @@
             </tr>
         </table>
         <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
-        <div style="width: 10rem;margin-left:1rem;text-align: left;font-size: 1.2em;font-weight: 700;">应收总计:￥{{totalXlf+totalMoney}}</div>
+        <div style="width: 10rem;margin-left:1rem;text-align: left;font-size: 1.0em;font-weight: 700;">应收总计:￥{{totalXlf+totalMoney}}</div>
         <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
-        <div style="width: 10rem;margin-left:1rem;text-align: left;font-size: 1.2em;font-weight: 700;">地址：{{address}}</div>
-        <div style="width: 10rem;margin-left:1rem;margin-top:0.05rem;text-align: left;font-size: 1.2em;font-weight: 700;">电话：{{telphone}}</div>
+        <div style="width: 10rem;margin-left:1rem;text-align: left;font-size: 1.0em;font-weight: 700;">地址：{{address}}</div>
+        <div style="width: 10rem;margin-left:1rem;margin-top:0.05rem;text-align: left;font-size: 1.0em;font-weight: 700;">电话：{{telphone}}</div>
         <div style="width: 10rem;margin: 0.05rem auto; white-space:nowrap;overflow: hidden">--------------------------------------------------------------------------------------------------------------------------</div>
 
 

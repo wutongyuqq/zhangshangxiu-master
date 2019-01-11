@@ -17,7 +17,7 @@
     }
     .login-color{
         color: #03f44d;
-        font-size: 1.6em;
+        font-size: 1.0em;
         font-weight: 500;
     }
     .login-input_a{
@@ -53,7 +53,7 @@
         background-color: #32b16c;
         color: white;
         font-weight: 500;
-        font-size: 1.5em;
+        font-size: 1.0em;
         border: none;
     }
     .btn-login:hover{
@@ -66,23 +66,23 @@
     }
     .text-inline{
         display: inline-block;
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     .login_back_img{
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     input[type=text]{
         display:inline-block;
         height: auto;
         padding: 0.1rem 0.2rem;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
 
     input[type=password]{
         display:inline-block;
         height: auto;
         padding: 0.1rem 0.2rem;
-        font-size: 1.2em;
+        font-size: 1.0em;
         color:#ffffff
     }
 
@@ -107,7 +107,7 @@
                 <input type="password" ng-model="user.password"   placeholder="输入密码"  class="text-inline login-input_a login_password"/></div>
         </div>
             <div class="btn-login-div">
-            <button type="button" class="btn btn-login" ng-click="checkDate(user)" style="font-size: 1.4em;">登录</button>
+            <button type="button" class="btn btn-login" ng-click="checkDate(user)" style="font-size: 1.0em;">登录</button>
             </div>
         </div>
     </div>
@@ -125,7 +125,7 @@
         if(inputArr!=null&&inputArr.length>0){
             for(var i=0;i<inputArr.length;i++){
                 var elem = inputArr[i];
-                elem.style.fontSize = 0.6+"rem";
+                elem.style.fontSize = 1.0+"em";
                 elem.style.padding = "0px 10px";
                 elem.style.lineHeight = "1.3rem";
             }

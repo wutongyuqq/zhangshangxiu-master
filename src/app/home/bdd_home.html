@@ -268,6 +268,18 @@
     .tabs-line{
         font-size: 1.0em;
     }
+    .bar_footer_a{
+        border-top: 1px solid rgb(18, 150, 219);
+        height: 1.9rem;
+        padding-bottom: 0.1rem;
+        z-index: 30019;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        border-top-width: 1px;
+        border-bottom-width: 0;
+        background-position: top;
+    }
 </style>
 
 <div>
@@ -367,7 +379,7 @@
 
     <div class="back-line-red">
     </div>
-    <div class="btn_width_div">
+    <div class="btn_width_div" style="display:inline-block">
         <div class="text_inline btn_gz_left">
             <button class="btn_a" ui-sref="CompanyDetail">关注</button>
         </div>
@@ -377,7 +389,7 @@
 
     </div>
 
-    <div id="tab_nav" class="tabs-line bar bar-footer"  style="display:inline-block;border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;" ng-show="tabShow">
+    <div id="tab_nav" class="tabs-line bar bar_footer_a"  style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;display:inline-block;" ng-show="tabShow">
         <a class="tab-item" style="display:inline-block;width: 19%;">
 
                 <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;"

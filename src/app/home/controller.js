@@ -608,6 +608,7 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
             previous_xh: postFlag
         };
         var jsonStr = angular.toJson(params);
+        console.log("jsonStr:"+jsonStr);
         $http({
             method: 'post',
             url: '/restful/pro',

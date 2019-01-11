@@ -3,10 +3,6 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
     $scope.exitLogin = function(){
         locals.setObject("pjKucun","");
         var user = locals.getObject("user");
-        locals.set("ticheTime","");
-        locals.set("gonglishu","");
-        locals.set("guzhangDes","");
-        locals.setObject("selectCarInfo",null);
 
 
         var params = {
@@ -26,6 +22,23 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
             var state = data.state;
             var endDateStr = data.service_end_date;
             if (state == 'true') {
+
+                locals.set("ticheTime","");
+                locals.set("gonglishu","");
+                locals.set("guzhangDes","");
+                locals.setObject("selectCarInfo",null);
+                locals.setObject("firstIconArr",null);
+                locals.setObject("carInfo",null);
+                locals.setObject("repairPersonList",null);
+
+                locals.setObject("kjProList",null);
+                locals.setObject("chgProList",null);
+
+                locals.setObject("pjKucun", null);
+                locals.setObject("newPjDataList", null);
+                locals.setObject("shouyinCar",null);
+                locals.setObject("shouyinBean", null);
+
                 console.log(data.msg);
                 locals.setObject("user","");
                 $state.go("Login");

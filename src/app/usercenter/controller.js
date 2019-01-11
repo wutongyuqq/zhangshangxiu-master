@@ -9,17 +9,34 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
      */
     $scope.getCurrentMonthFirst=function(){
         var myDate = new Date();//获取系统当前时间
-        return myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-01"
+        var month = myDate.getMonth()+1;
+        var monthStr = month+"";
+        if(month<10){
+            monthStr = "0"+month;
+        }
+        return myDate.getFullYear()+"-"+monthStr+"-01"
     }
     /**
      * 获取当前月的最后一天
      */
     $scope.getCurrentMonthLast=function(){
         var myDate = new Date();//获取系统当前时间
-        return  myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+        var month = myDate.getMonth()+1;
+        var monthStr = month+"";
+        if(month<10){
+            monthStr = "0"+month;
+        }
+        var date = myDate.getDate();
+        var dateStr = date+"";
+        if(date<10){
+            dateStr = "0"+date;
+        }
+        return  myDate.getFullYear()+"-"+monthStr+"-"+dateStr;
     }
 
-
+    $scope.goBackHistory=function(){
+        history.go(-1);
+    }
     var user = locals.getObject("user");
     $scope.userName = user.userName;
     $scope.getCardListData = function (selectDate) {
@@ -245,7 +262,7 @@ app.controller('userCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals', '$s
     });
 
 }]);
-app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',function ($http, $scope, ionicToast,locals) {
+app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals','$state',function ($http, $scope, ionicToast,locals,$state) {
 
     $scope.showSelectMore = 0;
     var mSelectDate = {
@@ -281,8 +298,15 @@ app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',f
     }
 
 
+    $scope.goBackHistory=function(){
+        history.go(-1);
+    }
 
+    $scope.goTenderDetail=function(jsd_id){
+        locals.set("jsd_id",jsd_id);
+        $state.go("Tender");
 
+    }
 
 
     /**
@@ -290,14 +314,29 @@ app.controller('msgInfoCenterCtrl', ['$http', '$scope', 'ionicToast', 'locals',f
      */
     $scope.getCurrentMonthFirst=function(){
         var myDate = new Date();//获取系统当前时间
-        return myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-01"
+        var month = myDate.getMonth()+1;
+        var monthStr = month+"";
+        if(month<10){
+            monthStr = "0"+month;
+        }
+        return myDate.getFullYear()+"-"+monthStr+"-01"
     }
     /**
      * 获取当前月的最后一天
      */
-     $scope.getCurrentMonthLast=function(){
-         var myDate = new Date();//获取系统当前时间
-        return  myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+    $scope.getCurrentMonthLast=function(){
+        var myDate = new Date();//获取系统当前时间
+        var month = myDate.getMonth()+1;
+        var monthStr = month+"";
+        if(month<10){
+            monthStr = "0"+month;
+        }
+        var date = myDate.getDate();
+        var dateStr = date+"";
+        if(date<10){
+            dateStr = "0"+date;
+        }
+        return  myDate.getFullYear()+"-"+monthStr+"-"+dateStr;
     }
 
     mSelectDate.startData = $scope.getCurrentMonthFirst();
@@ -323,9 +362,9 @@ app.controller('centerCtrl', ['$http', '$scope', '$state', function ($http, $sco
         } else if (selectItem == '4') {
             $state.go("sinCenter");
         } else if (selectItem == '5') {
-            $state.go("tipCenter");
-        } else if (selectItem == '6') {
             $state.go("msgInfoCenter");
+        } else if (selectItem == '6') {
+            $state.go("tipCenter");
         }
 
     }

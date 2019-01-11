@@ -412,11 +412,18 @@
 
 </style>
 
+<div class="bar bar-header bar-light">
 
-    <div class="bar bar-header bar-light bar-light-div">
-        <!--  <button class="button-clear"><img src="../../../vendor/images/zsx/back_blue.png"></button>-->
-        <h1 class="title"><span class="title-color">信息中心</span></h1>
-    </div>
+    <ion-header-bar align-title="left" class="bar-positive"  style="background-color: transparent;border-bottom: 1px solid blue">
+        <div class="buttons" style="background-color: transparent">
+            <button class="button" ng-click="goBackHistory()" style="border: none;background-color: transparent;"><img src="../../../vendor/images/zsx/back_blue.png"></button>
+        </div>
+        <h1 class="title"></h1>
+
+    </ion-header-bar>
+    <h1 class="title"><span class="title-color">我的绩效</span></h1>
+</div>
+
     <div class="bar_second_pink">
 
             <div class="color-white bar-white-home" style="font-size: 1.0em;margin-left: 1rem;">姓名：{{userName}}</div>

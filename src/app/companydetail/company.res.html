@@ -311,15 +311,26 @@
     }
 
     .text-aign-left {
-        text-align: left;
-        margin-left: 1rem;
-        color: #333333;
-        font-weight: 500;
+        width: 25%;
+        float: left;
 
     }
+    .text-aign-right {
+        width: 74.9%;
+        text-align: left;
+        padding-left: 0.2rem;
+        color: #333333;
+        font-weight: 500;
+        float: left;
+    }
+
 
     .text-left-b {
         height: 0.6rem;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        font-size: 0.8em;
     }
 
     .pg-line {
@@ -396,7 +407,7 @@
     </div>
 </div>
 
-<ion-content style="top:4.2rem;">
+<ion-content style="top:4.25rem;">
     <ion-list>
         <ion-item ng-repeat="item in dataArray"
                   item="item" ng-click="toGongdanPage(item)"
@@ -408,12 +419,12 @@
                         <div class="float_right">状态：{{item.states}}</div>
                     </div>
                     <div class="pg_div_content">
-                        <div class="float_left"><img class="car_img" src="../../../vendor/images/zsx/car_img.jpg"/></div>
-                        <div class="float_left text-aign-left">
-                            <div class="text-left-b">车架号：{{item.cjhm}}</div>
-                            <div class="text-left-b">进厂时间：{{item.jc_date}}</div>
-                            <div class="text-left-b">接待人员：{{item.jcr}}</div>
-                            <div class="text-left-b">车型：{{item.cx}}</div>
+                        <div class="text-inline text-aign-left"><img class="car_img" src="../../../vendor/images/zsx/car_img.jpg"/></div>
+                        <div class="text-inline text-aign-right">
+                            <div class="text-left-b" style="font-size: 0.8em;">车架号：{{item.cjhm}}</div>
+                            <div class="text-left-b" style="font-size: 0.8em;">进厂时间：{{item.jc_date}}</div>
+                            <div class="text-left-b" style="font-size: 0.8em;">接待人员：{{item.jcr}}</div>
+                            <div class="text-left-b" style="font-size: 0.8em;">车型：{{item.cx}}</div>
                         </div>
 
                     </div>

@@ -113,7 +113,7 @@
 
     .home_tab_div_right {
         padding: 0 0;
-        width: 24%;
+        width: 25%;
         height: 100%;
         line-height: 1rem;
         text-align: center;
@@ -124,7 +124,7 @@
 
     .home_tab_div_right_a {
         padding: 0 0;
-        width: 24.5%;
+        width: 25%;
         height: 100%;
         line-height: 1rem;
         text-align: center;
@@ -372,7 +372,18 @@
     <div style="margin-top: 46px;">
 
         <div class="home_tab_div {{showMore==0?'home_tab_div_right_color':'home_tab_div_left_color'}}">
-            <div class="text_inline home_tab_div_right {{showMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
+
+            <table style="width: 100%">
+                <tr style="width: 100%">
+                   <td class="text_inline home_tab_div_right {{showMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}" ng-click="showMoreView(0,'待领工')">待领工</td>
+                    <td class="text_inline home_tab_div_right  {{showMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}" ng-click="showMoreView(1,'修理中')">修理中</td>
+                    <td class="text_inline home_tab_div_right  {{showMore==2?'home_tab_div_left_color':'home_tab_div_right_color'}}" ng-click="showMoreView(2,'待质检')">待质检</td>
+                    <td class="text_inline home_tab_div_right_a  {{showMore==3?'home_tab_div_left_color':'home_tab_div_right_color'}}" ng-click="showMoreView(3,'已完工')">已完工</td>
+
+                </tr>
+
+            </table>
+            <!--<div class="text_inline home_tab_div_right {{showMore==0?'home_tab_div_left_color':'home_tab_div_right_color'}}"
                  ng-click="showMoreView(0,'待领工')">待领工
             </div>
             <div class="text_inline home_tab_div_right  {{showMore==1?'home_tab_div_left_color':'home_tab_div_right_color'}}"
@@ -385,7 +396,7 @@
 
             <div class="text_inline home_tab_div_right_a  {{showMore==3?'home_tab_div_left_color':'home_tab_div_right_color'}}"
                  ng-click="showMoreView(3,'已完工')">已完工
-            </div>
+            </div>-->
         </div>
         <div class="search_div">
             <div class="text_inline search_select_div">

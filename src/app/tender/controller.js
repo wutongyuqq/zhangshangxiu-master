@@ -114,7 +114,7 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
 
     var firstIconArr = locals.getObject("firstIconArr");
 
-    if (firstIconArr == null || firstIconArr.length == 0) {
+    if (!firstIconArr|| firstIconArr.length == 0) {
 
         $scope.getFirstPageData();
 

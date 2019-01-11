@@ -310,6 +310,11 @@
     .claim_input{
         width: 2.5rem;
     }
+    .single-line{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
 </style>
 
 <div>
@@ -451,8 +456,8 @@
                 <div class="tb_content_c" style="text-align: left;padding-left: 2rem;">
                     <div class="text_inline" style="font-size: 1.1em;width: 2rem;">备注:</div>
 
-                    <div class="text_inline"  style="font-size: 1.1em;"><div ng-show="!showBeizhu" ng-model="memo" ng-bind="memo"></div><div><input  ng-model="memo" ng-show="showBeizhu" type="text" placeholder="输入" style="width: 5rem;font-size: 1.2em;"/></div></div>
-                    <div class="text_inline" ng-hide="showFloatImg"> <img ng-click="showBeizhuT(showBeizhu)" class="text_inline wb_btn_img"
+                    <div class="text_inline"  style="font-size: 1.1em;max-width: 6rem;"><div class="single-line" style="max-width: 5rem;" ng-show="!showBeizhu" ng-model="memo" ng-bind="memo"></div><div><input  ng-model="memo" ng-show="showBeizhu" type="text" placeholder="输入" style="width: 5rem;font-size: 1.2em;"/></div></div>
+                    <div class="text_inline" ng-hide="showFloatImg" style="max-width: 1rem;"> <img ng-click="showBeizhuT(showBeizhu)" class="text_inline wb_btn_img"
                               src="{{showBeizhu?'../../../vendor/images/zsx/edit_true.png':'../../../vendor/images/zsx/edit.png'}}"/></div>
 
 
