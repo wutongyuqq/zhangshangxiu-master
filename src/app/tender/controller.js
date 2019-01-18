@@ -4,16 +4,61 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
     var showType = 0;
     var carInfo = locals.getObject("carInfo");
     $scope.carInfo = carInfo;
-    $scope.firstIconArr = locals.getObject("firstIconArr");
+    var firstIconArr = locals.getObject("firstIconArr");
+    var threeIconArr = new Array();
+
+    $scope.firstIconArr = firstIconArr;
+
     $scope.showMore = 0;
     $scope.showSelectMore = 0;
     $scope.showMoreView = function (showMore) {
-        $scope.showMore = showMore;
+        $scope.showMore = 0;
         $scope.showSelectMore = showMore;
         showType = showMore;
+        if(showMore==2){
+            $scope.firstIconArr = threeIconArr;
+        }else{
+            $scope.firstIconArr = firstIconArr;
+        }
+
     }
+    $scope.threeIconArr = new Array();
+    $scope.getBaoyangIcon = function(){
+        var params = {
+            db: locals.get("Data_Source_name"),
+            function: "sp_fun_down_maintenance_category_maintain"
+        }
+
+        var jsonStr6 = angular.toJson(params);
+        $http({
+            method: 'post',
+            url: '/restful/pro',
+            dataType: "json",
+            data: jsonStr6
+        }).success(function (data, status, headers, config) {
+            var state = data.state;
+            if (state == "ok") {
+                var thirdArr = data.data;
+                var newThirdArr = new Array();
+                if(thirdArr&&thirdArr.length!=0){
+                    for(var i=0;i<thirdArr.length;i++){
+                        var bean = new Object();
+                        bean.imageurl = thirdArr[i].imageurl;
+                        bean.wxgz = thirdArr[i].tcmc;
+                        newThirdArr.push(bean);
+                    }
+                }
+                threeIconArr = newThirdArr;
+            }
+        }).error(function (data) {
+            console.log(data);
+        });
+
+    }
+
+    $scope.getBaoyangIcon();
     $scope.showMoreChange = function () {
-        $scope.showMore = showType;
+        $scope.showMore = 0;
     }
     $scope.goBackHistory = function () {
         history.back();
@@ -25,6 +70,8 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
         var searchName = $scope.searchName;
         var kjProList = locals.getObject("kjProList");
         var chgProList = locals.getObject("chgProList");
+        var baoyangList = locals.getObject("baoyangList");
+
         var newDataArr = new Array();
         for(var i=0;i<kjProList.length;i++){
             var kjBean = kjProList[i];
@@ -41,8 +88,17 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
         }
 
 
+        for(var j=0;j<baoyangList.length;j++){
+            var kjBean = baoyangList[j];
+            if(kjBean.wxgz.indexOf(searchName)!=-1||kjBean.mc.indexOf(searchName)!=-1){
+                newDataArr.push(kjBean);
+            }
+        }
 
-       $scope.sencondPageData=newDataArr;
+
+
+
+        $scope.sencondPageData=newDataArr;
 
         //$state.go("Register");
     }
@@ -54,11 +110,11 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
         $scope.sencondPageData.splice(index,1,item);
        // chooseItem = item;
     }
-    $scope.showDetailImgPro = function (type, wxgz) {
-
-
+    $scope.showDetailImgPro = function ( wxgz) {
+        var type = $scope.showSelectMore;
         var kjProList = locals.getObject("kjProList");
         var chgProList = locals.getObject("chgProList");
+        var baoyangList = locals.getObject("baoyangList");
         var sencondPageData = [];
         if (type == 0) {
 
@@ -67,13 +123,11 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
                 if (kjPro.wxgz == wxgz) {
                     kjPro.selected=false;
                     sencondPageData.push(kjPro);
-
-
                 }
             }
             $scope.sencondPageData = sencondPageData;
 
-        } else {
+        } else if(type==1){
 
             for (var i = 0; i < chgProList.length; i++) {
                 var kjPro = chgProList[i];
@@ -83,6 +137,14 @@ app.controller('tenderDetailCtrl', ['$http', '$scope', '$state' , "locals", "ion
             }
             $scope.sencondPageData = sencondPageData;
 
+        }else if(type==2){
+            for (var i = 0; i < baoyangList.length; i++) {
+                var kjPro = baoyangList[i];
+                if (kjPro.wxgz == wxgz) {
+                    sencondPageData.push(kjPro);
+                }
+            }
+            $scope.sencondPageData = sencondPageData;
         }
         $scope.showMore = 2;
     }

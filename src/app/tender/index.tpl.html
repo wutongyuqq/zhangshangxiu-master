@@ -303,7 +303,7 @@
 
 
     <div class="select_pro" ng-show="showMore==0">
-        <div class="select-item select_one" ng-repeat="item in firstIconArr" ng-click="showDetailImgPro(0,item.wxgz)">
+        <div class="select-item select_one" ng-repeat="item in firstIconArr" ng-click="showDetailImgPro(item.wxgz)">
             <img class="select-img"  style="font-size: 1.0em;" src="{{item.imageurl?('../../../vendor/images/zsx/'+item.imageurl):'../../../vendor/images/zsx/fold_img.png'}}"/>
 
             <div class="select-text"  style="font-size: 1.0em;">{{item.wxgz}}</div>
@@ -312,32 +312,23 @@
 
     </div>
 
-    <div class="select_pro" ng-show="showMore==1">
-        <div class="select-item select_one" ng-repeat="item in firstIconArr" ng-click="showDetailImgPro(1,item.wxgz)">
-            <img class="select-img" src="{{item.imageurl?('../../../vendor/images/zsx/'+item.imageurl):'../../../vendor/images/zsx/fold_img.png'}}"/>
-
-            <div class="select-text"  style="font-size: 1.0em;">{{item.wxgz}}</div>
-
-        </div>
-
-    </div>
-
     <div class="select_pro" ng-show="showMore==2">
-
         <div class="select-item select_one" ng-click="showMoreChange()">
             <img class="select-img" src="../../../vendor/images/zsx/fold_back_img.png"/>
 
-            <div class="select-text"  style="font-size: 1.0em;">返回</div>
+            <div class="select-text"  style="font-size: 1.2em;">返回</div>
 
         </div>
 
         <div ng-repeat="item in sencondPageData" style="margin-top: 0.3rem;" class="select-item select_one  {{item.selected?'choose_back':''}}"   ng-click="chooseProject($index,item,item.selected)">
             <img class="select-img" src="../../../vendor/images/zsx/file_img.png"/>
 
-            <div class="select-text" style="font-size: 1.0em;">{{item.mc}}<br/><span style="font-size: 1.0em;">￥</span><span style="font-size: 1.0em;">{{item.xlf}}</span></div>
+            <div class="select-text" style="font-size: 1.2em;">{{item.mc}}<br/><span style="font-size: 1.2em;">￥</span><span style="font-size: 1.2em;">{{item.xlf}}</span></div>
 
         </div>
+
     </div>
+
     <div class="confirm-div">
 
     <div class="text-inline confirm-a confirm-nav-btn" ui-sref="home"  style="font-size: 1.0em;">

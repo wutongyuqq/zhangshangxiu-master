@@ -33,6 +33,7 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
     carInfo.ysph="";
     carInfo.ywtx="";
     carInfo.shortCardName = "";
+    carInfo.openid = "";
     $scope.carInfo = carInfo;
     $scope.proName="闽";
     if(locals.getObject("selectCarInfo")!=null){
@@ -444,6 +445,16 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         }
 
 
+    $scope.guanZhu = function(carInfoParam){
+        if(carInfoParam.openid) {
+            ionicToast.show("公众号已关注，无需再次关注", 'middle', false, 2000);
+        }else{
+            $state.go("CompanyDetail");
+        }
+
+
+    }
+
 
         //4  5-8：生成接车单。
     $scope.insertCarInfo = function(upLoadInfo){
@@ -521,6 +532,7 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         carInfo.cx=item.cx;
         carInfo.cardName=item.mc;
         carInfo.shortCardName=item.mc.substring(1,item.mc.length);
+        carInfo.openid = item.openid;
         $scope.carInfo=carInfo;
         $scope.showCardList = false;
         $scope.proName = item.mc.substring(0,1);
@@ -594,12 +606,14 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
 //获取项目二级页面配置
     var kjProList = [];
     var chgProList = [];
+    var baoyangList = [];
     var postFlag = "0";
 
     $scope.getIconData = function () {
         if (postFlag == "end") {
             locals.setObject("kjProList",kjProList);
             locals.setObject("chgProList",chgProList);
+            locals.setObject("baoyangList",baoyangList);
             return;
         }
         var params = {
@@ -628,6 +642,14 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
                         }else if(item.is_quick_project == "否"){
                             chgProList.push(item);
                         }
+
+                        var baoyangArray = baoyangMap.get(item.tybz);
+                        if(baoyangArray==null||baoyangArray.length==0){
+                            baoyangArray = new Array();
+                        }
+                        baoyangMap.set(item.tybz,baoyangArray.push(item))
+                    }else if(item.tybz=="2"){
+                        baoyangList.push(item);
                     }
                 }
             }
@@ -654,6 +676,9 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         }
         return true;
     }
+
+
+
 }]);
 
 

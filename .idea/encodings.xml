@@ -2,9 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/app/company/companyTop.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/app/companydetail/controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/tender/controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/tender/tender.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/usercenter/controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/winbid/controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/app/workmore/controller.js" charset="UTF-8" />
   </component>
 </project>

@@ -268,7 +268,7 @@
     .tabs-line{
         font-size: 1.0em;
     }
-    .bar_footer_a{
+    .bar-footer{
         border-top: 1px solid rgb(18, 150, 219);
         height: 1.9rem;
         padding-bottom: 0.1rem;
@@ -379,9 +379,9 @@
 
     <div class="back-line-red">
     </div>
-    <div class="btn_width_div" style="display:inline-block">
+    <div class="btn_width_div">
         <div class="text_inline btn_gz_left">
-            <button class="btn_a" ui-sref="CompanyDetail">关注</button>
+            <button class="btn_a" ng-click="guanZhu(carInfo)">{{carInfo.openid?'已关注':'关注'}}</button>
         </div>
         <div class="text_inline btn_jc_right">
             <button class="btn_b" ng-click="uploadCardInfo(carInfo)">接车</button>
@@ -389,7 +389,7 @@
 
     </div>
 
-    <div id="tab_nav" class="tabs-line bar bar_footer_a"  style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;display:inline-block;" ng-show="tabShow">
+    <div id="tab_nav" class="tabs-line bar bar-footer"  style="border-top: 1px solid #1296db;height: 1.9rem;padding-bottom: 0.1rem;z-index: 30019;display:inline-block;" ng-show="tabShow">
         <a class="tab-item" style="display:inline-block;width: 19%;">
 
                 <img style="width: 0.7rem;height: 0.7rem;margin-top: 0.03rem;"
@@ -509,16 +509,7 @@
      */
 
     var winHeight = $(window).height();   //获取当前页面高度
-    $(window).resize(function(){
-        var thisHeight=$(this).height();
-        if(winHeight - thisHeight >50){
-            $(".bar-footer").hide();
-            $(".btn_width_div").hide();
-        }else{
-            $(".bar-footer").show();
-            $(".btn_width_div").show();
-        }
-    });
+
 
 
     var calendar = new LCalendar();
