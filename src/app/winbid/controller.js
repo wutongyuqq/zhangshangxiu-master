@@ -694,6 +694,34 @@ app.controller('WinTotalCtrl', ['$http', '$scope', '$state', 'locals', 'ionicToa
         }
         return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
     }
+
+    $scope.cancleJiesuan = function(){
+        var jsd_id = locals.get("jsd_id");
+        var params1 = {
+            db: locals.get("Data_Source_name"),
+            function: "sp_fun_delete_skd",
+            jsd_id: jsd_id
+        }
+        var jsonStr9 = angular.toJson(params1);
+        $http({
+            method: 'post',
+            url: '/restful/pro',
+            dataType: "json",
+            data: jsonStr9
+        }).success(function (data, status, headers, config) {
+            var state = data.state;
+            if (state == 'ok') {
+                ionicToast.show(data.msg ? data.msg : "", 'middle', false, 2000);
+            } else {
+                ionicToast.show("错误：" + data.msg ? data.msg : "", 'middle', false, 2000);
+            }
+        }).error(function (data) {
+            ionicToast.show("服务异常", "middle", 2000);
+        });
+
+
+
+    }
     $scope.printOne = function(){
         /*var timestamp = (Date.parse(new Date()))/1000;
         var params = {

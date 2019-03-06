@@ -272,7 +272,46 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         });
     }
 
+    $scope.getImageCode=function() {
+        /*var params = {
+         db: locals.get("Data_Source_name"),
+         function: "sp_fun_get_weixin_brcode_address",
+         data_source:locals.get("Data_Source_name"),
+         }*/
 
+        var  params =  {db:"asa_to_sql",function:"sp_fun_get_wxgzh_account",company_code:"A"}
+
+        var jsonStr = angular.toJson(params);
+        $http({
+            method: 'post',
+            url: '/restful/pro',
+            dataType: "json",
+            data: jsonStr,
+        }).success(function (data, status, headers, config) {
+            var state = data.state;
+            if (state == 'ok') {
+                // $scope.imgCodeUrl = data.brcode_address;
+                var dataItemList = data.data;
+                if(dataItemList&&dataItemList.length>0){
+                    var dataItem = dataItemList[0];
+                    var strAppid = dataItem.Appid;
+                    var strAppSecret = dataItem.AppSecret;
+                    $scope.getWxImageCode(strAppid,strAppSecret);
+                }
+            } else {
+
+            }
+        }).error(function (data) {
+            ionicToast.show("服务异常", "middle", 2000);
+        });
+    }
+
+    $scope.getWxImageCode=function(strAppid,strAppSecret) {
+        console.log(strAppid+"======"+strAppSecret)
+        // var addressUrl = 'http://wxgzh.whsjsoft.com/wx/api/push?id='+strAppid+'&aSet='+strAppSecret+'&nonce=access_token';
+        var usercode =  locals.getObject("user").company_code;
+        window.printdata.getWxInfoFromServer(strAppid,strAppSecret,'access_token',usercode);
+    }
         //5-3：新车上传信息。
     $scope.uploadCardInfo = function (upLoadInfo) {
 
@@ -302,12 +341,12 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         }
 
         upLoadInfo.cardName = $scope.proName + $scope.carInfo.shortCardName;
-        locals.set("gonglishu",upLoadInfo.gls==null?"":upLoadInfo.gls);
+        locals.set("gonglishu",upLoadInfo.gls?upLoadInfo.gls:"");
         var isNewCar = $scope.judgeNewCar(upLoadInfo.cardName);
         var allCarList = locals.getObject("cardDataList");
         upLoadInfo.cp= upLoadInfo.cardName;
         upLoadInfo.momo= upLoadInfo.gzms;
-        upLoadInfo.jclc= upLoadInfo.gls;
+        upLoadInfo.jclc= upLoadInfo&&upLoadInfo.gls?upLoadInfo.gls:"";
         upLoadInfo.mc= upLoadInfo.cardName;
         if(isNewCar){//如果是新车，就调用5-3 新车上传信息。
             upLoadInfo.company_code = user.company_code;
@@ -475,7 +514,7 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
             ns_date:dateTime,
             oprater_code:userName,
             xllb:"",
-            jclc:upLoadInfo.gls+"",
+            jclc:upLoadInfo.gls?upLoadInfo.gls:"",
             ywg_date:upLoadInfo.ywg_date?(upLoadInfo.ywg_date+" 00:00:00"):dateTime,
             keys_no:upLoadInfo.ysph,
             memo:upLoadInfo.ywtx,

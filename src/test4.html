@@ -29,16 +29,9 @@
 
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script>
-    Vue.component('tree', {
-        name:"tree",
-        template:`<ul>
-    <li v-for = "item in folder">
-            <span @click = "select(item)">{{ item.name }}</span>
-    <tree v-if = "item.children" :folder = "item.children" :select = "select"></tree>
-            </li>
-            </ul>`,
-    props:["folder","select"],
-    })
+    $.get("http://wxgzh.whsjsoft.com/wx/api/push?id=wxf7580d49be2667f5&aSet=5850bd955e175a50191ee9445f8ab73e&nonce=access_token", function(result){
+        $("div").html(result);
+    });
 
 
 </script>

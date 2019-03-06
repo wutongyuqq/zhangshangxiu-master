@@ -423,7 +423,7 @@ app.controller('WinbdingCtrl', ['$http', '$scope', '$state', "locals", "ionicToa
             return;
         }
 
-        locals.set("gonglishu", $scope.gonglishu);
+        locals.set("gonglishu", $scope.gonglishu?$scope.gonglishu:"");
         var carInfo = locals.getObject("carInfo");
         carInfo.gls = $scope.showInputGls;
         locals.setObject("carInfo", carInfo);
@@ -883,12 +883,12 @@ app.controller('WinbdingCtrl', ['$http', '$scope', '$state', "locals", "ionicToa
             cd: item.cd,
             cx: item.cx,
             dw: item.dw,
-            property: item.property,
-            zt: item.zt,
+            property:item.property?item.property:'维修',
+            zt: item.zt?item.zt:'',
             ssj: item.ssj,
             cb: item.cb,
             sl: (item.sl&&Number(item.sl)>0)?item.sl:'1',
-            xh: item.xh,
+            xh: item.xh?item.xh:'0',
             comp_code: user.company_code,
             operater_code:user.userName
         }
@@ -1312,7 +1312,7 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
 
 
         var jsd_id = locals.get("jsd_id");
-        var user = locals.get("user");
+        var user = locals.getObject("user");
         var params =
         {
             db: locals.get("Data_Source_name"),
@@ -1324,12 +1324,12 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
             cd: item.cd,
             cx: item.cx,
             dw: item.dw,
-            property: item.property,
-            zt: item.zt,
+            property: item.property?item.property:'维修',
+            zt: item.zt?item.zt:'',
             ssj: item.xsj,
             cb: item.pjjj,
             sl: (item.sl&&Number(item.sl)>0)?item.sl:'1',
-            xh: item.xh,
+            xh: item.xh?item.xh:'0',
             comp_code: user.company_code,
             operater_code:user.userName
         }
@@ -1382,7 +1382,7 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
 
 
         var jsd_id = locals.get("jsd_id");
-        var user = locals.get("user");
+        var user = locals.getObject("user");
         var params =
         {
             db: locals.get("Data_Source_name"),
@@ -1394,7 +1394,7 @@ app.controller('TenderSayCtrl', ['$http', '$scope', 'utils', '$stateParams', '$s
             cd: item.cd,
             cx: item.cx,
             dw: item.dw,
-            property: item.property,
+            property:item.property?item.property:'维修',
             zt: "急件销售",
             ssj: item.ssj,
             cb: item.cb,

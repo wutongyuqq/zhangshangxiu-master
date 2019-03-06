@@ -75,6 +75,7 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
                 var firstIconArr = data.data;
                 $scope.firstIconArr = firstIconArr;
                 locals.setObject("firstIconArr", firstIconArr);
+                ionicToast.show("更新车辆数据成功", "middle",false, 2000);
             }else{
                 ionicToast.show("更新项目库数据失败："+data.msg, "middle",false, 2000);
             }
@@ -99,6 +100,7 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
             var state = data.state;
             if (state == 'ok') {
                 locals.setObject("repairPersonList", data.data);
+                ionicToast.show("更新修理数据成功", "middle",false, 2000);
             } else {
                 ionicToast.show("更新项目库数据失败："+data.msg, "middle",false, 2000);
             }
@@ -116,11 +118,12 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
             cd: "",
             ck: ""
         }
+        var jsonStr4 = angular.toJson(params3);
         $http({
             method: 'post',
             url: '/restful/pro',
             dataType: "json",
-            data: angular.toJson(params3)
+            data:jsonStr4
         }).success(function (data, status, headers, config) {
             console.log("data   " + angular.toJson(data));
 
@@ -129,6 +132,7 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
                 var pjKucun = data.data;
                 locals.setObject("pjKucun", pjKucun);
                 locals.setObject("newPjDataList", pjKucun);
+                ionicToast.show("更新配件数据成功", "middle",false, 2000);
             } else {
                 ionicToast.show("错误：更新配件库存失败 " + data.msg ? data.msg : "", 'middle', false, 2000);
             }
@@ -154,6 +158,7 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
             locals.setObject("kjProList",kjProList);
             locals.setObject("chgProList",chgProList);
             locals.setObject("baoyangList",baoyangList);
+            ionicToast.show("更新项目库数据成功", "middle",false, 2000);
             return;
         }
         var params = {
