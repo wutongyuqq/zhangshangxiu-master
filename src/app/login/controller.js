@@ -45,7 +45,7 @@ app.controller('LoginCtrl', ['$http','$scope', '$state','locals',"ionicToast", f
                     $scope.checkOtherService();
                 }
             } else {
-                ionicToast.show(data.msg ? data.msg : "服务异常", 'middle',false, 2000);
+                ionicToast.show(data.msg ? data.msg : "服务异常", 'middle',false, 3000);
             }
         });
     }

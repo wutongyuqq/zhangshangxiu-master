@@ -271,6 +271,12 @@
         width: 0.5rem;
         height: 0.5rem;
     }
+    .position-left-b>div{
+        width:5rem;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        whitewhite-space: nowrap;
+    }
 </style>
 
 <div>
@@ -333,10 +339,10 @@
                     <div style="font-size: 1.2em">派工状态：</div>
                 </div>
                 <div class="text-inline position-left-b">
-                    <div style="font-size: 1.2em">{{item.xlxm}}</div>
-                    <div style="font-size: 1.2em">{{item.assign}}</div>
-                    <div style="font-size: 1.2em">{{item.xlg}}</div>
-                    <div style="font-size: 1.2em"><span
+                    <div style="font-size: 1.0em;">{{item.xlxm}}</div>
+                    <div style="font-size: 1.0em">{{item.assign}}</div>
+                    <div style="font-size: 1.0em">{{item.xlg}}</div>
+                    <div style="font-size: 1.0em"><span
                             class="text_inline" ng-show="!item.showPgje">{{item.pgje}}</span>
 
                         <div class="text_inline" ng-show="item.showPgje">

@@ -38,7 +38,7 @@ app.controller('WorkMoreCtrl', ['$http','$scope','$state','locals',"ionicToast",
                 locals.setObject("shouyinBean", null);
 
                 console.log(data.msg);
-                locals.setObject("user","");
+                //locals.setObject("user","");
                 $state.go("Login");
 
             }

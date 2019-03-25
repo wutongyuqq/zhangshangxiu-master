@@ -133,6 +133,33 @@ app.controller('HomeCtrl', ['$http', '$scope', "locals","$modal","$state","ionic
         $scope.cardDataList = cardDataList;
     };
 
+    //去重元素
+
+    function deleteRepetion(arr){
+        var arrTable = {},arrData = [];
+        for (var i = 0; i < arr.length; i++) {
+            if(!arrTable[arr[i].mc]){
+                arrTable[arr[i].mc] = true;
+                arrData.push(arr[i])
+            }
+        }
+        return arrData;
+    }
+
+
+
+    $scope.deleteCard=function(){
+        console.log("去重元素");
+        var oldCardList =  locals.getObject("cardDataList");
+        if(oldCardList==null||oldCardList.length==0){
+            return;
+        }
+        var newCardList=deleteRepetion(oldCardList);
+
+        locals.setObject("cardDataList",newCardList);
+    }
+
+    $scope.deleteCard();
     $scope.toSelectPage=function(){
         $state.go("Register");
     }
